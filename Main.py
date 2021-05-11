@@ -13,6 +13,11 @@ import time
 import os
 from flask import Flask, render_template
 
+"""
+color fondo en hexa #262833
+color logo en hexa es #39E991
+"""
+
 """ DECLARATION OF ALL VARIABLES """
 a = 1
 BTC = 0
