@@ -4,7 +4,8 @@ Made by Facundo DiaZ - Tomas De CastrO - Tadeo Grach for Holberton School 2021 "
 
 """ IMPORTS """
 import requests
-
+import time
+from datetime import datetime
 
 """ DECLARACION DE TODAS LAS VARIABLES """
 
@@ -31,12 +32,13 @@ def consultar_precio_ETH(url):
 
 def consultar_transacciones_BTC(url):
     suma = 0
+    btc = consultar_precio_BTC(url)
+    now = datetime.now()
+    hora_exacta = now.strftime("%H:%M:%S")
+    print("Hora:", hora_exacta, "el precio es:", btc)
     query = "api/v3/trades?symbol=BTCUSDT"
     r = requests.get(url + query)
-    print(r)
-    print(type(r))
     r = r.json()
-    print(r, "\n\n\n")
     for i in r:
         if (i["isBuyerMaker"] == "true"):
             suma = suma + int(float((i["quoteQty"])))
@@ -44,9 +46,18 @@ def consultar_transacciones_BTC(url):
             suma = suma - int(float((i["quoteQty"])))
     print("el resultado de sumar todas las transacciones compra/venta es = ", suma)
     if (suma > 0):
-        print("va a subir")
+        print("La prediccion es que va a subir")
     else:
-        print("va a bajar")
-    """for elem in r:
-        print(elem)
-    print(type(elem))"""
+        print("La prediccion es que va a bajar")
+    print("esperamos 3 minutos")
+    time.sleep(180)
+    btc1 = consultar_precio_BTC(url)
+    now = datetime.now()
+    hora_exacta = now.strftime("%H:%M:%S")
+    print("Hora:", hora_exacta, "el precio es:", btc1)
+    if (btc > btc1):
+        print("efectivamente bajo")
+    elif (btc1 > btc):
+        print("efectivamente subio")
+    else:
+        print("el precio se mantuvo igual")
