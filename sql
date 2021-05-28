@@ -27,10 +27,10 @@ CREATE TABLE users_sigma (
     PRIMARY KEY (id_users)
 );
 
-INSERT INTO coins (id_coin, name) VALUES (0, "BITCOIN");
-INSERT INTO coins (id_coin, name) VALUES (1, "ETHEREUM");
-INSERT INTO coins (id_coin, name) VALUES (2, "DOGE");
+INSERT INTO coins (id_coin, name) VALUES (1, "BITCOIN");
+INSERT INTO coins (id_coin, name) VALUES (2, "ETHEREUM");
+INSERT INTO coins (id_coin, name) VALUES (3, "DOGE");
 
-INSERT INTO users_sigma (id_users, name, mail) VALUES (0, "Facundo", "ddiiaazzfacu@gmail.com")
-INSERT INTO users_sigma (id_users, name, mail) VALUES (1, "Tadeo", "tade.g.17@gmail.com")
-INSERT INTO users_sigma (id_users, name, mail) VALUES (2, "Tomas", "tdecastroguelfi@gmail.com")
+INSERT INTO users_sigma (id_users, name, mail) VALUES (1, "Facundo", "ddiiaazzfacu@gmail.com");
+INSERT INTO users_sigma (id_users, name, mail) VALUES (2, "Tadeo", "tade.g.17@gmail.com");
+INSERT INTO users_sigma (id_users, name, mail) VALUES (3, "Tomas", "tdecastroguelfi@gmail.com");
