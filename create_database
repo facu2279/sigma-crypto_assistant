@@ -35,7 +35,6 @@ CREATE TABLE users_sigma (
 	        PRIMARY KEY (id_users)
 		);
 
-INSERT INTO history_btc (name, price) VALUES ("BTC", 444);
 
 INSERT INTO users_sigma (id_users, name, mail) VALUES (1, "Facundo", "ddiiaazzfacu@gmail.com");
 INSERT INTO users_sigma (id_users, name, mail) VALUES (2, "Tadeo", "tade.g.17@gmail.com");
