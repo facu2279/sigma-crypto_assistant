@@ -19,7 +19,7 @@ url = "https://api.binance.com/"
 
 
 print("empezo")
-for i in range(0,300):
+for i in range(0,20):
         btc = info.consultar_precio_BTC(url)
         persistence.save_price_bitcoin(btc)
         eth = info.consultar_precio_ETH(url)
