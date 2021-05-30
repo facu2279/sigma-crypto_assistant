@@ -1,3 +1,4 @@
+DROP DATABASE sigma;
 CREATE DATABASE sigma;
 USE sigma;
 
