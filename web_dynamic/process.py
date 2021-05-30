@@ -20,7 +20,7 @@ print("promedio", suma/len(lasts_price_btc))
 lasts_price_doge = persistence.traer_ultimos_precios_doge()
 suma = 0
 for i in lasts_price_doge:
-    suma = suma + int(i)
+    suma = suma + float(i)
 print("la suma de todos los precios del doge en la ultima hora es", suma)
 print("promedio", suma/len(lasts_price_doge))
 
