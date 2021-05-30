@@ -7,8 +7,8 @@ Made by Facundo Diaz - Tomas De Castro - Tadeo Grach for Holberton School 2021 "
 """ IMPORTS EXTERN MODULES """
 
 """ IMPORTS FILES """
-from ... import persistence
-from ... import info
+from proyecto_final import persistence
+from proyecto_final import info
 
 persistence.insert_new_user("test", "correofd")
 print("alo")
