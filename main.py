@@ -23,7 +23,7 @@ for i in range(0,300):
         btc = info.consultar_precio_BTC(url)
         persistence.save_price_bitcoin(btc)
         """eth = info.consultar_precio_ETH(url)
-        persistence.save_price_ethereum(eth)"""
+        persistence.save_price_ethereum(eth)
         doge = info.consultar_precio_DOGE(url)
-        persistence.save_price_doge(doge)
+        persistence.save_price_doge(doge)"""
 print("termino")

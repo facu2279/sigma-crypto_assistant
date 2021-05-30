@@ -18,9 +18,12 @@ def save_price_bitcoin(price):
     for i in resultado:
         for i2 in i:
             cant_items = i2
+    print("la cantidad de items es", cant_items)
     if cant_items < 288:
+        print("entro en menor que 288")
         insertar_btc(str(price))
     else:
+        print("entro en mayor igua que 288")
         borrar_ultimo_btc(str(price))
 
 def insertar_btc(price):
@@ -28,6 +31,7 @@ def insertar_btc(price):
     consulta = nueva.cursor()
     consulta.execute("INSERT INTO history_btc (name, price) VALUES ('BTC', " + str(price) + ");")
     nueva.commit()
+    print("termino de insertar")
 
 def borrar_ultimo_btc(price):
     newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
@@ -38,15 +42,17 @@ def borrar_ultimo_btc(price):
         for i2 in i:
             id = i2
             id = str(id)
-            borrar_item(id, str(price))
-            
-def borrar_item(id, price):
+            print("el ultimo id es", id)
+            borrar_item_btc(id, str(price))
+
+def borrar_item_btc(id, price):
     nuevaxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = nuevaxd.cursor()
     consulta.execute("DELETE FROM history_btc WHERE id ="+ id)
     nuevaxd.commit()
+    print("termino de borrar")
     insertar_btc(str(price))
-    
+
 """ doge """
 
 def save_price_doge(price):
@@ -77,9 +83,9 @@ def borrar_ultimo_doge(price):
         for i2 in i:
             id = i2
             id = str(id)
-            borrar_item(id, str(price))
+            borrar_item_doge(id, str(price))
 
-def borrar_item(id, price):
+def borrar_item_doge(id, price):
     nuevaxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = nuevaxd.cursor()
     consulta.execute("DELETE FROM history_doge WHERE id ="+ id)
@@ -116,9 +122,9 @@ def borrar_ultimo_eth(price):
         for i2 in i:
             id = i2
             id = str(id)
-            borrar_item(id, str(price))
+            borrar_item_eth(id, str(price))
 
-def borrar_item(id, price):
+def borrar_item_eth(id, price):
     nuevaxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = nuevaxd.cursor()
     consulta.execute("DELETE FROM history_eth WHERE id ="+ id)
