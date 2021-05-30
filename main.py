@@ -19,6 +19,7 @@ url = "https://api.binance.com/"
 i = 0
 
 while(1):
+        print("New insert -", i)
         btc = info.consultar_precio_BTC(url)
         persistence.save_price_bitcoin(btc)
         eth = info.consultar_precio_ETH(url)
@@ -27,4 +28,3 @@ while(1):
         persistence.save_price_doge(doge)
         i = i + 1
         time.sleep(300)
-        print("New insert -" + i)
