@@ -18,12 +18,9 @@ def save_price_bitcoin(price):
     for i in resultado:
         for i2 in i:
             cant_items = i2
-    print("la cantidad de items es", cant_items)
-    if cant_items < 288:
-        print("entro en menor que 288")
+    if cant_items <= 288:
         insertar_btc(str(price))
     else:
-        print("entro en mayor igua que 288")
         borrar_ultimo_btc(str(price))
 
 def insertar_btc(price):
@@ -31,7 +28,6 @@ def insertar_btc(price):
     consulta = nueva.cursor()
     consulta.execute("INSERT INTO history_btc (name, price) VALUES ('BTC', " + str(price) + ");")
     nueva.commit()
-    print("termino de insertar")
 
 def borrar_ultimo_btc(price):
     newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
@@ -42,7 +38,6 @@ def borrar_ultimo_btc(price):
         for i2 in i:
             id = i2
             id = str(id)
-            print("el ultimo id es", id)
             borrar_item_btc(id, str(price))
 
 def borrar_item_btc(id, price):
@@ -50,7 +45,6 @@ def borrar_item_btc(id, price):
     consulta = nuevaxd.cursor()
     consulta.execute("DELETE FROM history_btc WHERE id ="+ id)
     nuevaxd.commit()
-    print("termino de borrar")
     insertar_btc(str(price))
 
 """ doge """
@@ -63,7 +57,7 @@ def save_price_doge(price):
         for i in resultado:
             for i2 in i:
                 cant_items = i2
-        if cant_items < 288:
+        if cant_items <= 288:
             insertar_doge(str(price))
         else:
             borrar_ultimo_doge(str(price))
@@ -102,7 +96,7 @@ def save_price_ethereum(price):
     for i in resultado:
         for i2 in i:
             cant_items = i2
-    if cant_items < 288:
+    if cant_items <= 288:
         insertar_eth(str(price))
     else:
         borrar_ultimo_eth(str(price))
