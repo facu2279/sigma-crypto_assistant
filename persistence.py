@@ -9,7 +9,14 @@ MY_P = "betty"
 MY_D = "sigma"
 
 
-""" btc """
+
+
+
+
+""" btc functions ---- this kit of functions make a inserts into database
+    but if the database have a more of 288 (24 hours) the function delete the first iteam and add
+    a new item, using this way simpre tenemos los precios de las ultimas 24 horas y se
+    actualiza automaticamente """
 def save_price_bitcoin(price):
     nuevaconexion = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = nuevaconexion.cursor()
@@ -47,7 +54,18 @@ def borrar_item_btc(id, price):
     nuevaxd.commit()
     insertar_btc(str(price))
 
-""" doge """
+
+
+
+
+
+
+
+
+""" doge functions ---- this kit of functions make a inserts into database
+    but if the database have a more of 288 (24 hours) the function delete the first iteam and add
+    a new item, using this way simpre tenemos los precios de las ultimas 24 horas y se
+    actualiza automaticamente """
 
 def save_price_doge(price):
         nuevaconexion = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
@@ -86,7 +104,17 @@ def borrar_item_doge(id, price):
     nuevaxd.commit()
     insertar_doge(str(price))
 
-""" ethereum """
+
+
+
+
+
+
+
+""" ethereum functions ---- this kit of functions make a inserts into database
+    but if the database have a more of 288 (24 hours) the function delete the first iteam and add
+    a new item, using this way simpre tenemos los precios de las ultimas 24 horas y se
+    actualiza automaticamente """
 
 def save_price_ethereum(price):
     nuevaconexion = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
@@ -124,3 +152,12 @@ def borrar_item_eth(id, price):
     consulta.execute("DELETE FROM history_eth WHERE id ="+ id)
     nuevaxd.commit()
     insertar_eth(str(price))
+
+
+""" USERS INSERTS """
+
+def insert_new_user(name, mail):
+    nuevaconexion = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
+    consulta = nuevaconexion.cursor()
+    consulta.execute("INSERT INTO users_sigma (name, mail) VALUES ('" + name  +"', '" + mail +"');")
+    nuevaconexion.commit()

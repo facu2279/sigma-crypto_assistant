@@ -27,3 +27,6 @@ for i in range(0,300):
         doge = info.consultar_precio_DOGE(url)
         persistence.save_price_doge(doge)
 print("termino")
+print("test insert new user")
+persistence.insert_new_user("pedro", "holahola@hotmal.com")
+print("termino inser user")
