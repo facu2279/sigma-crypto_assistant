@@ -130,6 +130,19 @@ def traer_ultimo_precio_doge():
             price = i2
     return price
 
+def traer_ultimos_precios_doge():
+    newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
+    consulta = newxd.cursor()
+    consulta.execute("SELECT price FROM history_doge ORDER BY id DESC LIMIT 12;")
+    resultado = consulta.fetchall()
+    arr_precios = []
+    for i in resultado:
+        for i2 in i:
+            arr_precios.append(i2)
+    return arr_precios
+            
+
+
 
 
 
@@ -183,6 +196,18 @@ def traer_ultimo_precio_eth():
         for i2 in i:
             price = i2
     return price
+
+def traer_ultimos_precios_eth():
+    newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
+    consulta = newxd.cursor()
+    consulta.execute("SELECT price FROM history_eth ORDER BY id DESC LIMIT 12;")
+    resultado = consulta.fetchall()
+    arr_precios = []
+    for i in resultado:
+        for i2 in i:
+            arr_precios.append(i2)
+    return arr_precios
+            
 
 
 """ USERS INSERTS """
