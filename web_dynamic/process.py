@@ -13,5 +13,5 @@ import persistence
 lasts_price_btc = persistence.traer_ultimos_precios_btc()
 suma = 0
 for i in lasts_price_btc:
-    suma = suma + i
+    suma = suma + int(i)
 print("la suma de todos los precios es", suma)
