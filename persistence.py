@@ -13,10 +13,7 @@ MY_D = "sigma"
 
 
 
-""" btc functions ---- this kit of functions make a inserts into database
-    but if the database have a more of 288 (24 hours) the function delete the first iteam and add
-    a new item, using this way simpre tenemos los precios de las ultimas 24 horas y se
-    actualiza automaticamente """
+""" btc functions """
 def save_price_bitcoin(price):
     nuevaconexion = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = nuevaconexion.cursor()
@@ -72,10 +69,7 @@ def traer_ultimo_precio_btc():
 
 
 
-""" doge functions ---- this kit of functions make a inserts into database
-    but if the database have a more of 288 (24 hours) the function delete the first iteam and add
-    a new item, using this way simpre tenemos los precios de las ultimas 24 horas y se
-    actualiza automaticamente """
+""" doge functions ---- """
 
 def save_price_doge(price):
         nuevaconexion = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
@@ -129,10 +123,7 @@ def traer_ultimo_precio_doge():
 
 
 
-""" ethereum functions ---- this kit of functions make a inserts into database
-    but if the database have a more of 288 (24 hours) the function delete the first iteam and add
-    a new item, using this way simpre tenemos los precios de las ultimas 24 horas y se
-    actualiza automaticamente """
+""" ethereum functions """
 
 def save_price_ethereum(price):
     nuevaconexion = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
