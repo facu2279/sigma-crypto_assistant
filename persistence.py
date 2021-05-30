@@ -57,14 +57,12 @@ def borrar_item_btc(id, price):
 def traer_ultimo_precio_btc():
     newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = newxd.cursor()
-    consulta.execute("select * from history_btc ORDER BY id ASC limit 1;")
+    consulta.execute("select price from history_btc ORDER BY id ASC limit 1;")
     resultado = consulta.fetchall()
     for i in resultado:
-        print(type(i))
-        print(i)
         for i2 in i:
-            print(type(i2))
-            print(i2)
+            price = i2
+    return price
 
 
 
@@ -119,14 +117,12 @@ def borrar_item_doge(id, price):
 def traer_ultimo_precio_doge():
     newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = newxd.cursor()
-    consulta.execute("select * from history_doge ORDER BY id ASC limit 1;")
+    consulta.execute("select price from history_doge ORDER BY id ASC limit 1;")
     resultado = consulta.fetchall()
     for i in resultado:
-        print(type(i))
-        print(i)
         for i2 in i:
-            print(type(i2))
-            print(i2)
+            price = i2
+    return price
 
 
 
@@ -178,14 +174,12 @@ def borrar_item_eth(id, price):
 def traer_ultimo_precio_eth():
     newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = newxd.cursor()
-    consulta.execute("select * from history_eth ORDER BY id ASC limit 1;")
+    consulta.execute("select price from history_eth ORDER BY id ASC limit 1;")
     resultado = consulta.fetchall()
     for i in resultado:
-        print(type(i))
-        print(i)
         for i2 in i:
-            print(type(i2))
-            print(i2)
+            price = i2
+    return price
 
 
 """ USERS INSERTS """
