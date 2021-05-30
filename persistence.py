@@ -17,7 +17,7 @@ MY_D = "sigma"
 def save_price_bitcoin(price):
     nuevaconexion = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = nuevaconexion.cursor()
-    consulta.execute("SELECT count(*) from history_btc;")
+    consulta.execute("SELECT count(*) FROM history_btc;")
     resultado = consulta.fetchall()
     for i in resultado:
         for i2 in i:
@@ -36,7 +36,7 @@ def insertar_btc(price):
 def borrar_ultimo_btc(price):
     newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = newxd.cursor()
-    consulta.execute("select id from history_btc ORDER BY id ASC limit 1;")
+    consulta.execute("SELECT id FROM history_btc ORDER BY id ASC LIMIT 1;")
     resultado = consulta.fetchall()
     for i in resultado:
         for i2 in i:
@@ -54,12 +54,24 @@ def borrar_item_btc(id, price):
 def traer_ultimo_precio_btc():
     newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = newxd.cursor()
-    consulta.execute("select price from history_btc ORDER BY id DESC limit 1;")
+    consulta.execute("SELECT price FROM history_btc ORDER BY id DESC LIMIT 1;")
     resultado = consulta.fetchall()
     for i in resultado:
         for i2 in i:
             price = i2
     return price
+
+def traer_ultimos_precios_btc():
+    newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
+    consulta = newxd.cursor()
+    consulta.execute("SELECT price FROM history_btc ORDER BY id DESC LIMIT 10;")
+    resultado = consulta.fetchall()
+    for i in resultado:
+        print(i)
+        print(type(i))
+        for i2 in i:
+            print(i2)
+            print(type(i2))
 
 
 
@@ -74,7 +86,7 @@ def traer_ultimo_precio_btc():
 def save_price_doge(price):
         nuevaconexion = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
         consulta = nuevaconexion.cursor()
-        consulta.execute("SELECT count(*) from history_doge;")
+        consulta.execute("SELECT COUNT(*) FROM history_doge;")
         resultado = consulta.fetchall()
         for i in resultado:
             for i2 in i:
@@ -93,7 +105,7 @@ def insertar_doge(price):
 def borrar_ultimo_doge(price):
     newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = newxd.cursor()
-    consulta.execute("select id from history_doge ORDER BY id ASC limit 1;")
+    consulta.execute("SELECT id FROM history_doge ORDER BY id ASC LIMIT 1;")
     resultado = consulta.fetchall()
     for i in resultado:
         for i2 in i:
@@ -111,7 +123,7 @@ def borrar_item_doge(id, price):
 def traer_ultimo_precio_doge():
     newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = newxd.cursor()
-    consulta.execute("select price from history_doge ORDER BY id DESC limit 1;")
+    consulta.execute("SELECT price FROM history_doge ORDER BY id DESC LIMIT 1;")
     resultado = consulta.fetchall()
     for i in resultado:
         for i2 in i:
@@ -128,7 +140,7 @@ def traer_ultimo_precio_doge():
 def save_price_ethereum(price):
     nuevaconexion = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = nuevaconexion.cursor()
-    consulta.execute("SELECT count(*) from history_eth;")
+    consulta.execute("SELECT COUNT(*) FROM history_eth;")
     resultado = consulta.fetchall()
     for i in resultado:
         for i2 in i:
@@ -147,7 +159,7 @@ def insertar_eth(price):
 def borrar_ultimo_eth(price):
     newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = newxd.cursor()
-    consulta.execute("select id from history_eth ORDER BY id ASC limit 1;")
+    consulta.execute("SELECT id FROM history_eth ORDER BY id ASC LIMIT 1;")
     resultado = consulta.fetchall()
     for i in resultado:
         for i2 in i:
@@ -165,7 +177,7 @@ def borrar_item_eth(id, price):
 def traer_ultimo_precio_eth():
     newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = newxd.cursor()
-    consulta.execute("select price from history_eth ORDER BY id DESC limit 1;")
+    consulta.execute("SELECT price FROM history_eth ORDER BY id DESC LIMIT 1;")
     resultado = consulta.fetchall()
     for i in resultado:
         for i2 in i:
