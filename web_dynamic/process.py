@@ -15,3 +15,7 @@ import persistence
 last_price_btc = persistence.traer_ultimo_precio_btc()
 last_price_doge = persistence.traer_ultimo_precio_doge()
 last_price_eth = persistence.traer_ultimo_precio_eth()
+
+print("last price of btc", last_price_btc)
+print("last price of doge", last_price_doge)
+print("last price of eth", last_price_eth)
