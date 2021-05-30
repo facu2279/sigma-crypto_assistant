@@ -12,5 +12,6 @@ sys.path.append('/home/ubuntu/proyecto_final')
 import persistence
 """ IMPORTS FILES """
 
-persistence.insert_new_user("test", "correofd")
-print("alo")
+last_price_btc = persistence.traer_ultimo_precio_btc()
+last_price_doge = persistence.traer_ultimo_precio_doge()
+last_price_eth = persistence.traer_ultimo_precio_eth()
