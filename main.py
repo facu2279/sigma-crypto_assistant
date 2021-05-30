@@ -16,17 +16,15 @@ url = "https://api2.binance.com/"
 url = "https://api3.binance.com/"
 """
 url = "https://api.binance.com/"
+i = 0
 
-
-print("empezo")
-for i in range(0,20):
+while(1):
         btc = info.consultar_precio_BTC(url)
         persistence.save_price_bitcoin(btc)
         eth = info.consultar_precio_ETH(url)
         persistence.save_price_ethereum(eth)
         doge = info.consultar_precio_DOGE(url)
         persistence.save_price_doge(doge)
-print("termino")
-print("test insert new user")
-persistence.insert_new_user("pedro", "holahola@hotmal.com")
-print("termino inser user")
+        i = i + 1
+        time.sleep(300)
+        print("New insert -" + i)
