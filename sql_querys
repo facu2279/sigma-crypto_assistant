@@ -2,3 +2,4 @@ use sigma;
 SELECT * FROM history_btc;
 SELECT * FROM history_eth;
 SELECT * FROM history_doge;
+SELECT * FROM users_sigma;
