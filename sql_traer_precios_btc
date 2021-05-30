@@ -1,2 +1,0 @@
-use sigma;
-SELECT * FROM history_btc
