@@ -66,12 +66,14 @@ def traer_ultimos_precios_btc():
     consulta = newxd.cursor()
     consulta.execute("SELECT price FROM history_btc ORDER BY id DESC LIMIT 10;")
     resultado = consulta.fetchall()
+    arr_precios = [10]
+    pos = 0
     for i in resultado:
-        print(i)
-        print(type(i))
         for i2 in i:
-            print(i2)
-            print(type(i2))
+            arr_precios[pos] = i2
+            pos = pos + 1
+    return arr_precios
+            
 
 
 

@@ -11,3 +11,6 @@ import persistence
 
 
 lasts_price_btc = persistence.traer_ultimos_precios_btc()
+
+for i in lasts_price_btc:
+    print(i)
