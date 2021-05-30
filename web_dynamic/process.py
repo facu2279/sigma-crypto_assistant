@@ -14,4 +14,5 @@ lasts_price_btc = persistence.traer_ultimos_precios_btc()
 suma = 0
 for i in lasts_price_btc:
     suma = suma + int(i)
-print("la suma de todos los precios es", suma)
+print("la suma de todos los precios en la ultima hora es", suma)
+print("promedio", suma/len(lasts_price_btc))
