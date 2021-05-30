@@ -69,7 +69,7 @@ def traer_ultimos_precios_btc():
     arr_precios = []
     for i in resultado:
         for i2 in i:
-            arr_precios.append = i2
+            arr_precios.append(i2)
     return arr_precios
             
 
