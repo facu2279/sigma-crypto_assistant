@@ -21,6 +21,7 @@ lasts_price_doge = persistence.traer_ultimos_precios_doge()
 suma = 0
 for i in lasts_price_doge:
     suma = suma + float(i)
+suma = int(suma)
 print("la suma de todos los precios del doge en la ultima hora es", suma)
 print("promedio", suma/len(lasts_price_doge))
 
