@@ -11,6 +11,8 @@ sys.path.append('/home/ubuntu/proyecto_final')
 """ IMPORTS FILES """
 import persistence
 import entities
-
+"""
 content = "contenido"
 os.system("echo -e 'Subject: hola \n\n " + content + "' | ssmtp tdecastroguelfi56@gmail.com")
+"""
+persistence.traer_users()
