@@ -223,5 +223,8 @@ def traer_users():
     consulta = newxd.cursor()
     consulta.execute("SELECT name, mail FROM users_sigma;")
     resultado = consulta.fetchall()
+    arr_correos = []
     for i in resultado:
-        print(i, type(i))
+        for i2 in i:
+            arr_correos.append(i2)
+    print(arr_correos, type(arr_correos))
