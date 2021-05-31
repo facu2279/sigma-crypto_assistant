@@ -16,7 +16,7 @@ def enviar_correos(resumen):
     users = persistence.traer_users()
     for i in range(0, len(users), 2):
         content = "Buenas tardes "
-        nombre = str(users[i])
+        nombre = str(users[i]) + " "
         correo = str(users[i + 1])
         content = content + nombre + resumen
         os.system("echo -e 'Subject: subject \n\n " + content + "' | ssmtp " + correo)
