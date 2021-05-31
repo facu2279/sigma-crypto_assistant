@@ -1,4 +1,4 @@
-DROP DATABASE sigma;
+DROP DATABASE IF EXISTS sigma;
 CREATE DATABASE sigma;
 USE sigma;
 
@@ -37,6 +37,6 @@ CREATE TABLE users_sigma (
 		);
 
 
-INSERT INTO users_sigma (id_users, name, mail) VALUES (1, "Facundo", "ddiiaazzfacu@gmail.com");
-INSERT INTO users_sigma (id_users, name, mail) VALUES (2, "Tadeo", "tade.g.17@gmail.com");
-INSERT INTO users_sigma (id_users, name, mail) VALUES (3, "Tomas", "tdecastroguelfi@gmail.com");
+INSERT INTO users_sigma (name, mail) VALUES ("Facundo", "ddiiaazzfacu@gmail.com");
+INSERT INTO users_sigma (name, mail) VALUES ("Tadeo", "tade.g.17@gmail.com");
+INSERT INTO users_sigma (name, mail) VALUES ("Tomas", "tdecastroguelfi56@gmail.com");
