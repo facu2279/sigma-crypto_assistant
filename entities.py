@@ -16,6 +16,9 @@ class Coin:
         self.price = price
         self.suggest = suggest
 
-    def to_json(self):
-        new = self.json()
+    def to_dict(self):
+        new = {}
+        new["name"] = self.name
+        new["price"] = self.price
+        new["suggest"] = self.suggest
         print(new, type(new))
