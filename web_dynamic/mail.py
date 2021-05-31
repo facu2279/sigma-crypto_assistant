@@ -17,7 +17,6 @@ os.system("echo -e 'Subject: hola \n\n " + content + "' | ssmtp tdecastroguelfi5
 """
 users = persistence.traer_users()
 
-for i in range(0, len(users)):
+for i in range(0, len(users), 2):
     print("nombre:", users[i])
     print("correo:", users[i + 1])
-    i = i + 2
