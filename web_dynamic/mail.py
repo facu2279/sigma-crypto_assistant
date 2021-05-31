@@ -6,13 +6,15 @@ Made by Facundo Diaz - Tomas De Castro - Tadeo Grach for Holberton School 2021
 """ IMPORTS EXTERN MODULES """
 import sys
 import os
+import time
 sys.path.append('/home/ubuntu/proyecto_final')
 
 """ IMPORTS FILES """
 import persistence
 
 os.system('su Sigma')
-os.system('sigma\n')
+time.sleep(2)
+os.system('echo -e "sigma\n"')
 """
 users = persistence.traer_users()
 resumen = "  no hay info para darte my king"
