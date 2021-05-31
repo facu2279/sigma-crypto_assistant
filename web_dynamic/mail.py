@@ -12,12 +12,5 @@ sys.path.append('/home/ubuntu/proyecto_final')
 import persistence
 import entities
 
-persistence.traer_users()
-"""
-subject = "subject"
-content = "content"
-
-os.system("clear")
-
-echo -e "{}: {}".format(subject, content) | ssmtp tdecastroguelfi56@gmail.com
-"""
+content = "contenido"
+os.system("echo -e 'Subject: hola \n\n " + content + "' | ssmtp tdecastroguelfi56@gmail.com")
