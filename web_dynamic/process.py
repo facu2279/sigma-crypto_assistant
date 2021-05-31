@@ -31,7 +31,7 @@ while(1):
     persistence.save_price_doge(doge)"""
     precio_btc = persistence.traer_ultimo_precio_btc()
     name = "BTC"
-    suggest = "el precio del " + name + " es " + btc
+    suggest = "el precio del " + str(name) + " es " + str(btc)
     btc = entities.Coin(name, precio_btc, suggest)
     mail.enviar_correos(suggest)
     break
