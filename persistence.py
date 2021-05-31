@@ -227,4 +227,4 @@ def traer_users():
     for i in resultado:
         for i2 in i:
             arr_correos.append(i2)
-    print(arr_correos, type(arr_correos))
+    return arr_correos
