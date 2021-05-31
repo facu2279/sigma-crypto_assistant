@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 """ """
+import sys
+sys.path.append('/home/ubuntu/proyecto_final/web_dynamic')
+
 import process
 from flask import Flask, render_template
 
