@@ -217,3 +217,11 @@ def insert_new_user(name, mail):
     consulta = nuevaconexion.cursor()
     consulta.execute("INSERT INTO users_sigma (name, mail) VALUES ('" + name  +"', '" + mail +"');")
     nuevaconexion.commit()
+
+def traer_users():
+    ewxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
+    consulta = newxd.cursor()
+    consulta.execute("SELECT name, mail FROM users_sigma;")
+    resultado = consulta.fetchall()
+    for i in resultado:
+        print(i, type(i))
