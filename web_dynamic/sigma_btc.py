@@ -15,7 +15,7 @@ def bitcoin():
     price = process.btc.price
     name = process.btc.name
     suggest = process.btc.suggest
-    render_template('bitcoin.html', price=price, name=name, suggest=suggest)
+    render_template('/var/www/html/bitcoin.html', price=price, name=name, suggest=suggest)
 
 if __name__ == "__main__":
     """ Main Function """
