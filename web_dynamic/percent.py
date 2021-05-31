@@ -11,3 +11,8 @@ sys.path.append('/home/ubuntu/proyecto_final')
 
 """ IMPORTS FILES """
 import persistence
+
+viejo = persistence.traer_masviejo_precio_btc()
+nuevo = persistence.traer_ultimo_precio_btc()
+
+print(viejo, nuevo)
