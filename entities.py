@@ -15,3 +15,7 @@ class Coin:
         self.name = name
         self.price = price
         self.suggest = suggest
+
+    def to_json(self):
+        new = self.json()
+        print(new, type(new))
