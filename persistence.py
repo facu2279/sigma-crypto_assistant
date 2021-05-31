@@ -219,7 +219,7 @@ def insert_new_user(name, mail):
     nuevaconexion.commit()
 
 def traer_users():
-    ewxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
+    newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = newxd.cursor()
     consulta.execute("SELECT name, mail FROM users_sigma;")
     resultado = consulta.fetchall()
