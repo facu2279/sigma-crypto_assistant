@@ -13,11 +13,9 @@ import persistence
 
 
 users = persistence.traer_users()
-resumen = "aun no hay info para darte my king"
+resumen = "  no hay info para darte my king"
 for i in range(0, len(users), 2):
-    content = "Buenas tardes"
-    print("enviando correo a ", users[i])
-    print("que su direccion es", users[i + 1])
+    content = "Buenas tardes "
     nombre = str(users[i])
     correo = str(users[i + 1])
     content = content + nombre + resumen
