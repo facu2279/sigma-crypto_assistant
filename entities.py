@@ -21,4 +21,4 @@ class Coin:
         new["name"] = self.name
         new["price"] = self.price
         new["suggest"] = self.suggest
-        print(new, type(new))
+        return new
