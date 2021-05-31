@@ -9,8 +9,11 @@ sys.path.append('/home/ubuntu/proyecto_final')
 """ IMPORTS FILES """
 import persistence
 import entities 
+import web_dynamic.mail as mail
 
 precio_btc = persistence.traer_ultimo_precio_btc()
 name = "BTC"
 suggest = "va a subir"
 btc = entities.Coin(name, precio_btc, suggest)
+resumen = "va subir el btc pa"
+mail.enviar_correos(resumen)
