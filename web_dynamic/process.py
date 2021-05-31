@@ -8,9 +8,10 @@ sys.path.append('/home/ubuntu/proyecto_final')
 
 """ IMPORTS FILES """
 import persistence
-import entities
+import entities 
 
 precio_btc = persistence.traer_ultimo_precio_btc()
 name = "BTC"
 suggest = "va a subir"
 btc = entities.Coin(name, precio_btc, suggest)
+print("name: {}, suggest: {}, price: {}.".format(btc.name, btc.price, btc.suggest))
