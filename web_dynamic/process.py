@@ -33,5 +33,5 @@ while(1):
     name = "BTC"
     suggest = "el precio del " + str(name) + " es " + str(btc)
     btc = entities.Coin(name, precio_btc, suggest)
-    mail.enviar_correos(suggest)
+    """mail.enviar_correos(suggest)"""
     break
