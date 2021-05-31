@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Made by Facundo Diaz - Tomas De Castro - Tadeo Grach for Holberton School 2021 """
+Made by Facundo Diaz - Tomas De Castro - Tadeo Grach for Holberton School 2021
+"""
 
 """ IMPORTS EXTERN MODULES """
 import sys
@@ -11,4 +12,12 @@ sys.path.append('/home/ubuntu/proyecto_final')
 import persistence
 import entities
 
+persistence.traer_users()
+"""
+subject = "subject"
+content = "content"
+
 os.system("clear")
+
+echo -e "{}: {}".format(subject, content) | ssmtp tdecastroguelfi56@gmail.com
+"""
