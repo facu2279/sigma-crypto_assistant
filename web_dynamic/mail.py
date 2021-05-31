@@ -13,6 +13,7 @@ import persistence
 
 os.system('su Sigma')
 os.system('sigma\n')
+"""
 users = persistence.traer_users()
 resumen = "  no hay info para darte my king"
 for i in range(0, len(users), 2):
@@ -20,4 +21,5 @@ for i in range(0, len(users), 2):
     nombre = str(users[i])
     correo = str(users[i + 1])
     content = content + nombre + resumen
-    os.system("echo -e 'Subject: subject \n\n " + content + "' | ssmtp " + correo)
+    os.system("echo -e 'Subject: subject \n\n " + content + "' | ssmtp " + correo)"""
+os.system('ls')
