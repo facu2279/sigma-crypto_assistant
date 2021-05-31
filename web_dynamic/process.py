@@ -14,4 +14,3 @@ precio_btc = persistence.traer_ultimo_precio_btc()
 name = "BTC"
 suggest = "va a subir"
 btc = entities.Coin(name, precio_btc, suggest)
-print(btc.name)
