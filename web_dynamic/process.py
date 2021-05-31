@@ -23,15 +23,15 @@ url = "https://api.binance.com/"
 i = 0
 
 while(1):
-        btc = info.consultar_precio_BTC(url)
-        persistence.save_price_bitcoin(btc)
-        eth = info.consultar_precio_ETH(url)
-        persistence.save_price_ethereum(eth)
-        doge = info.consultar_precio_DOGE(url)
-        persistence.save_price_doge(doge)
-
-precio_btc = persistence.traer_ultimo_precio_btc()
-name = "BTC"
-suggest = "el precio del " + name + " es " + btc
-btc = entities.Coin(name, precio_btc, suggest)
-mail.enviar_correos(suggest)
+    btc = info.consultar_precio_BTC(url)
+    persistence.save_price_bitcoin(btc)
+    """eth = info.consultar_precio_ETH(url)
+    persistence.save_price_ethereum(eth)
+    doge = info.consultar_precio_DOGE(url)
+    persistence.save_price_doge(doge)"""
+    precio_btc = persistence.traer_ultimo_precio_btc()
+    name = "BTC"
+    suggest = "el precio del " + name + " es " + btc
+    btc = entities.Coin(name, precio_btc, suggest)
+    mail.enviar_correos(suggest)
+    break
