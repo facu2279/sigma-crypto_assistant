@@ -36,7 +36,7 @@ while(i < 100):
     btc = entities.Coin(name, precio_btc, suggest)
     print("creo el object para la pagina web")
     print("llamo a enviar correos")
-    resume = "El precio del BTC es " +  str(btc.price) + "<br> El precio del DOGE es" + str(doge) + "<br> El precio del ETHEREUM es " + str(eth)
+    resume = "El precio del BTC es " +  str(btc.price) + " El precio del DOGE es" + str(doge) + " El precio del ETHEREUM es " + str(eth)
     i = i + 1
     time.sleep(5)
     if i == 3:
