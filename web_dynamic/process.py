@@ -14,6 +14,7 @@ import persistence
 import entities 
 import web_dynamic.mail as mail
 import info
+import percent
 
 """ In case url 1 is not changing for these
 url = "https://api2.binance.com/"
@@ -42,4 +43,11 @@ while(i < 100):
     if i == 3:
         mail.enviar_correos(resume)
         break"""
+    res = percent.detectar_constantes()
+    if res == 0:
+        print("no hay variacion")
+    elif res == 1:
+        print("bajo constante")
+    else:
+        print("subio constante")
     break
