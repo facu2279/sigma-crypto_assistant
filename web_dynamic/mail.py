@@ -18,7 +18,5 @@ def enviar_correos(resumen):
         content = "Buenas tardes "
         nombre = str(users[i]) + " "
         correo = str(users[i + 1])
-        correo = "ddiiaazzfacu@gmail.com"
-        """"content = content + nombre + resumen"""
-        content = resumen
+        content = content + nombre + resumen
         os.system("echo -e 'Subject: subject \n\n " + content + "' | ssmtp " + correo)
