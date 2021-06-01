@@ -22,16 +22,22 @@ url = "https://api3.binance.com/"
 url = "https://api.binance.com/"
 i = 0
 
-while(1):
+while(i < 100):
     btc = info.consultar_precio_BTC(url)
     persistence.save_price_bitcoin(btc)
     eth = info.consultar_precio_ETH(url)
     persistence.save_price_ethereum(eth)
     doge = info.consultar_precio_DOGE(url)
     persistence.save_price_doge(doge)
+    print("Actualice precios", btc, doge, eth)
     precio_btc = persistence.traer_ultimo_precio_btc()
     name = "BTC"
     suggest = "el precio del " + str(name) + " es " + str(btc)
     btc = entities.Coin(name, precio_btc, suggest)
-    """mail.enviar_correos(suggest)"""
-    break
+    print("creo el object para la pagina web")
+    resume = "El precio del BTC es" +  str(btc.price) + "\n El precio del DOGE es" + str(doge) + "\n El precio del ETHEREUM es " + eth
+    time.sleep(20)
+    i = i + 1
+    if i == 3:
+        mail.enviar_correos(resume)
+        breaj;
