@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/bitcoin', strict_slashes=False)
 def bitcoin():
     """ """
-    return "<h1 style='color:blue'>Hello There!</h1>"
+    render_template('bitcoin.html', price=price, name=name, suggest=suggest)
 
 if __name__ == "__main__":
     """ Main Function """
