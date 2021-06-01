@@ -17,3 +17,6 @@ viejo = persistence.traer_masviejo_precio_btc()
 nuevo = persistence.traer_ultimo_precio_btc()
 viejo = int(viejo)
 nuevo = int(nuevo)
+
+porcentaje = viejo / 100 * (viejo-nuevo)
+print(viejo, nuevo, porcentaje)
