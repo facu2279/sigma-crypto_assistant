@@ -15,6 +15,16 @@ def bitcoin():
     suggest = process.btc.suggest
     render_template('bitcoin.html', price=price, name=name, suggest=suggest)
 
+@app.route('/team', strict_slashes=False)
+def team():
+    """ """
+    render_template('team.html')
+
+@app.route('/index', strict_slashes=False)
+def index():
+    """"""
+    render_template('index.html')
+
 if __name__ == "__main__":
     """ Main Function """
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', port='5000')
