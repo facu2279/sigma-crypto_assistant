@@ -35,7 +35,9 @@ while(i < 100):
     suggest = "el precio del " + str(name) + " es " + str(btc)
     btc = entities.Coin(name, precio_btc, suggest)
     print("creo el object para la pagina web")
+    print("llamo a enviar correos")
     resume = "El precio del BTC es " +  str(btc.price) + "<br> El precio del DOGE es" + str(doge) + "<br> El precio del ETHEREUM es " + str(eth)
+    resume = "<HTML><HEAD>Sigma</HEAD><BODY><img src='static/img/sigma_logo.png'><h1>" + resume + "</h1></BODY></HTML>"
     i = i + 1
     if i == 3:
         mail.enviar_correos(resume)
