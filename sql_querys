@@ -1,3 +1,6 @@
 use sigma;
-SELECT * FROM history_coin;
+SELECT * FROM history_coin WHERE name='BTC';
+SELECT COUNT(*) FROM history_coin WHERE name='BTC';
+SELECT * FROM history_coin WHERE name='DOGE';
+SELECT * FROM history_coin WHERE name='ETH';
 SELECT * FROM users_sigma;
