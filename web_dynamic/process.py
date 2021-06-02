@@ -23,27 +23,30 @@ url = "https://api3.binance.com/"
 url = "https://api.binance.com/"
 i = 0
 
-while(i < 100):
-    btc = info.consultar_precio_BTC(url)
+while(i < 1500):
+    btc = "33333"
+    doge = "0.11111"
+    eth = "2222"
+    """btc = info.consultar_precio_BTC(url)"""
     persistence.save_price_bitcoin(btc)
-    eth = info.consultar_precio_ETH(url)
+    """eth = info.consultar_precio_ETH(url)"""
     persistence.save_price_ethereum(eth)
-    doge = info.consultar_precio_DOGE(url)
+    """doge = info.consultar_precio_DOGE(url)"""
     persistence.save_price_doge(doge)
     print("Actualice precios", btc, doge, eth)
-    precio_btc = persistence.traer_ultimo_precio_btc()
+    """precio_btc = persistence.traer_ultimo_precio_btc()"""
     name = "BTC"
     suggest = "el precio del " + str(name) + " es " + str(btc)
-    btc = entities.Coin(name, precio_btc, suggest)
+    btc = entities.Coin(name, btc, suggest)
+    i = i + 1
     print("creo el object para la pagina web")
     """print("llamo a enviar correos")
     resume = "El precio del BTC es " +  str(btc.price) + " El precio del DOGE es" + str(doge) + " El precio del ETHEREUM es " + str(eth)
-    i = i + 1
     time.sleep(5)
     if i == 3:
         mail.enviar_correos(resume)
         break"""
-    res = percent.detectar_constantes()
+    """res = percent.detectar_constantes()
     mail.enviar_correos("matate fraca")
     if res == 0:
         print("no hay variacion")
@@ -51,4 +54,4 @@ while(i < 100):
         print("bajo constante")
     else:
         print("subio constante")
-    break
+    break"""

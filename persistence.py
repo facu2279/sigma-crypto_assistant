@@ -17,12 +17,12 @@ MY_D = "sigma"
 def save_price_bitcoin(price):
     nuevaconexion = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = nuevaconexion.cursor()
-    consulta.execute("SELECT count(*) FROM history_btc;")
+    consulta.execute("SELECT count(*) FROM history_coin WHERE name='BTC';")
     resultado = consulta.fetchall()
     for i in resultado:
         for i2 in i:
             cant_items = i2
-    if cant_items <= 288:
+    if cant_items <= 1440:
         insertar_btc(str(price))
     else:
         borrar_ultimo_btc(str(price))
@@ -30,13 +30,13 @@ def save_price_bitcoin(price):
 def insertar_btc(price):
     nueva = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = nueva.cursor()
-    consulta.execute("INSERT INTO history_btc (name, price) VALUES ('BTC', " + str(price) + ");")
+    consulta.execute("INSERT INTO history_coin (name, price) VALUES ('BTC', " + str(price) + ");")
     nueva.commit()
 
 def borrar_ultimo_btc(price):
     newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = newxd.cursor()
-    consulta.execute("SELECT id FROM history_btc ORDER BY id ASC LIMIT 1;")
+    consulta.execute("SELECT id FROM history_coin WHERE name='BTC' ORDER BY id ASC LIMIT 1;")
     resultado = consulta.fetchall()
     for i in resultado:
         for i2 in i:
@@ -47,14 +47,14 @@ def borrar_ultimo_btc(price):
 def borrar_item_btc(id, price):
     nuevaxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = nuevaxd.cursor()
-    consulta.execute("DELETE FROM history_btc WHERE id ="+ id)
+    consulta.execute("DELETE FROM history_coin WHERE id ="+ id)
     nuevaxd.commit()
     insertar_btc(str(price))
 
 def traer_ultimo_precio_btc():
     newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = newxd.cursor()
-    consulta.execute("SELECT price FROM history_btc ORDER BY id DESC LIMIT 1;")
+    consulta.execute("SELECT price FROM history_coin WHERE name='BTC' ORDER BY id DESC LIMIT 1;")
     resultado = consulta.fetchall()
     for i in resultado:
         for i2 in i:
@@ -64,7 +64,7 @@ def traer_ultimo_precio_btc():
 def traer_ultimos_precios_btc():
     newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = newxd.cursor()
-    consulta.execute("SELECT price FROM history_btc ORDER BY id DESC LIMIT 12;")
+    consulta.execute("SELECT price FROM history_coin WHERE name='BTC' ORDER BY id DESC LIMIT 60;")
     resultado = consulta.fetchall()
     arr_precios = []
     for i in resultado:
@@ -75,7 +75,7 @@ def traer_ultimos_precios_btc():
 def traer_masviejo_precio_btc():
     newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = newxd.cursor()
-    consulta.execute("SELECT price FROM history_btc ORDER BY id ASC LIMIT 1;")
+    consulta.execute("SELECT price FROM history_coin WHERE name='BTC' ORDER BY id ASC LIMIT 1;")
     resultado = consulta.fetchall()
     for i in resultado:
         for i2 in i:
@@ -95,12 +95,12 @@ def traer_masviejo_precio_btc():
 def save_price_doge(price):
         nuevaconexion = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
         consulta = nuevaconexion.cursor()
-        consulta.execute("SELECT COUNT(*) FROM history_doge;")
+        consulta.execute("SELECT COUNT(*) FROM history_coin SELECT price WHERE name='DOGE';")
         resultado = consulta.fetchall()
         for i in resultado:
             for i2 in i:
                 cant_items = i2
-        if cant_items <= 288:
+        if cant_items <= 1440:
             insertar_doge(str(price))
         else:
             borrar_ultimo_doge(str(price))
@@ -108,13 +108,13 @@ def save_price_doge(price):
 def insertar_doge(price):
     nueva = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = nueva.cursor()
-    consulta.execute("INSERT INTO history_doge (name, price) VALUES ('DOGE', " + str(price) + ");")
+    consulta.execute("INSERT INTO history_coin (name, price) VALUES ('DOGE', " + str(price) + ");")
     nueva.commit()
 
 def borrar_ultimo_doge(price):
     newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = newxd.cursor()
-    consulta.execute("SELECT id FROM history_doge ORDER BY id ASC LIMIT 1;")
+    consulta.execute("SELECT id FROM history_coin WHERE name='DOGE' ORDER BY id ASC LIMIT 1;")
     resultado = consulta.fetchall()
     for i in resultado:
         for i2 in i:
@@ -125,14 +125,14 @@ def borrar_ultimo_doge(price):
 def borrar_item_doge(id, price):
     nuevaxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = nuevaxd.cursor()
-    consulta.execute("DELETE FROM history_doge WHERE id ="+ id)
+    consulta.execute("DELETE FROM history_coin WHERE id ="+ id)
     nuevaxd.commit()
     insertar_doge(str(price))
 
 def traer_ultimo_precio_doge():
     newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = newxd.cursor()
-    consulta.execute("SELECT price FROM history_doge ORDER BY id DESC LIMIT 1;")
+    consulta.execute("SELECT price FROM history_coin WHERE name='DOGE' ORDER BY id DESC LIMIT 1;")
     resultado = consulta.fetchall()
     for i in resultado:
         for i2 in i:
@@ -142,7 +142,7 @@ def traer_ultimo_precio_doge():
 def traer_ultimos_precios_doge():
     newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = newxd.cursor()
-    consulta.execute("SELECT price FROM history_doge ORDER BY id DESC LIMIT 12;")
+    consulta.execute("SELECT price FROM history_coin WHERE name='DOGE' ORDER BY id DESC LIMIT 60;")
     resultado = consulta.fetchall()
     arr_precios = []
     for i in resultado:
@@ -162,12 +162,12 @@ def traer_ultimos_precios_doge():
 def save_price_ethereum(price):
     nuevaconexion = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = nuevaconexion.cursor()
-    consulta.execute("SELECT COUNT(*) FROM history_eth;")
+    consulta.execute("SELECT COUNT(*) FROM history_coin;")
     resultado = consulta.fetchall()
     for i in resultado:
         for i2 in i:
             cant_items = i2
-    if cant_items <= 288:
+    if cant_items <= 1440:
         insertar_eth(str(price))
     else:
         borrar_ultimo_eth(str(price))
@@ -175,13 +175,13 @@ def save_price_ethereum(price):
 def insertar_eth(price):
     nueva = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = nueva.cursor()
-    consulta.execute("INSERT INTO history_eth (name, price) VALUES ('ETH', " + str(price) + ");")
+    consulta.execute("INSERT INTO history_coin (name, price) VALUES ('ETH', " + str(price) + ");")
     nueva.commit()
 
 def borrar_ultimo_eth(price):
     newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = newxd.cursor()
-    consulta.execute("SELECT id FROM history_eth ORDER BY id ASC LIMIT 1;")
+    consulta.execute("SELECT id FROM history_coin WHERE name='ETH' ORDER BY id ASC LIMIT 1;")
     resultado = consulta.fetchall()
     for i in resultado:
         for i2 in i:
@@ -192,14 +192,14 @@ def borrar_ultimo_eth(price):
 def borrar_item_eth(id, price):
     nuevaxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = nuevaxd.cursor()
-    consulta.execute("DELETE FROM history_eth WHERE id ="+ id)
+    consulta.execute("DELETE FROM history_coin WHERE id ="+ id)
     nuevaxd.commit()
     insertar_eth(str(price))
 
 def traer_ultimo_precio_eth():
     newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = newxd.cursor()
-    consulta.execute("SELECT price FROM history_eth ORDER BY id DESC LIMIT 1;")
+    consulta.execute("SELECT price FROM history_coin WHERE name='ETH' ORDER BY id DESC LIMIT 1;")
     resultado = consulta.fetchall()
     for i in resultado:
         for i2 in i:
@@ -209,7 +209,7 @@ def traer_ultimo_precio_eth():
 def traer_ultimos_precios_eth():
     newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = newxd.cursor()
-    consulta.execute("SELECT price FROM history_eth ORDER BY id DESC LIMIT 12;")
+    consulta.execute("SELECT price FROM history_coin WHERE name='ETH' ORDER BY id DESC LIMIT 60;")
     resultado = consulta.fetchall()
     arr_precios = []
     for i in resultado:
