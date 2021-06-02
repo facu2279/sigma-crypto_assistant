@@ -14,6 +14,8 @@ sys.path.append('/home/ubuntu/proyecto_final')
 import persistence
 
 """ CALCULA CAMBIO EN 24hs """
+viejo = 1
+nuevo = 1
 viejo = persistence.traer_masviejo_precio_btc()
 nuevo = persistence.traer_ultimo_precio_btc()
 viejo = int(viejo)

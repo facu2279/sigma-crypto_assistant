@@ -79,10 +79,8 @@ def traer_ultimos_precios_btc():
 def traer_masviejo_precio_btc():
     newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = newxd.cursor()
-    price = 0
     consulta.execute("SELECT price FROM history_coin WHERE name='BTC' ORDER BY id ASC LIMIT 1;")
     resultado = consulta.fetchall()
-    price = 0
     for i in resultado:
         for i2 in i:
             price = i2
@@ -93,7 +91,6 @@ def traer_mayor_24_btc():
     consulta = newxd.cursor()
     consulta.execute("SELECT price FROM history_coin WHERE name='BTC' ORDER BY price DESC LIMIT 1;")
     resultado = consulta.fetchall()
-    res = 1
     for i in resultado:
         for i2 in i:
             res = i2
@@ -104,7 +101,6 @@ def traer_menor_24_btc():
     consulta = newxd.cursor()
     consulta.execute("SELECT price FROM history_coin WHERE name='BTC' ORDER BY price ASC LIMIT 1;")
     resultado = consulta.fetchall()
-    res = 1
     for i in resultado:
         for i2 in i:
             res = i2
@@ -160,7 +156,6 @@ def traer_ultimo_precio_doge():
     consulta = newxd.cursor()
     consulta.execute("SELECT price FROM history_coin WHERE name='DOGE' ORDER BY id DESC LIMIT 1;")
     resultado = consulta.fetchall()
-    price = 1
     for i in resultado:
         for i2 in i:
             price = i2
@@ -183,7 +178,6 @@ def traer_masviejo_precio_doge():
     consulta = newxd.cursor()
     consulta.execute("SELECT price FROM history_coin WHERE name='DOGE' ORDER BY id ASC LIMIT 1;")
     resultado = consulta.fetchall()
-    price = 1
     for i in resultado:
         for i2 in i:
             price = i2
@@ -194,7 +188,6 @@ def traer_mayor_24_doge():
     consulta = newxd.cursor()
     consulta.execute("SELECT price FROM history_coin WHERE name='DOGE' ORDER BY price DESC LIMIT 1;")
     resultado = consulta.fetchall()
-    res = 1
     for i in resultado:
         for i2 in i:
             res = i2
@@ -205,7 +198,6 @@ def traer_menor_24_doge():
     consulta = newxd.cursor()
     consulta.execute("SELECT price FROM history_coin WHERE name='DOGE' ORDER BY price ASC LIMIT 1;")
     resultado = consulta.fetchall()
-    res = 1
     for i in resultado:
         for i2 in i:
             res = i2
@@ -261,7 +253,6 @@ def traer_ultimo_precio_eth():
     consulta = newxd.cursor()
     consulta.execute("SELECT price FROM history_coin WHERE name='ETH' ORDER BY id DESC LIMIT 1;")
     resultado = consulta.fetchall()
-    price = 1
     for i in resultado:
         for i2 in i:
             price = i2
@@ -284,7 +275,6 @@ def traer_masviejo_precio_eth():
     consulta = newxd.cursor()
     consulta.execute("SELECT price FROM history_coin WHERE name='ETH' ORDER BY id ASC LIMIT 1;")
     resultado = consulta.fetchall()
-    price = 1
     for i in resultado:
         for i2 in i:
             price = i2
@@ -295,7 +285,6 @@ def traer_mayor_24_eth():
     consulta = newxd.cursor()
     consulta.execute("SELECT price FROM history_coin WHERE name='ETH' ORDER BY price DESC LIMIT 1;")
     resultado = consulta.fetchall()
-    res = 1
     for i in resultado:
         for i2 in i:
             res = i2
@@ -306,7 +295,6 @@ def traer_menor_24_eth():
     consulta = newxd.cursor()
     consulta.execute("SELECT price FROM history_coin WHERE name='ETH' ORDER BY price ASC LIMIT 1;")
     resultado = consulta.fetchall()
-    res = 1
     for i in resultado:
         for i2 in i:
             res = i2
