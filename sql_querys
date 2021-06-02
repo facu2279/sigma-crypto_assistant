@@ -1,5 +1,3 @@
 use sigma;
-SELECT * FROM history_btc;
-SELECT * FROM history_eth;
-SELECT * FROM history_doge;
+SELECT * FROM history_coin;
 SELECT * FROM users_sigma;
