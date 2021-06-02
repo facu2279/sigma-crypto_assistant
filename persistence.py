@@ -226,7 +226,7 @@ def insert_new_tendencia(name, average, min_price, max_price):
     nuevaconexion = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = nuevaconexion.cursor()
     date = "2012-12-21 23:10:30"
-    consulta.execute("INSERT INTO tendencias (name, average, max, min, dateprice) VALUES ('" + name  +"', '" + average +"', '" + max_price + "', '" + min_price + "', '" + date + "');")
+    consulta.execute("INSERT INTO tendencias (name, average, max, min, date) VALUES ('" + name  +"', '" + average +"', '" + max_price + "', '" + min_price + "', '" + date + "');")
     nuevaconexion.commit()
 
 
