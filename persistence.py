@@ -171,6 +171,35 @@ def traer_ultimos_precios_doge():
             arr_precios.append(i2)
     return arr_precios
             
+def traer_masviejo_precio_doge():
+    newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
+    consulta = newxd.cursor()
+    consulta.execute("SELECT price FROM history_coin WHERE name='DOGE' ORDER BY id ASC LIMIT 1;")
+    resultado = consulta.fetchall()
+    for i in resultado:
+        for i2 in i:
+            price = i2
+    return price
+
+def traer_mayor_24_doge():
+    newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
+    consulta = newxd.cursor()
+    consulta.execute("SELECT price FROM history_coin WHERE name='DOGE' ORDER BY price DESC LIMIT 1;")
+    resultado = consulta.fetchall()
+    for i in resultado:
+        for i2 in i:
+            res = i2
+    return res
+
+def traer_menor_24_doge():
+    newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
+    consulta = newxd.cursor()
+    consulta.execute("SELECT price FROM history_coin WHERE name='DOGE' ORDER BY price ASC LIMIT 1;")
+    resultado = consulta.fetchall()
+    for i in resultado:
+        for i2 in i:
+            res = i2
+    return res
 
 
 
@@ -238,6 +267,42 @@ def traer_ultimos_precios_eth():
             arr_precios.append(i2)
     return arr_precios
             
+def traer_masviejo_precio_eth():
+    newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
+    consulta = newxd.cursor()
+    consulta.execute("SELECT price FROM history_coin WHERE name='ETH' ORDER BY id ASC LIMIT 1;")
+    resultado = consulta.fetchall()
+    for i in resultado:
+        for i2 in i:
+            price = i2
+    return price
+
+def traer_mayor_24_eth():
+    newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
+    consulta = newxd.cursor()
+    consulta.execute("SELECT price FROM history_coin WHERE name='ETH' ORDER BY price DESC LIMIT 1;")
+    resultado = consulta.fetchall()
+    for i in resultado:
+        for i2 in i:
+            res = i2
+    return res
+
+def traer_menor_24_eth():
+    newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
+    consulta = newxd.cursor()
+    consulta.execute("SELECT price FROM history_coin WHERE name='ETH' ORDER BY price ASC LIMIT 1;")
+    resultado = consulta.fetchall()
+    for i in resultado:
+        for i2 in i:
+            res = i2
+    return res
+
+
+
+
+
+
+
 
 """ TENDENCIAS """
 
@@ -247,6 +312,11 @@ def insert_new_tendencia(name, average, min_price, max_price):
     date = str(datetime.now())
     consulta.execute("INSERT INTO tendencias (name, average, max, min, date) VALUES ('" + name  +"', '" + average +"', '" + max_price + "', '" + min_price + "', '" + date + "');")
     nuevaconexion.commit()
+
+
+
+
+
 
 
 """ USERS INSERTS """
