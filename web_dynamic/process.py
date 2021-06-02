@@ -23,7 +23,8 @@ url = "https://api3.binance.com/"
 url = "https://api.binance.com/"
 i = 0
 
-while(i < 2):
+while(i < 1500):
+    print("vuelta numero", i)
     btc = info.consultar_precio_BTC(url)
     persistence.save_price_bitcoin(btc)
     eth = info.consultar_precio_ETH(url)
@@ -36,12 +37,27 @@ while(i < 2):
         min_price_doge = min(ultimos)
         max_price_doge = max(ultimos)
         persistence.insert_new_tendencia("DOGE", str(average_doge), str(min_price_doge), str(max_price_doge))
+
+        ultimos = persistence.traer_ultimos_precios_btc()
+        average_btc = sum(ultimos) / len(ultimos)
+        min_price_btc = min(ultimos)
+        max_price_btc = max(ultimos)
+        persistence.insert_new_tendencia("BTC", str(average_btc), str(min_price_btc), str(max_price_btc))
+
+        ultimos = persistence.traer_ultimos_precios_eth()
+        average_eth = sum(ultimos) / len(ultimos)
+        min_price_eth = min(ultimos)
+        max_price_eth = max(ultimos)
+        persistence.insert_new_tendencia("ETH", str(average_eth), str(min_price_eth), str(max_price_eth))
+        
+        print("Inserte una nueva tendencia doge", min_price_doge, max_price_doge, average_doge)
+        print("Inserte una nueva tendencia btc", min_price_btc, max_price_btc, average_btc)
+        print("Inserte una nueva tendencia eth", min_price_eth, max_price_eth, average_eth)
+    
+
     name = "DOGE"
     suggest = "el precio del " + str(name) + " es " + str(doge)
     doge = entities.Coin(name, doge, suggest)
-    max_doge_24 = persistence.traer_mayor_24_doge()
-    min_doge_24 = persistence.traer_menor_24_doge()
-    print(max_doge_24, min_doge_24)
 
     i = i + 1
 
