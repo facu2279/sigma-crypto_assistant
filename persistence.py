@@ -78,6 +78,7 @@ def traer_ultimos_precios_btc():
 def traer_masviejo_precio_btc():
     newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = newxd.cursor()
+    price = 0
     consulta.execute("SELECT price FROM history_coin WHERE name='BTC' ORDER BY id ASC LIMIT 1;")
     resultado = consulta.fetchall()
     for i in resultado:
