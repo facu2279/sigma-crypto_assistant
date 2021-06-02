@@ -2,30 +2,20 @@ DROP DATABASE IF EXISTS sigma;
 CREATE DATABASE sigma;
 USE sigma;
 
-CREATE TABLE history_btc (
+CREATE TABLE history_coin (
     id int NOT NULL AUTO_INCREMENT,
         name varchar(4),
 	    price varchar(15),
 	        PRIMARY KEY (id)
 		);
 
-CREATE TABLE history_eth (
-    id int NOT NULL AUTO_INCREMENT,
+CREATE TABLE tendencias (
+    id_tend int NOT NULL AUTO_INCREMENT,
         name varchar(4),
-	    price varchar(15),
-	        PRIMARY KEY (id)
-		);
-
-CREATE TABLE history_doge (
-    id int NOT NULL AUTO_INCREMENT,
-        name varchar(4),
-	    price varchar(15),
-	        PRIMARY KEY (id)
-		);
-
-CREATE TABLE suggestions (
-    id_suggest int NOT NULL AUTO_INCREMENT,
-        coin varchar(4),
+		average varchar(25),
+		max varchar(25),
+		min varchar(25),
+		dateprice int,
 	    PRIMARY KEY (id_suggest)
 	    );
 
@@ -40,3 +30,19 @@ CREATE TABLE users_sigma (
 INSERT INTO users_sigma (name, mail) VALUES ("Facundo", "ddiiaazzfacu@gmail.com");
 INSERT INTO users_sigma (name, mail) VALUES ("Tadeo", "tade.g.17@gmail.com");
 INSERT INTO users_sigma (name, mail) VALUES ("Tomas", "tdecastroguelfi56@gmail.com");
+
+INSERT INTO history_coin (name, price) VALUES ("BTC", "34234");
+INSERT INTO history_coin (name, price) VALUES ("BTC", "34235");
+INSERT INTO history_coin (name, price) VALUES ("BTC", "34236");
+INSERT INTO history_coin (name, price) VALUES ("BTC", "34237");
+INSERT INTO history_coin (name, price) VALUES ("BTC", "34238");
+
+INSERT INTO history_coin (name, price) VALUES ("DOGE", "0.6545");
+INSERT INTO history_coin (name, price) VALUES ("DOGE", "0.6544");
+INSERT INTO history_coin (name, price) VALUES ("DOGE", "0.6543");
+INSERT INTO history_coin (name, price) VALUES ("DOGE", "0.6542");
+
+INSERT INTO history_coin (name, price) VALUES ("ETH", "2545");
+INSERT INTO history_coin (name, price) VALUES ("ETH", "2542");
+INSERT INTO history_coin (name, price) VALUES ("ETH", "2543");
+INSERT INTO history_coin (name, price) VALUES ("ETH", "2545");
