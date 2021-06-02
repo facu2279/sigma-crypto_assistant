@@ -25,7 +25,7 @@ i = 0
 
 while(i < 2):
     btc = info.consultar_precio_BTC(url)
-    if i == 1:
+    if i == 2:
         btc = "99999"
     persistence.save_price_bitcoin(btc)
     eth = info.consultar_precio_ETH(url)
