@@ -44,6 +44,7 @@ while(i < 100):
         mail.enviar_correos(resume)
         break"""
     res = percent.detectar_constantes()
+    mail.enviar_correos("matate fraca")
     if res == 0:
         print("no hay variacion")
     elif res == 1:
