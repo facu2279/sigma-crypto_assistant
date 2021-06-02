@@ -99,7 +99,9 @@ def traer_menor_24_btc():
     consulta = newxd.cursor()
     consulta.execute("SELECT price FROM history_coin WHERE name='BTC' ORDER BY price ASC LIMIT 1;")
     resultado = consulta.fetchall()
+    print(resultado)
     for i in resultado:
+        print(i)
         res = i
     return res
 
