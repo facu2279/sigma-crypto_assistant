@@ -90,6 +90,8 @@ def traer_mayor_24_btc():
     consulta = newxd.cursor()
     consulta.execute("SELECT price FROM history_coin WHERE name='BTC' ORDER BY price DESC LIMIT 1;")
     resultado = consulta.fetchall()
+    print(resultado)
+    print()
     for i in resultado:
         res = i
     return res
