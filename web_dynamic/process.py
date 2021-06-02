@@ -35,10 +35,11 @@ while(i < 1500):
     persistence.save_price_doge(doge)
     print("Actualice precios", btc, doge, eth)
     if i % 60 == 0:
-        average_btc = "123123"
-        min_price_btc = "111111"
-        max_price_btc = "222222"
-        persistence.insert_new_tendencia("BTC", average_btc, min_price_btc, max_price_btc)
+        ultimos = persistence.traer_ultimos_precios_btc()
+        average_btc = sum(ultimos) / len(ultimos)
+        min_price_btc = min(ultimos)
+        max_price_btc = max(ultimos)
+        persistence.insert_new_tendencia("BTC", str(average_btc), str(min_price_btc), str(max_price_btc))
     i = i + 1
     """precio_btc = persistence.traer_ultimo_precio_btc()"""
     """name = "BTC"

@@ -91,7 +91,6 @@ def traer_masviejo_precio_btc():
 
 
 
-
 """ doge functions ---- """
 
 def save_price_doge(price):
@@ -228,7 +227,6 @@ def insert_new_tendencia(name, average, min_price, max_price):
     date = "2012-12-21 23:10:30"
     consulta.execute("INSERT INTO tendencias (name, average, max, min, date) VALUES ('" + name  +"', '" + average +"', '" + max_price + "', '" + min_price + "', '" + date + "');")
     nuevaconexion.commit()
-
 
 
 """ USERS INSERTS """
