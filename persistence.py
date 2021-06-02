@@ -227,7 +227,7 @@ def insert_new_tendencia(name, average, min_price, max_price):
     consulta = nuevaconexion.cursor()
     date = datetime.now()
     print(date)
-    date = int(datetime.strptime(date, '%d/%m/%Y').strftime("%s"))
+    date = int(datetime.strptime(str(date), '%d/%m/%Y').strftime("%s"))
     print(date)
     consulta.execute("INSERT INTO tendencias (name, average, max_price, min_price, dateprice) VALUES ('" + name  +"', '" + average +"', '" + max_price + "', '" + min_price + "', " + date + ");")
     nuevaconexion.commit()
