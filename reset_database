@@ -15,7 +15,7 @@ CREATE TABLE tendencias (
 		average varchar(25),
 		max varchar(25),
 		min varchar(25),
-		dateprice int,
+		date datetime,
 	    PRIMARY KEY (id_tend)
 	    );
 
