@@ -25,8 +25,6 @@ i = 0
 
 while(i < 2):
     btc = info.consultar_precio_BTC(url)
-    if i == 2:
-        btc = "99999"
     persistence.save_price_bitcoin(btc)
     eth = info.consultar_precio_ETH(url)
     persistence.save_price_ethereum(eth)
@@ -41,8 +39,9 @@ while(i < 2):
     name = "BTC"
     suggest = "el precio del " + str(name) + " es " + str(btc)
     btc = entities.Coin(name, btc, suggest)
-    max_btc_24 = persistence.traer_ultimas_24_precios_btc()
-    print(max_price_btc)
+    max_btc_24 = persistence.traer_mayor_24_btc()
+    min_btc_24 = persistence.traer_menor_24_btc()
+    print(max_price_btc, min_btc_24)
 
     i = i + 1
 
