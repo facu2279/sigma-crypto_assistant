@@ -20,7 +20,6 @@ viejo = int(viejo)
 nuevo = int(nuevo)
 
 porcentaje = 100 * (nuevo - viejo) / viejo
-print(viejo, nuevo, porcentaje)
 
 """ """
 def detectar_constantes():
