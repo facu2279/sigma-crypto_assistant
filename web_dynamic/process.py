@@ -31,17 +31,17 @@ while(i < 2):
     doge = info.consultar_precio_DOGE(url)
     persistence.save_price_doge(doge)
     if i % 60 == 0:
-        ultimos = persistence.traer_ultimos_precios_btc()
-        average_btc = sum(ultimos) / len(ultimos)
-        min_price_btc = min(ultimos)
-        max_price_btc = max(ultimos)
-        persistence.insert_new_tendencia("BTC", str(average_btc), str(min_price_btc), str(max_price_btc))
-    name = "BTC"
+        ultimos = persistence.traer_ultimos_precios_eth()
+        average_eth = sum(ultimos) / len(ultimos)
+        min_price_eth = min(ultimos)
+        max_price_eth = max(ultimos)
+        persistence.insert_new_tendencia("ETH", str(average_eth), str(min_price_eth), str(max_price_eth))
+    name = "ETH"
     suggest = "el precio del " + str(name) + " es " + str(btc)
-    btc = entities.Coin(name, btc, suggest)
-    max_btc_24 = persistence.traer_mayor_24_btc()
-    min_btc_24 = persistence.traer_menor_24_btc()
-    print(max_price_btc, min_btc_24)
+    eth = entities.Coin(name, eth, suggest)
+    max_eth_24 = persistence.traer_mayor_24_eth()
+    min_eth_24 = persistence.traer_menor_24_eth()
+    print(max_eth_24, min_eth_24)
 
     i = i + 1
 
