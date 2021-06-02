@@ -29,15 +29,10 @@ def detectar_constantes():
     count = 0
     for i in range(1,12):
         if prev < int(ultimos_precios[i]):
-            print("+")
             count = count + 1
         elif prev > int(ultimos_precios[i]):
-            print("-")
             count = count - 1
-        else:
-            print("=")
         prev = int(ultimos_precios[i])
-        print(ultimos_precios[i])
     if count > 1:
         return(2)
     if count < -1:
