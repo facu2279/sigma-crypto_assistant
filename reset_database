@@ -16,7 +16,7 @@ CREATE TABLE tendencias (
 		max varchar(25),
 		min varchar(25),
 		dateprice int,
-	    PRIMARY KEY (id_suggest)
+	    PRIMARY KEY (id_tend)
 	    );
 
 CREATE TABLE users_sigma (
