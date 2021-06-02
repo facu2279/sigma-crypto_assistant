@@ -162,7 +162,7 @@ def traer_ultimos_precios_doge():
 def save_price_ethereum(price):
     nuevaconexion = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = nuevaconexion.cursor()
-    consulta.execute("SELECT COUNT(*) FROM history_coin;")
+    consulta.execute("SELECT COUNT(*) FROM history_coin WHERE name='ETH';")
     resultado = consulta.fetchall()
     for i in resultado:
         for i2 in i:
