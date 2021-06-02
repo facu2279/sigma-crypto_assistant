@@ -92,7 +92,7 @@ def traer_mayor_24_btc():
     resultado = consulta.fetchall()
     for i in resultado:
         for i2 in i:
-            res = i
+            res = i2
     return res
 
 def traer_menor_24_btc():
@@ -102,7 +102,7 @@ def traer_menor_24_btc():
     resultado = consulta.fetchall()
     for i in resultado:
         for i2 in i:
-            res = i
+            res = i2
     return res
 
 
