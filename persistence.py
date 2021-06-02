@@ -2,6 +2,8 @@
 """ Made by Facundo Diaz, Tomas De Castro and Tadeo Grach to Holberton School 2021 """
 
 import MySQLdb
+import time
+from datetime import datetime
 
 MY_H = "localhost"
 MY_U = "root"
@@ -22,7 +24,7 @@ def save_price_bitcoin(price):
     for i in resultado:
         for i2 in i:
             cant_items = i2
-    if cant_items <= 1440:
+    if cant_items < 1440:
         insertar_btc(str(price))
     else:
         borrar_ultimo_btc(str(price))
@@ -100,7 +102,7 @@ def save_price_doge(price):
         for i in resultado:
             for i2 in i:
                 cant_items = i2
-        if cant_items <= 1440:
+        if cant_items < 1440:
             insertar_doge(str(price))
         else:
             borrar_ultimo_doge(str(price))
@@ -167,7 +169,7 @@ def save_price_ethereum(price):
     for i in resultado:
         for i2 in i:
             cant_items = i2
-    if cant_items <= 1440:
+    if cant_items < 1440:
         insertar_eth(str(price))
     else:
         borrar_ultimo_eth(str(price))
@@ -217,6 +219,19 @@ def traer_ultimos_precios_eth():
             arr_precios.append(i2)
     return arr_precios
             
+
+""" TENDENCIAS """
+
+def insert_new_tendencia(name, average, min_price, max_price):
+    nuevaconexion = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
+    consulta = nuevaconexion.cursor()
+    date = datetime.now()
+    print(date)
+    date = int(datetime.strptime(date, '%d/%m/%Y').strftime("%s"))
+    print(date)
+    consulta.execute("INSERT INTO tendencias (name, average, max_price, min_price, dateprice) VALUES ('" + name  +"', '" + average +"', '" + max_price + "', '" + min_price + "', " + date + ");")
+    nuevaconexion.commit()
+
 
 
 """ USERS INSERTS """

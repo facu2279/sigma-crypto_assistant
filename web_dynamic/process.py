@@ -34,12 +34,17 @@ while(i < 1500):
     """doge = info.consultar_precio_DOGE(url)"""
     persistence.save_price_doge(doge)
     print("Actualice precios", btc, doge, eth)
+    if i % 60 == 0:
+        average_btc = "123123"
+        min_price_btc = "111111"
+        max_price_btc = "222222"
+        persistence.insert_new_tendencia("BTC", average_btc, min_price_btc, max_price_btc)
+    i = i + 1
     """precio_btc = persistence.traer_ultimo_precio_btc()"""
-    name = "BTC"
+    """name = "BTC"
     suggest = "el precio del " + str(name) + " es " + str(btc)
     btc = entities.Coin(name, btc, suggest)
-    i = i + 1
-    print("creo el object para la pagina web")
+    print("creo el object para la pagina web")"""
     """print("llamo a enviar correos")
     resume = "El precio del BTC es " +  str(btc.price) + " El precio del DOGE es" + str(doge) + " El precio del ETHEREUM es " + str(eth)
     time.sleep(5)
