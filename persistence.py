@@ -95,7 +95,7 @@ def traer_masviejo_precio_btc():
 def save_price_doge(price):
         nuevaconexion = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
         consulta = nuevaconexion.cursor()
-        consulta.execute("SELECT COUNT(*) FROM history_coin SELECT price WHERE name='DOGE';")
+        consulta.execute("SELECT COUNT(*) FROM history_coin WHERE name='DOGE';")
         resultado = consulta.fetchall()
         for i in resultado:
             for i2 in i:
