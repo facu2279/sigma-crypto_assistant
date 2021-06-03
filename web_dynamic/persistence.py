@@ -185,7 +185,7 @@ def traer_masviejo_precio_doge():
     price = 1
     for i in resultado:
         for i2 in i:
-            price = i2
+            price = float(i2)
     return price
 
 def traer_mayor_24_doge():
@@ -196,7 +196,7 @@ def traer_mayor_24_doge():
     res = 1
     for i in resultado:
         for i2 in i:
-            res = i2
+            res = float(i2)
     return res
 
 def traer_menor_24_doge():
@@ -207,7 +207,7 @@ def traer_menor_24_doge():
     res = 1
     for i in resultado:
         for i2 in i:
-            res = i2
+            res = float(i2)
     return res
 
 
