@@ -23,7 +23,7 @@ url = "https://api3.binance.com/"
 url = "https://api.binance.com/"
 i = 0
 
-while(i < 1500):
+while(i < 1):
     print("vuelta numero", i)
     btc = info.consultar_precio_BTC(url)
     persistence.save_price_bitcoin(btc)
@@ -59,5 +59,6 @@ while(i < 1500):
     suggest = "el precio del " + str(name) + " es " + str(doge)
     doge = entities.Coin(name, doge, suggest)
 
+    percent.detectar_constantes_btc()
     i = i + 1
 

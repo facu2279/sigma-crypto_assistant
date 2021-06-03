@@ -13,29 +13,51 @@ sys.path.append('/home/ubuntu/proyecto_final')
 """ IMPORTS FILES """
 import persistence
 
-""" CALCULA CAMBIO EN 24hs """
-viejo = 1
-nuevo = 1
-viejo = persistence.traer_masviejo_precio_btc()
-nuevo = persistence.traer_ultimo_precio_btc()
-viejo = int(viejo)
-nuevo = int(nuevo)
+""" CALCULA CAMBIO EN 24hs  BTC"""
+def porcentaje_btc_24():
+    viejo = 1
+    nuevo = 1
+    viejo = persistence.traer_masviejo_precio_btc()
+    nuevo = persistence.traer_ultimo_precio_btc()
+    viejo = int(viejo)
+    nuevo = int(nuevo)
+    return 100 * (nuevo - viejo) / viejo
 
-porcentaje = 100 * (nuevo - viejo) / viejo
+""" CALCULA CAMBIO EN 24hs DOGE"""
+def porcentaje_doge_24():
+    viejo = 1
+    nuevo = 1
+    viejo = persistence.traer_masviejo_precio_doge()
+    nuevo = persistence.traer_ultimo_precio_doge()
+    viejo = int(viejo)
+    nuevo = int(nuevo)
+    return 100 * (nuevo - viejo) / viejo
 
-""" """
-def detectar_constantes():
+""" CALCULA CAMBIO EN 24hs ETH"""
+def porcentaje_eth_24():
+    viejo = 1
+    nuevo = 1
+    viejo = persistence.traer_masviejo_precio_eth()
+    nuevo = persistence.traer_ultimo_precio_eth()
+    viejo = int(viejo)
+    nuevo = int(nuevo)
+    return 100 * (nuevo - viejo) / viejo
+
+""" recive two numbers and return the percent """
+def caclular_porcentaje(viejo, nuevo):
+    viejo = int(viejo)
+    nuevo = int(nuevo)
+    return 100 * (nuevo - viejo) / viejo
+
+""" detectar constantes btc cada una hora """
+def detectar_constantes_btc():
     ultimos_precios = persistence.traer_ultimos_precios_btc()
     prev = int(ultimos_precios[0])
-    count = 0
-    for i in range(1,12):
+    porcentaje = 0
+    for i in range(1,60):
         if prev < int(ultimos_precios[i]):
-            count = count + 1
+            porcentaje = porcentaje + caclular_porcentaje(prev, ultimos_precios[i])
         elif prev > int(ultimos_precios[i]):
-            count = count - 1
+            porcentaje = porcentaje - caclular_porcentaje(prev, ultimos_precios[i])
         prev = int(ultimos_precios[i])
-    if count > 1:
-        return(2)
-    if count < -1:
-        return(1)
-    return 0
+    print(porcentaje)
