@@ -43,8 +43,8 @@ def porcentaje_eth_24():
 
 """ recive two numbers and return the percent """
 def calcular_porcentaje(viejo, nuevo):
-    viejo = int(viejo)
-    nuevo = int(nuevo)
+    viejo = viejo
+    nuevo = nuevo
     return 100 * (nuevo - viejo) / viejo
 
 """ detectar constantes btc cada una hora """
@@ -82,6 +82,7 @@ def detectar_constantes_doge():
         elif prev > float(ultimos_precios[i]):
             counter = counter - 1
         prev = float(ultimos_precios[i])
+
     porcentaje = calcular_porcentaje(float(ultimos_precios[0]), float(ultimos_precios[i]))
     porcentaje = str(porcentaje)
     porcentaje = porcentaje[0:6]
