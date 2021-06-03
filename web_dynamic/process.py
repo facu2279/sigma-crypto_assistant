@@ -54,9 +54,33 @@ while(i < 1):
     
 
     name = "DOGE"
-    suggest = "el precio del " + str(name) + " es " + str(doge)
-    doge = entities.Coin(name, doge, suggest)
+    suggest = "el precio del " + str(name) + " es " + str(btc)
+    btc = entities.Coin(name, btc, suggest)
+    res = percent.detectar_constantes_btc()
+    if res != 0:
+        if res > 0:
+            print("llego subida constante btc")
+        else:
+            print("llego bajada constante btc")
+    else:
+        print("no hubo subidas o bajadas constantes btc")
+    
+    res = percent.detectar_constantes_doge()
+    if res != 0:
+        if res > 0:
+            print("llego subida constante doge")
+        else:
+            print("llego bajada constante doge")
+    else:
+        print("no hubo subidas o bajadas constantes doge")
 
-    percent.detectar_constantes_btc()
+    res = percent.detectar_constantes_eth()
+    if res != 0:
+        if res > 0:
+            print("llego subida constante eth")
+        else:
+            print("llego bajada constante eth")
+    else:
+        print("no hubo subidas o bajadas constantes eth")
     i = i + 1
 
