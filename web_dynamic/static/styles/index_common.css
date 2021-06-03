@@ -4,7 +4,9 @@ body {
     color: white;
     font-size: 14px;
     font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-image: url("background-img.png")
+    background-image: url("../img/background-img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 body .container {

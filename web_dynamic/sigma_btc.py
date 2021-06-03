@@ -7,20 +7,20 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
-@app.route('/templates/bitcoin', strict_slashes=False)
+@app.route('/bitcoin', strict_slashes=False)
 def bitcoin():
     """ """
-    price = process.btc.price
-    name = process.btc.name
-    suggest = process.btc.suggest
+    price = process.doge.price
+    name = process.doge.name
+    suggest = process.doge.suggest
     render_template('bitcoin.html', price=price, name=name, suggest=suggest)
 
-@app.route('/templates/team', strict_slashes=False)
+@app.route('/team', strict_slashes=False)
 def team():
     """ """
     render_template('team.html')
 
-@app.route('/templates/index', strict_slashes=False)
+@app.route('/index', strict_slashes=False)
 def index():
     """"""
     render_template('index.html')

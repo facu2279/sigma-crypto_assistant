@@ -2,22 +2,97 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../static/styles/team_common.css">
+    <link rel="stylesheet" type="text/css" href="../static/styles/bitcoin_common.css">
     <link rel="stylesheet" type="text/css" href="../static/styles/header.css">
-    <link rel="stylesheet" type="text/css" href="../static/styles/team_filters.css">
-    <link rel="icon" href="../static/images/small_logo.png" />
+    <link rel="stylesheet" type="text/css" href="../static/styles/bitcoin_filters.css">
+    <link rel="stylesheet" type="text/css" href="../static/styles/bitcoin_article.css">
+    <link rel="icon" href="../static/img/small_logo.png" />
     <title>Sigma</title>
   </head>
   <body>
     <header>
       <div class="logo">
-      <a href="index.html"><img src="../static/images/small_logo_header.png"></a>
-      <a href="index.html"><img src="../static/images/just_sigma2.png"></a>
+      <a href="index.html"><img src="../static/img/small_logo_header.png"></a>
+      <a href="index.html"><img src="../static/img/just_sigma2.png"></a>
       </div>
     </header>
-    <h2>BTC price: {{ price }}</h2>
-    <h2>BTC name: {{ name }}</h2>
-    <h2>BTC suggest: {{ suggest }}</h2>
+    <div class="container">
+      <section class="filters">
+        <div class="box1">
+          <h3>Cryptocurrency</h3>
+          <h4>&nbsp;</h4>
+          <div class="popover">
+            <ul>
+              <li>
+                <h2>Coins</h2>
+                <ul>
+                  <li><a href="bitcoin.html">Bitcoin</a></li>
+                  <li>Doge</li>
+                  <li>Ethereum</li>
+                </ul>
+                <h2>Blockchain</h2>
+                <ul>
+                  <li>What is a blockchain?</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="box2">
+          <h3>Blockchain</h3>
+          <h4>&nbsp;</h4>
+          <div class="popover">
+            <ul>
+              <li>
+                <h2>Coins</h2>
+                <ul>
+                  <li>Bitcoin</li>
+                  <li>Doge</li>
+                  <li>Ethereum</li>
+                </ul>
+                <h2>Blockchain</h2>
+                <ul>
+                  <li>What is a blockchain?</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="box3">
+          <h3>Sigma</h3>
+          <h4>&nbsp;</h4>
+          <div class="popover">
+            <ul>
+              <li>
+                <h2>About us</h2>
+                <ul>
+                  <li><a href="team.html">Team</a></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <h2>Blockchain</h2>
+                <ul>
+                  <li>What is a blockchain?</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="btc">
+    <article>
+	    <img src="../static/img/btc_log.png">
+      <h4>price: {{ price }}</h4>
+      <h4>name: {{ name }}</h4>
+    </article>
+    <div>
+    <div class="articles">
+	 <div>
+	 	<img src="../static/img/ethereum_logo.png">
+	 </div>
+	 <img src="../static/img/doge_log.png">
+    </div>
     <footer>
       <p></p>
     </footer>

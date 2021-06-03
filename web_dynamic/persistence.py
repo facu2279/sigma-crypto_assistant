@@ -7,7 +7,7 @@ from datetime import datetime
 
 MY_H = "localhost"
 MY_U = "root"
-MY_P = "betty"
+MY_P = "root"
 MY_D = "sigma"
 
 
