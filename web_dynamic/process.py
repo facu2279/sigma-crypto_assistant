@@ -5,14 +5,12 @@ Made by Facundo Diaz - Tomas De Castro - Tadeo Grach for Holberton School 2021 "
 """ colour background in hexa #262833 colour of logo in hexa #39E991 """
 
 """ IMPORTS EXTERN MODULES """
-import sys
-sys.path.append('/home/ubuntu/proyecto_final')
 import time
 
 """ IMPORTS FILES """
 import persistence
 import entities 
-import web_dynamic.mail as mail
+import mail
 import info
 import percent
 
