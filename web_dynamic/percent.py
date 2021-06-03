@@ -63,10 +63,9 @@ def detectar_constantes_btc():
     porcentaje = str(porcentaje)
     porcentaje = porcentaje[0:6]
     porcentaje = float(porcentaje)
-    print(calcular_porcentaje(2700, 2730))
-    if counter > 0 and porcentaje > 1.5:
-        return 1
-    elif counter < 0 and porcentaje < -1.5:
-        return -1
+    if counter > 10 and porcentaje > 1:
+        return porcentaje
+    elif counter < -10 and porcentaje < -1:
+        return porcentaje
     else:
         return 0
