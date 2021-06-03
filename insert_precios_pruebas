@@ -1,4 +1,5 @@
 USE sigma;
+
 INSERT INTO history_btc (name, price) VALUES ('BTC', '36101');
 INSERT INTO history_btc (name, price) VALUES ('BTC', '36102');
 INSERT INTO history_btc (name, price) VALUES ('BTC', '36103');
