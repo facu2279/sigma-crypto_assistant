@@ -42,7 +42,7 @@ def porcentaje_eth_24():
     return 100 * (nuevo - viejo) / viejo
 
 """ recive two numbers and return the percent """
-def caclular_porcentaje(viejo, nuevo):
+def calcular_porcentaje(viejo, nuevo):
     viejo = int(viejo)
     nuevo = int(nuevo)
     return 100 * (nuevo - viejo) / viejo
@@ -52,10 +52,12 @@ def detectar_constantes_btc():
     ultimos_precios = persistence.traer_ultimos_precios_btc()
     prev = int(ultimos_precios[0])
     porcentaje = 0
+    counter = 0
     for i in range(1,60):
         if prev < int(ultimos_precios[i]):
-            porcentaje = porcentaje + caclular_porcentaje(prev, ultimos_precios[i])
+            counter = counter + 1
         elif prev > int(ultimos_precios[i]):
-            porcentaje = porcentaje - caclular_porcentaje(prev, ultimos_precios[i])
+            counter = counter - 1
         prev = int(ultimos_precios[i])
-    print(porcentaje)
+    porcentaje = calcular_porcentaje(int(ultimos_precios[0]), int(ultimos_precios[i]))
+    print(counter, porcentaje)
