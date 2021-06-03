@@ -60,4 +60,7 @@ def detectar_constantes_btc():
             counter = counter - 1
         prev = int(ultimos_precios[i])
     porcentaje = calcular_porcentaje(int(ultimos_precios[0]), int(ultimos_precios[i]))
+    porcentaje = str(porcentaje)
+    porcentaje = porcentaje[0:4]
+    porcentaje = float(porcentaje)
     print(counter, porcentaje, type(porcentaje))
