@@ -73,16 +73,16 @@ def detectar_constantes_btc():
 """ detectar constantes doge cada una hora """
 def detectar_constantes_doge():
     ultimos_precios = persistence.traer_ultimos_precios_doge()
-    prev = int(ultimos_precios[0])
+    prev = float(ultimos_precios[0])
     porcentaje = 0
     counter = 0
     for i in range(1,60):
-        if prev < int(ultimos_precios[i]):
+        if prev < float(ultimos_precios[i]):
             counter = counter + 1
-        elif prev > int(ultimos_precios[i]):
+        elif prev > float(ultimos_precios[i]):
             counter = counter - 1
-        prev = int(ultimos_precios[i])
-    porcentaje = calcular_porcentaje(int(ultimos_precios[0]), int(ultimos_precios[i]))
+        prev = float(ultimos_precios[i])
+    porcentaje = calcular_porcentaje(float(ultimos_precios[0]), float(ultimos_precios[i]))
     porcentaje = str(porcentaje)
     porcentaje = porcentaje[0:6]
     porcentaje = float(porcentaje)
