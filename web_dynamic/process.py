@@ -34,7 +34,7 @@ while(i >= 0):
         percent.chequear_tendencias()
         percent.chequear_movimientos()
     
-    objects.refresh_objects_values()
+    refresh_objects_values()
     print(btc.to_dict())
     print(doge.to_dict())
     print(eth.to_dict())
