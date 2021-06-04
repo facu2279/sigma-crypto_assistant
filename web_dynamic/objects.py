@@ -48,5 +48,3 @@ while(1):
     menor3 = persistence.traer_mayor_24_eth()
 
     eth = entities.Coin(name3, price3, porcentaje3, mayor3, menor3)
-
-    time.sleep(1)
