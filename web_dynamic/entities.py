@@ -11,10 +11,12 @@ class User:
         self.mail = mail
 
 class Coin:
-    def __init__(self, name, price, suggest):
+    def __init__(self, name, price, porcenaje_24, mayor, menor):
         self.name = name
         self.price = price
-        self.suggest = suggest
+        self.porcentaje = porcenaje_24
+        self.mayor = mayor
+        self.menor = menor
 
     def to_dict(self):
         new = {}

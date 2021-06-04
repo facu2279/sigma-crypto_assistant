@@ -33,9 +33,6 @@ while(i > 0):
         percent.chequear_tendencias()
         percent.chequear_movimientos()
 
-    name = "DOGE"
-    suggest = "el precio del " + str(name) + " es " + str(btc)
-    btc = entities.Coin(name, btc, suggest)
     
     i = i + 1
 
