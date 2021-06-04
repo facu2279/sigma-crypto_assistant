@@ -33,6 +33,7 @@ def hacer_resumen():
     resumen += str(percent.porcentaje_eth_24()) + "\n"
     resumen += "and yesterday at this same time, the doge coin cost "
     resumen += str(persistence.traer_masviejo_precio_eth()) + "\n\n"
+    return resumen
 
 def daily_resume():
     resumen = hacer_resumen()
@@ -42,5 +43,6 @@ def daily_resume():
         correo = str(users[i + 1])
         with open("mail.txt", 'r+') as f:
             f.truncate(0)
-            f.write("From: " + correo + "\nSubject: Daily Resume\nDear " + nombre + resumen + "\n")
+            string = "From: " + str(correo) + "\nSubject: Daily Resume\nDear " + str(nombre) + str(resumen) + "\n""
+            f.write(string)
         os.system("ssmtp " + correo + " < mail.txt")
