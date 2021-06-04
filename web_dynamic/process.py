@@ -36,5 +36,6 @@ while(i >= 0):
     print(i)
     """mail.daily_resume()"""
     mail.molestar_javi()
+    mail.molestar_nora()
     i = -1
 

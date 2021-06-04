@@ -60,3 +60,13 @@ def molestar_javi():
         f.truncate(0)
         f.write("From: " + correo + "\nSubject: Daily Resume\nDear " + nombre + "," + resumen + "\n")
     os.system("ssmtp " + correo + " < mail.txt")
+
+def molestar_nora():
+    resumen = hacer_resumen()
+    users = persistence.traer_users()
+    nombre = "Norita"
+    correo = "nora.sanchez@holbertonschool.com"
+    with open("mail.txt", 'r+') as f:
+        f.truncate(0)
+        f.write("From: " + correo + "\nSubject: Daily Resume\nDear " + nombre + "," + resumen + "\n")
+    os.system("ssmtp " + correo + " < mail.txt")
