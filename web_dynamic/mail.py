@@ -56,7 +56,7 @@ def resumen_alerta_btc(porcentaje):
         resumen = "The price of BTC is on a constant raise, now at U$S "
     else:
         resumen = "The price of BTC is on a steady decent, now at U$S "
-    resumen += str(persistence.traer_ulimo_precio_btc()) + " , take a look!\n"
+    resumen += str(persistence.traer_ultimo_precio_btc()) + " , take a look!\n"
     resumen += "To see more detailed information, click here http://tadeograchstudio.tech/bitcoin\n\n"
     resumen += "Yours sincerely, Sigma corporation."
     users = persistence.traer_users()
@@ -74,7 +74,7 @@ def resumen_alerta_doge(porcentaje):
         resumen = "The price of DOGE is on a constant raise, now at U$S "
     else:
         resumen = "The price of DOGE is on a steady decent, now at U$S "
-    resumen += str(persistence.traer_ulimo_precio_doge()) + " , take a look!\n"
+    resumen += str(persistence.traer_ultimo_precio_doge()) + " , take a look!\n"
     resumen += "To see more detailed information, click here http://tadeograchstudio.tech/\n\n"
     resumen += "Yours sincerely, Sigma corporation."
     users = persistence.traer_users()
@@ -91,7 +91,7 @@ def resumen_alerta_eth(porcentaje):
         resumen = "The price of ETH is on a constant raise, now at U$S "
     else:
         resumen = "The price of ETH is on a steady decent, now at U$S "
-    resumen += str(persistence.traer_ulimo_precio_eth()) + " , take a look!\n"
+    resumen += str(persistence.traer_ultimo_precio_eth()) + " , take a look!\n"
     resumen += "To see more detailed information, click here http://tadeograchstudio.tech/\n\n"
     resumen += "Yours sincerely, Sigma corporation."
     users = persistence.traer_users()
