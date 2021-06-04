@@ -12,7 +12,7 @@ import persistence
 import entities 
 import mail
 import info
-from objects import btc, doge, eth, refresh_objects_values
+from objects import btc, doge, eth
 import percent
 
 """ In case url 1 is not changing for these
@@ -34,7 +34,6 @@ while(i >= 0):
         percent.chequear_tendencias()
         percent.chequear_movimientos()
     
-    refresh_objects_values()
     print(btc.to_dict())
     print(doge.to_dict())
     print(eth.to_dict())
