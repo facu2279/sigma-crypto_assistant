@@ -22,7 +22,7 @@ estructura objetos
 
 name = "BTC"
 price = persistence.traer_ultimo_precio_btc()
-porcentaje = persistence.porcentaje_btc_24()
+porcentaje = percent.porcentaje_btc_24()
 mayor = persistence.traer_mayor_24_btc()
 menor = persistence.traer_mayor_24_btc()
 
@@ -33,7 +33,7 @@ btc = entities.Coin(name, price, porcentaje, mayor, menor)
 """ DOGE """
 name2 = "DOGE"
 price2 = persistence.traer_ultimo_precio_doge()
-porcentaje2 = persistence.porcentaje_doge_24()
+porcentaje2 = percent.porcentaje_doge_24()
 mayor2 = persistence.traer_mayor_24_doge()
 menor2 = persistence.traer_mayor_24_doge()
 
@@ -43,7 +43,7 @@ doge = entities.Coin(name2, price2, porcentaje2, mayor2, menor2)
 """ ETH """
 name3 = "ETH"
 price3 = persistence.traer_ultimo_precio_eth()
-porcentaje3 = persistence.porcentaje_eth_24()
+porcentaje3 = percent.porcentaje_eth_24()
 mayor3 = persistence.traer_mayor_24_eth()
 menor3 = persistence.traer_mayor_24_eth()
 
