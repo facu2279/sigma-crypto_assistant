@@ -20,7 +20,7 @@ url = "https://api2.binance.com/"
 url = "https://api3.binance.com/"
 """
 url = "https://api.binance.com/"
-i = 1
+i = 2
 
 while(i >= 0):
     btc_price = info.consultar_precio_BTC(url)
