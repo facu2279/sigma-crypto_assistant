@@ -52,6 +52,7 @@ def daily_resume():
         os.system("ssmtp " + correo + " < mail.txt")
 
 def resumen_alerta_btc(porcentaje):
+    print("va mail btc")
     if porcentaje > 0:
         resumen = "The price of BTC is on a constant raise, now at U$S "
     else:
@@ -70,6 +71,7 @@ def resumen_alerta_btc(porcentaje):
 
 
 def resumen_alerta_doge(porcentaje):
+    print("va mail doge")
     if porcentaje > 0:
         resumen = "The price of DOGE is on a constant raise, now at U$S "
     else:
@@ -87,6 +89,7 @@ def resumen_alerta_doge(porcentaje):
         os.system("ssmtp " + correo + " < mail.txt")
 
 def resumen_alerta_eth(porcentaje):
+    print("va mail eth")
     if porcentaje > 0:
         resumen = "The price of ETH is on a constant raise, now at U$S "
     else:
