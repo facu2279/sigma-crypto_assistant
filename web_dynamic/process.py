@@ -12,7 +12,7 @@ import persistence
 import entities 
 import mail
 import info
-import objects
+from objects import btc, doge, eth
 import percent
 
 """ In case url 1 is not changing for these
@@ -23,19 +23,19 @@ url = "https://api.binance.com/"
 i = 0
 
 while(i >= 0):
-    btc = info.consultar_precio_BTC(url)
-    persistence.save_price_bitcoin(btc)
-    eth = info.consultar_precio_ETH(url)
-    persistence.save_price_ethereum(eth)
-    doge = info.consultar_precio_DOGE(url)
-    persistence.save_price_doge(doge)
+    btc_price = info.consultar_precio_BTC(url)
+    persistence.save_price_bitcoin(btc_price)
+    eth_price = info.consultar_precio_ETH(url)
+    persistence.save_price_ethereum(eth_price)
+    doge_price = info.consultar_precio_DOGE(url)
+    persistence.save_price_doge(doge_price)
 
     if i % 60 == 0:
         percent.chequear_tendencias()
         percent.chequear_movimientos()
 
-    print(object.btc)
-    print(object.doge)
-    print(object.eth)
+    print(btc)
+    print(doge)
+    print(eth)
     i = i + 1
 
