@@ -22,7 +22,7 @@ url = "https://api3.binance.com/"
 url = "https://api.binance.com/"
 i = 0
 
-while(i > 0):
+while(i >= 0):
     btc = info.consultar_precio_BTC(url)
     persistence.save_price_bitcoin(btc)
     eth = info.consultar_precio_ETH(url)
@@ -34,8 +34,6 @@ while(i > 0):
         percent.chequear_tendencias()
         percent.chequear_movimientos()
 
-    print(object.btc)
-    print(object.doge)
-    print(object.eth)
+    print("hola")
     i = i + 1
 
