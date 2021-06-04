@@ -33,6 +33,6 @@ while(i >= 0):
     if i % 60 == 0:
         percent.chequear_tendencias()
         percent.chequear_movimientos()
-
+    print(i)
     i = i + 1
 
