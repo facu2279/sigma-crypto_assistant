@@ -66,7 +66,7 @@ def resumen_alerta_btc(porcentaje):
         print(correo)
         with open("mail.txt", 'r+') as f:
             f.truncate(0)
-            f.write("From: " + correo + "\nSubject: Alert\nDear " + nombre + "," + resumen + "\n")
+            f.write("From: sigma.cryptocurrency.assistant@gmail.com\nSubject: Alert\nDear " + nombre + "," + resumen + "\n")
         os.system("ssmtp " + correo + " < mail.txt")
 
 
