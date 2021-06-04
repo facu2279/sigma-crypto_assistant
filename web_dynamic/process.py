@@ -34,7 +34,7 @@ while(i >= 0):
     if i % 60 == 0:
         percent.chequear_tendencias()
     
-    if i % 1440:
+    if i % 1440 == 0:
         mail.daily_resume()
 
     print(i)
