@@ -34,8 +34,8 @@ while(i >= 0):
         percent.chequear_tendencias()
         percent.chequear_movimientos()
 
-    print(btc)
-    print(doge)
-    print(eth)
+    print(btc.to_dict())
+    print(doge.to_dict())
+    print(eth.to_dict())
     i = i + 1
 
