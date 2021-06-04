@@ -48,7 +48,7 @@ def daily_resume():
         correo = str(users[i + 1])
         with open("mail.txt", 'r+') as f:
             f.truncate(0)
-            f.write("From: " + correo + "\nSubject: Daily Resume\nDear " + nombre + "," + resumen + "\n")
+            f.write("From: sigma.cryptocurrency.assistant@gmail.com\nSubject: Daily Resume\nDear " + nombre + "," + resumen + "\n")
         os.system("ssmtp " + correo + " < mail.txt")
 
 def resumen_alerta_btc(porcentaje):
@@ -84,7 +84,7 @@ def resumen_alerta_doge(porcentaje):
         correo = str(users[i + 1])
         with open("mail.txt", 'r+') as f:
             f.truncate(0)
-            f.write("From: " + correo + "\nSubject: Alert\nDear " + nombre + "," + resumen + "\n")
+            f.write("From: sigma.cryptocurrency.assistant@gmail.com\nSubject: Alert\nDear " + nombre + "," + resumen + "\n")
         os.system("ssmtp " + correo + " < mail.txt")
 
 def resumen_alerta_eth(porcentaje):
@@ -101,26 +101,6 @@ def resumen_alerta_eth(porcentaje):
         correo = str(users[i + 1])
         with open("mail.txt", 'r+') as f:
             f.truncate(0)
-            f.write("From: " + correo + "\nSubject: Alert\nDear " + nombre + "," + resumen + "\n")
+            f.write("From: sigma.cryptocurrency.assistant@gmail.com\nSubject: Alert\nDear " + nombre + "," + resumen + "\n")
         os.system("ssmtp " + correo + " < mail.txt")
-
-
-def molestar_javi():
-    resumen = hacer_resumen()
-    users = persistence.traer_users()
-    nombre = "Javiersito"
-    correo = "javier.valenzani@holbertonschool.com"
-    with open("mail.txt", 'r+') as f:
-        f.truncate(0)
-        f.write("From: " + correo + "\nSubject: Daily Resume\nDear " + nombre + "," + resumen + "\n")
-    os.system("ssmtp " + correo + " < mail.txt")
-
-def molestar_nora():
-    resumen = hacer_resumen()
-    users = persistence.traer_users()
-    nombre = "Norita"
-    correo = "nora.sanchez@holbertonschool.com"
-    with open("mail.txt", 'r+') as f:
-        f.truncate(0)
-        f.write("From: " + correo + "\nSubject: Daily Resume\nDear " + nombre + "," + resumen + "\n")
-    os.system("ssmtp " + correo + " < mail.txt")
+        
