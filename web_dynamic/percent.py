@@ -27,8 +27,8 @@ def porcentaje_doge_24():
     nuevo = 1
     viejo = persistence.traer_masviejo_precio_doge()
     nuevo = persistence.traer_ultimo_precio_doge()
-    viejo = int(viejo)
-    nuevo = int(nuevo)
+    viejo = float(viejo)
+    nuevo = float(nuevo)
     return 100 * (nuevo - viejo) / viejo
 
 """ CALCULA CAMBIO EN 24hs ETH"""
