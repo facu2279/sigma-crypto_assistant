@@ -34,6 +34,8 @@ while(i >= 0):
         percent.chequear_tendencias()
         percent.chequear_movimientos()
 
-    print("hola")
+    print(object.btc)
+    print(object.doge)
+    print(object.eth)
     i = i + 1
 
