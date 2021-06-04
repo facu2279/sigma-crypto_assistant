@@ -33,11 +33,6 @@ while(i >= 0):
     if i % 60 == 0:
         percent.chequear_tendencias()
         percent.chequear_movimientos()
-    btc.refresh_coin(btc.name)
-    eth.refresh_coin(eth.name)
-    doge.refresh_coin(doge.name)
-    print(btc.to_dict())
-    print(doge.to_dict())
-    print(eth.to_dict())
+
     i = i + 1
 

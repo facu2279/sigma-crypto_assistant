@@ -10,5 +10,8 @@ import percent
 
 
 btc = entities.Coin("BTC")
+btc.refresh_coin(btc.name)
 doge = entities.Coin("DOGE")
+doge.refresh_coin(doge.name)
 eth = entities.Coin("ETH")
+eth.refresh_coin(eth.name)
