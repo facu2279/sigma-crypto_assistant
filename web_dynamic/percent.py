@@ -116,3 +116,43 @@ def detectar_constantes_eth():
         return porcentaje
     else:
         return 0
+
+def chequear_movimientos():
+    res = detectar_constantes_btc()
+    if res != 0:
+        if res > 0:
+            """ llamar a mail """
+        else:
+           """ llamar a mail """   
+    res = detectar_constantes_doge()
+    if res != 0:
+        if res > 0:
+            """ llamar a mail """
+        else:
+            """ llamar a mail """
+    res = detectar_constantes_eth()
+    if res != 0:
+        if res > 0:
+            """ llamar a mail """
+        else:
+            """ llamar a mail """
+
+def chequear_tendencias():
+    ultimos = persistence.traer_ultimos_precios_doge()
+    average_doge = sum(ultimos) / len(ultimos)
+    min_price_doge = min(ultimos)
+    max_price_doge = max(ultimos)
+    persistence.insert_new_tendencia("DOGE", str(average_doge), str(min_price_doge), str(max_price_doge))
+
+    ultimos = persistence.traer_ultimos_precios_btc()
+    average_btc = sum(ultimos) / len(ultimos)
+    min_price_btc = min(ultimos)
+    max_price_btc = max(ultimos)
+    persistence.insert_new_tendencia("BTC", str(average_btc), str(min_price_btc), str(max_price_btc))
+
+    ultimos = persistence.traer_ultimos_precios_eth()
+    average_eth = sum(ultimos) / len(ultimos)
+    min_price_eth = min(ultimos)
+    max_price_eth = max(ultimos)
+    persistence.insert_new_tendencia("ETH", str(average_eth), str(min_price_eth), str(max_price_eth))
+    
