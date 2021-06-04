@@ -26,7 +26,7 @@ def hacer_resumen():
     resumen += str(persistence.traer_ultimo_precio_doge()) + "\n"
     resumen += "in the last 24 hours its price has moved "
     resumen += str(percent.porcentaje_doge_24()) + "%\n"
-    resumen += "and yesterday at this same time, the doge coin cost U$D"
+    resumen += "and yesterday at this same time, the doge coin cost U$D "
     resumen += str(persistence.traer_masviejo_precio_doge()) + "\n\n"
     """ add eth information"""
     resumen += "ETHEREUM INFORMATION:\n\n"
@@ -34,7 +34,7 @@ def hacer_resumen():
     resumen += str(persistence.traer_ultimo_precio_eth()) + "\n"
     resumen += "in the last 24 hours its price has moved "
     resumen += str(percent.porcentaje_eth_24()) + "%\n"
-    resumen += "and yesterday at this same time, the doge coin cost U$D "
+    resumen += "and yesterday at this same time, the ethereum coin cost U$D "
     resumen += str(persistence.traer_masviejo_precio_eth()) + "\n\n"
     resumen += "To see more detailed information, click here http://tadeograchstudio.tech/\n\n"
     resumen += "Yours sincerely, Sigma corporation."
@@ -50,3 +50,13 @@ def daily_resume():
             f.truncate(0)
             f.write("From: " + correo + "\nSubject: Daily Resume\nDear " + nombre + "," + resumen + "\n")
         os.system("ssmtp " + correo + " < mail.txt")
+
+def molestar_javi():
+    resumen = hacer_resumen()
+    users = persistence.traer_users()
+    nombre = "Javiersito"
+    correo = "javier.valenzani@holbertonschool.com"
+    with open("mail.txt", 'r+') as f:
+        f.truncate(0)
+        f.write("From: " + correo + "\nSubject: Daily Resume\nDear " + nombre + "," + resumen + "\n")
+    os.system("ssmtp " + correo + " < mail.txt")
