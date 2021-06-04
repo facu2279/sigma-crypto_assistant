@@ -32,9 +32,7 @@ def porcentaje_doge_24():
     viejo = float(viejo)
     nuevo = float(nuevo)
     porcentaje = 100 * (nuevo - viejo) / viejo
-    porcentaje = str(porcentaje)
-    porcentaje = porcentaje[0:6]
-    porcentaje = float(porcentaje)
+    porcentaje = round(porcentaje, 2)
     return porcentaje
 
 """ CALCULA CAMBIO EN 24hs ETH"""
@@ -46,9 +44,7 @@ def porcentaje_eth_24():
     viejo = int(viejo)
     nuevo = int(nuevo)
     porcentaje = 100 * (nuevo - viejo) / viejo
-    porcentaje = str(porcentaje)
-    porcentaje = porcentaje[0:6]
-    porcentaje = float(porcentaje)
+    porcentaje = round(porcentaje, 2)
     return porcentaje
 
 """ recive two numbers and return the percent """
@@ -70,9 +66,7 @@ def detectar_constantes_btc():
             counter = counter - 1
         prev = int(ultimos_precios[i])
     porcentaje = calcular_porcentaje(int(ultimos_precios[0]), int(ultimos_precios[i]))
-    porcentaje = str(porcentaje)
-    porcentaje = porcentaje[0:6]
-    porcentaje = float(porcentaje)
+    porcentaje = round(porcentaje, 2)
     if counter > 10 and porcentaje > 1:
         return porcentaje
     elif counter < -10 and porcentaje < -1:
@@ -94,9 +88,7 @@ def detectar_constantes_doge():
         prev = float(ultimos_precios[i])
 
     porcentaje = calcular_porcentaje(float(ultimos_precios[0]), float(ultimos_precios[i]))
-    porcentaje = str(porcentaje)
-    porcentaje = porcentaje[0:6]
-    porcentaje = float(porcentaje)
+    porcentaje = round(porcentaje, 2)
     if counter > 10 and porcentaje > 1:
         return porcentaje
     elif counter < -10 and porcentaje < -1:
@@ -117,9 +109,7 @@ def detectar_constantes_eth():
             counter = counter - 1
         prev = int(ultimos_precios[i])
     porcentaje = calcular_porcentaje(int(ultimos_precios[0]), int(ultimos_precios[i]))
-    porcentaje = str(porcentaje)
-    porcentaje = porcentaje[0:6]
-    porcentaje = float(porcentaje)
+    porcentaje = round(porcentaje, 2)
     if counter > 10 and porcentaje > 1:
         return porcentaje
     elif counter < -10 and porcentaje < -1:
