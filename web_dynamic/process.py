@@ -35,5 +35,5 @@ while(i >= 0):
         percent.chequear_movimientos()
     print(i)
     mail.daily_resume()
-    i = i + 1
+    i = -1
 
