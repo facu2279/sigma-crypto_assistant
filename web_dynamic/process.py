@@ -34,7 +34,9 @@ while(i >= 0):
         percent.chequear_tendencias()
         percent.chequear_movimientos()
     print(i)
+
     mail.resumen_alerta_btc(1)
     
+    print("paso mail")
     i = -1
 
