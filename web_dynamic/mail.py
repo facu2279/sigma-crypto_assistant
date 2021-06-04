@@ -6,26 +6,41 @@ Made by Facundo Diaz - Tomas De Castro - Tadeo Grach for Holberton School 2021
 """ IMPORTS EXTERN MODULES """
 import os
 import time
-import smtplib
+import percent
 """ IMPORTS FILES """
 import persistence
 
-def enviar_correos(resumen):
-    users = persistence.traer_users()
-    for i in range(0, len(users), 2):
-        content = "Buenas tardes "
-        nombre = str(users[i]) + " "
-        correo = str(users[i + 1])
-        content = content + nombre + resumen
-        os.system("ssmtp " + correo + " < mail.txt")
+def hacer_resumen():
+    resumen = ",\n This is your compilation of relevant information about cryptocurrencies today.\n\n"
+    """ add btc information """
+    resumen += "The current price of bitcoin at the time of this email is "
+    resumen += str(persistence.traer_ultimo_precio_btc()) + "\n"
+    resumen += "in the last 24 hours its price has moved "
+    resumen += str(percent.porcentaje_btc_24()) + "\n"
+    resumen += "and yesterday at this same time, the bitcoin cost "
+    resumen += str(persistence.traer_masviejo_precio_btc()) + "\n\n"
+    """ add doge information"""
+    resumen += "The current price of doge coin at the time of this email is "
+    resumen += str(persistence.traer_ultimo_precio_doge()) + "\n"
+    resumen += "in the last 24 hours its price has moved "
+    resumen += str(percent.porcentaje_doge_24()) + "\n"
+    resumen += "and yesterday at this same time, the doge coin cost "
+    resumen += str(persistence.traer_masviejo_precio_doge()) + "\n\n"
+    """ add eth information"""
+    resumen += "The current price of ethereum at the time of this email is "
+    resumen += str(persistence.traer_ultimo_precio_eth()) + "\n"
+    resumen += "in the last 24 hours its price has moved "
+    resumen += str(percent.porcentaje_eth_24()) + "\n"
+    resumen += "and yesterday at this same time, the doge coin cost "
+    resumen += str(persistence.traer_masviejo_precio_eth()) + "\n\n"
 
-def daily_resume():
+def daily_resume(resumen):
+    resumen = hacer_resumen()
     users = persistence.traer_users()
-    resumen = "EL BTC TA BARATO PA"
     for i in range(0, len(users), 2):
         nombre = str(users[i]) + " "
         correo = str(users[i + 1])
         with open("mail.txt", 'r+') as f:
             f.truncate(0)
-            f.write("From: " + correo + "\nSubject: Daily Resume\nBuenas tardes " + nombre + resumen + "\n")
+            f.write("From: " + correo + "\nSubject: Daily Resume\nDear " + nombre + resumen + "\n")
         os.system("ssmtp " + correo + " < mail.txt")
