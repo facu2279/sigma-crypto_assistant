@@ -20,9 +20,7 @@ def porcentaje_btc_24():
     viejo = int(viejo)
     nuevo = int(nuevo)
     porcentaje = 100 * (nuevo - viejo) / viejo
-    porcentaje = str(porcentaje)
-    porcentaje = porcentaje[0:6]
-    porcentaje = float(porcentaje)
+    porcentaje = round(porcentaje, 2)
     return porcentaje
 
 """ CALCULA CAMBIO EN 24hs DOGE"""
