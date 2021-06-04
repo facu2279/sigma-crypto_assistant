@@ -32,16 +32,16 @@ class Coin:
             self.price = persistence.traer_ultimo_precio_btc()
             self.porcentaje = percent.porcentaje_btc_24()
             self.mayor = persistence.traer_mayor_24_btc()
-            self.menor = persistence.traer_mayor_24_btc()
+            self.menor = persistence.traer_menor_24_btc()
         elif name == "DOGE":
             self.name = name
             self.price = persistence.traer_ultimo_precio_doge()
             self.porcentaje = percent.porcentaje_doge_24()
             self.mayor = persistence.traer_mayor_24_doge()
-            self.menor = persistence.traer_mayor_24_doge()
+            self.menor = persistence.traer_menor_24_doge()
         elif name == "ETH":
             self.name = name
             self.price = persistence.traer_ultimo_precio_eth()
             self.porcentaje = percent.porcentaje_eth_24()
             self.mayor = persistence.traer_mayor_24_eth()
-            self.mayor = persistence.traer_mayor_24_eth()
+            self.menor = persistence.traer_menor_24_eth()
