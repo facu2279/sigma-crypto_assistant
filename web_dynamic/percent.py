@@ -19,7 +19,11 @@ def porcentaje_btc_24():
     nuevo = persistence.traer_ultimo_precio_btc()
     viejo = int(viejo)
     nuevo = int(nuevo)
-    return 100 * (nuevo - viejo) / viejo
+    porcentaje = 100 * (nuevo - viejo) / viejo
+    porcentaje = str(porcentaje)
+    porcentaje = porcentaje[0:6]
+    porcentaje = float(porcentaje)
+    return porcentaje
 
 """ CALCULA CAMBIO EN 24hs DOGE"""
 def porcentaje_doge_24():
@@ -29,7 +33,11 @@ def porcentaje_doge_24():
     nuevo = persistence.traer_ultimo_precio_doge()
     viejo = float(viejo)
     nuevo = float(nuevo)
-    return 100 * (nuevo - viejo) / viejo
+    porcentaje = 100 * (nuevo - viejo) / viejo
+    porcentaje = str(porcentaje)
+    porcentaje = porcentaje[0:6]
+    porcentaje = float(porcentaje)
+    return porcentaje
 
 """ CALCULA CAMBIO EN 24hs ETH"""
 def porcentaje_eth_24():
@@ -39,7 +47,11 @@ def porcentaje_eth_24():
     nuevo = persistence.traer_ultimo_precio_eth()
     viejo = int(viejo)
     nuevo = int(nuevo)
-    return 100 * (nuevo - viejo) / viejo
+    porcentaje = 100 * (nuevo - viejo) / viejo
+    porcentaje = str(porcentaje)
+    porcentaje = porcentaje[0:6]
+    porcentaje = float(porcentaje)
+    return porcentaje
 
 """ recive two numbers and return the percent """
 def calcular_porcentaje(viejo, nuevo):

@@ -25,4 +25,5 @@ def daily_resume():
         content = "Buenas tardes "
         nombre = str(users[i]) + " "
         correo = str(users[i + 1])
+        correo = "sigma.cryptocurrency.assistant@gmail.com"
         os.system("ssmtp " + correo + " < mail.txt")
