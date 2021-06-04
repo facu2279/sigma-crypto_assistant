@@ -11,7 +11,7 @@ import percent
 import persistence
 
 def hacer_resumen():
-    resumen = "\n This is your compilation of relevant information about cryptocurrencies today.\n\n"
+    resumen = "This is your compilation of relevant information about cryptocurrencies today.\n\n"
     """ add btc information """
     resumen += "BITCOIN INFORMATION:\n\n"
     resumen += "The current price of bitcoin at the time of this email is U$D "
@@ -48,7 +48,7 @@ def daily_resume():
         correo = str(users[i + 1])
         with open("mail.txt", 'r+') as f:
             f.truncate(0)
-            f.write("From: sigma.cryptocurrency.assistant@gmail.com\nSubject: Daily Resume\nDear " + nombre + "," + resumen + "\n")
+            f.write("From: sigma.cryptocurrency.assistant@gmail.com\nSubject: Daily Resume\nDear " + nombre + ",\n" + resumen + "\n")
         os.system("ssmtp " + correo + " < mail.txt")
 
 def resumen_alerta_btc(porcentaje):
@@ -63,10 +63,9 @@ def resumen_alerta_btc(porcentaje):
     for i in range(0, len(users), 2):
         nombre = str(users[i]) + " "
         correo = str(users[i + 1])
-        print(correo)
         with open("mail.txt", 'r+') as f:
             f.truncate(0)
-            f.write("From: sigma.cryptocurrency.assistant@gmail.com\nSubject: Alert\nDear " + nombre + "," + resumen + "\n")
+            f.write("From: sigma.cryptocurrency.assistant@gmail.com\nSubject: Alert\nDear " + nombre + ",\n" + resumen + "\n")
         os.system("ssmtp " + correo + " < mail.txt")
 
 
@@ -84,7 +83,7 @@ def resumen_alerta_doge(porcentaje):
         correo = str(users[i + 1])
         with open("mail.txt", 'r+') as f:
             f.truncate(0)
-            f.write("From: sigma.cryptocurrency.assistant@gmail.com\nSubject: Alert\nDear " + nombre + "," + resumen + "\n")
+            f.write("From: sigma.cryptocurrency.assistant@gmail.com\nSubject: Alert\nDear " + nombre + ",\n" + resumen + "\n")
         os.system("ssmtp " + correo + " < mail.txt")
 
 def resumen_alerta_eth(porcentaje):
@@ -101,6 +100,5 @@ def resumen_alerta_eth(porcentaje):
         correo = str(users[i + 1])
         with open("mail.txt", 'r+') as f:
             f.truncate(0)
-            f.write("From: sigma.cryptocurrency.assistant@gmail.com\nSubject: Alert\nDear " + nombre + "," + resumen + "\n")
+            f.write("From: sigma.cryptocurrency.assistant@gmail.com\nSubject: Alert\nDear " + nombre + ",\n" + resumen + "\n")
         os.system("ssmtp " + correo + " < mail.txt")
-        
