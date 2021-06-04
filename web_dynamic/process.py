@@ -12,6 +12,7 @@ import persistence
 import entities 
 import mail
 import info
+import objects
 import percent
 
 """ In case url 1 is not changing for these
@@ -33,6 +34,8 @@ while(i > 0):
         percent.chequear_tendencias()
         percent.chequear_movimientos()
 
-    
+    print(object.btc)
+    print(object.doge)
+    print(object.eth)
     i = i + 1
 
