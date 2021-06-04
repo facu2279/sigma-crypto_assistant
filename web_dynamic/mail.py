@@ -63,6 +63,7 @@ def resumen_alerta_btc(porcentaje):
     for i in range(0, len(users), 2):
         nombre = str(users[i]) + " "
         correo = str(users[i + 1])
+        print(correo)
         with open("mail.txt", 'r+') as f:
             f.truncate(0)
             f.write("From: " + correo + "\nSubject: Alert\nDear " + nombre + "," + resumen + "\n")
