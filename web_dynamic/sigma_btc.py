@@ -13,17 +13,7 @@ def bitcoin():
     price = process.doge.price
     name = process.doge.name
     suggest = process.doge.suggest
-    render_template('bitcoin.html', price=price, name=name, suggest=suggest)
-
-@app.route('/team', strict_slashes=False)
-def team():
-    """ """
-    render_template('team.html')
-
-@app.route('/index', strict_slashes=False)
-def index():
-    """"""
-    render_template('index.html')
+    return render_template('bitcoin.html', price=price, name=name, suggest=suggest)
 
 if __name__ == "__main__":
     """ Main Function """
