@@ -25,7 +25,6 @@ def daily_resume():
     for i in range(0, len(users), 2):
         nombre = str(users[i]) + " "
         correo = str(users[i + 1])
-        correo = "sigma.cryptocurrency.assistant@gmail.com"
         with open("mail.txt", 'r+') as f:
             f.truncate(0)
             f.write("From: " + correo + "\nSubject: Daily Resume\nBuenas tardes " + nombre + resumen + "\n")
