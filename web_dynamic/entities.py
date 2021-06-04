@@ -22,5 +22,7 @@ class Coin:
         new = {}
         new["name"] = self.name
         new["price"] = self.price
-        new["suggest"] = self.suggest
+        new["porcentaje"] = self.porcentaje
+        new["mayor"] = self.mayor
+        new["menor"] = self.menor
         return new
