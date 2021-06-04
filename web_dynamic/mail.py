@@ -21,9 +21,12 @@ def enviar_correos(resumen):
 
 def daily_resume():
     users = persistence.traer_users()
+    resumen = "EL BTC TA BARATO PA"
     for i in range(0, len(users), 2):
-        content = "Buenas tardes "
         nombre = str(users[i]) + " "
         correo = str(users[i + 1])
         correo = "sigma.cryptocurrency.assistant@gmail.com"
+        with open("mail.txt", 'r+') as f:
+            f.truncate(0)
+            f.write("From: " + correo + "\nSubject: Daily Resume\nBuenas tardes " + nombre + resumen + "\n")
         os.system("ssmtp " + correo + " < mail.txt")
