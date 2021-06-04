@@ -20,24 +20,4 @@ def enviar_correos(resumen):
         os.system("echo -e 'Subject: subject \n\n " + content + "' | ssmtp " + correo)
 
 def daily_resume():
-    remitente = "Desde gnucita <sigma.cryptocurrency.assistant@gmail.com>" 
-    destinatario = "Mama de Gnucita <ddiiaazzfacu@gmail.com>" 
-    asunto = "E-mal HTML enviado desde Python" 
-    mensaje = """Hola!<br/> <br/> 
-    Este es un <b>e-mail</b> enviando desde <b>Python</b> 
-    """
-
-    email = """From: %s 
-    To: %s 
-    MIME-Version: 1.0 
-    Content-type: text/html 
-    Subject: %s 
-
-    %s
-    """ % (remitente, destinatario, asunto, mensaje) 
-    try: 
-        smtp = smtplib.SMTP('localhost') 
-        smtp.sendmail(remitente, destinatario, email) 
-        print("Correo enviado") 
-    except: 
-        print("ERROR")
+    

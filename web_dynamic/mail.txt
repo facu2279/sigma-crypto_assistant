@@ -1,0 +1,3 @@
+From: sigma.cryptocurrency.assistant@gmail.com
+Subject: test email
+Hello World!
