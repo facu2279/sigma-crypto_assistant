@@ -34,7 +34,7 @@ def hacer_resumen():
     resumen += "and yesterday at this same time, the doge coin cost "
     resumen += str(persistence.traer_masviejo_precio_eth()) + "\n\n"
 
-def daily_resume(resumen):
+def daily_resume():
     resumen = hacer_resumen()
     users = persistence.traer_users()
     for i in range(0, len(users), 2):
