@@ -7,6 +7,7 @@ Made by Facundo Diaz - Tomas De Castro - Tadeo Grach for Holberton School 2021
 
 import os
 import time
+import mail
 
 """ IMPORTS FILES """
 import persistence
@@ -120,22 +121,13 @@ def detectar_constantes_eth():
 def chequear_movimientos():
     res = detectar_constantes_btc()
     if res != 0:
-        if res > 0:
-            """ llamar a mail """
-        else:
-           """ llamar a mail """   
+        mail.resumen_alerta_btc(res)  
     res = detectar_constantes_doge()
     if res != 0:
-        if res > 0:
-            """ llamar a mail """
-        else:
-            """ llamar a mail """
+        mail.resumen_alerta_doge(res)
     res = detectar_constantes_eth()
     if res != 0:
-        if res > 0:
-            """ llamar a mail """
-        else:
-            """ llamar a mail """
+        mail.resumen_alerta_eth(res)
 
 def chequear_tendencias():
     ultimos = persistence.traer_ultimos_precios_doge()

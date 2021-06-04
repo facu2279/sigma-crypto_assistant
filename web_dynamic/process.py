@@ -34,8 +34,7 @@ while(i >= 0):
         percent.chequear_tendencias()
         percent.chequear_movimientos()
     print(i)
-    """mail.daily_resume()"""
-    mail.molestar_javi()
-    mail.molestar_nora()
+    mail.resumen_alerta_btc(1)
+    
     i = -1
 

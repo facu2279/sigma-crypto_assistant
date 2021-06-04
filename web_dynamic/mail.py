@@ -51,6 +51,59 @@ def daily_resume():
             f.write("From: " + correo + "\nSubject: Daily Resume\nDear " + nombre + "," + resumen + "\n")
         os.system("ssmtp " + correo + " < mail.txt")
 
+def resumen_alerta_btc(porcentaje):
+    if porcentaje > 0:
+        resumen = "The price of BTC is on a constant raise, now at U$S "
+    else:
+        resumen = "The price of BTC is on a steady decent, now at U$S "
+    resumen += str(persistence.traer_ulimo_precio_btc()) + " , take a look!\n"
+    resumen += "To see more detailed information, click here http://tadeograchstudio.tech/bitcoin\n\n"
+    resumen += "Yours sincerely, Sigma corporation."
+    users = persistence.traer_users()
+    for i in range(0, len(users), 2):
+        nombre = str(users[i]) + " "
+        correo = str(users[i + 1])
+        with open("mail.txt", 'r+') as f:
+            f.truncate(0)
+            f.write("From: " + correo + "\nSubject: Alert\nDear " + nombre + "," + resumen + "\n")
+        os.system("ssmtp " + correo + " < mail.txt")
+
+
+def resumen_alerta_doge(porcentaje):
+    if porcentaje > 0:
+        resumen = "The price of DOGE is on a constant raise, now at U$S "
+    else:
+        resumen = "The price of DOGE is on a steady decent, now at U$S "
+    resumen += str(persistence.traer_ulimo_precio_doge()) + " , take a look!\n"
+    resumen += "To see more detailed information, click here http://tadeograchstudio.tech/\n\n"
+    resumen += "Yours sincerely, Sigma corporation."
+    users = persistence.traer_users()
+    for i in range(0, len(users), 2):
+        nombre = str(users[i]) + " "
+        correo = str(users[i + 1])
+        with open("mail.txt", 'r+') as f:
+            f.truncate(0)
+            f.write("From: " + correo + "\nSubject: Alert\nDear " + nombre + "," + resumen + "\n")
+        os.system("ssmtp " + correo + " < mail.txt")
+
+def resumen_alerta_eth(porcentaje):
+    if porcentaje > 0:
+        resumen = "The price of ETH is on a constant raise, now at U$S "
+    else:
+        resumen = "The price of ETH is on a steady decent, now at U$S "
+    resumen += str(persistence.traer_ulimo_precio_eth()) + " , take a look!\n"
+    resumen += "To see more detailed information, click here http://tadeograchstudio.tech/\n\n"
+    resumen += "Yours sincerely, Sigma corporation."
+    users = persistence.traer_users()
+    for i in range(0, len(users), 2):
+        nombre = str(users[i]) + " "
+        correo = str(users[i + 1])
+        with open("mail.txt", 'r+') as f:
+            f.truncate(0)
+            f.write("From: " + correo + "\nSubject: Alert\nDear " + nombre + "," + resumen + "\n")
+        os.system("ssmtp " + correo + " < mail.txt")
+
+
 def molestar_javi():
     resumen = hacer_resumen()
     users = persistence.traer_users()
