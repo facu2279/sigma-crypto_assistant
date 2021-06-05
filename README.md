@@ -116,17 +116,17 @@ Made by [Facundo Diaz](https://github.com/facu2279), [Tadeo Grach](https://githu
 
 ## Social Networks
 
-Facundo Diaz
--------------------
+### Facundo Diaz
+
 - [Linkedin](https://www.linkedin.com/in/facundo-diaz-noya/)
 - Mail: ddiiaazzfacu@gmail.com
 
-Tadeo Grach
--------------------
+### Tadeo Grach
+
 - [Linkedin](https://www.linkedin.com/in/tadeo-grach-toledo/)
 - Mail: tade.g.17@gmail.com
 
-Tomas de Castro
--------------------
+### Tomas de Castro
+
 - [Linkedin](https://www.linkedin.com/in/tomas-de-castro-guelfi-1872a1211/)
 - Mail: tdecastroguelfi56@gmail.com
