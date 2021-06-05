@@ -12,8 +12,8 @@
   <body>
     <header>
       <div class="logo">
-      <a href="index.html"><img src="../static/img/small_logo_header.png"></a>
-      <a href="index.html"><img src="../static/img/just_sigma2.png"></a>
+      <a href="http://tadeograchstudio.tech/"><img src="../static/img/small_logo_header.png"></a>
+      <a href="http://tadeograchstudio.tech/"><img src="../static/img/just_sigma2.png"></a>
       </div>
     </header>
     <div class="container">
@@ -26,7 +26,7 @@
               <li>
                 <h2>Coins</h2>
                 <ul>
-                  <li><a href="bitcoin.html">Bitcoin</a></li>
+                  <li><a href="http://tadeograchstudio.tech/bitcoin">Bitcoin</a></li>
                   <li>Doge</li>
                   <li>Ethereum</li>
                 </ul>
@@ -66,7 +66,7 @@
               <li>
                 <h2>About us</h2>
                 <ul>
-                  <li><a href="team.html">Team</a></li>
+                  <li><a href="http://tadeograchstudio.tech/team">Team</a></li>
                   <li></li>
                   <li></li>
                 </ul>
@@ -84,7 +84,9 @@
     <article>
 	    <img src="../static/img/btc_log.png">
       <h4>price: {{ price }}</h4>
-      <h4>name: {{ name }}</h4>
+      <h4>Lowest price: {{ min_price }}</h4>
+      <h4>Highest price: {{ max_price }}</h4>
+      <h4>Down or up: {{ percent }}</h4>
     </article>
     <div>
     <div class="articles">
