@@ -26,7 +26,7 @@ def bitcoin():
     max_price = btc.mayor
     min_price = btc.menor
     percent = btc.porcentaje
-    return render_template('bitcoin.html', price=price, max_price=max_price, min_price=min_price, percent=percent)
+    return render_template('bitcoin.html', price=price, max_price=max_price, min_price=min_price, percent=percent, eth_percent=eth.porcentaje, doge_percent=doge.porcentaje)
 
 if __name__ == "__main__":
     """ Main Function """
