@@ -1,5 +1,5 @@
 # SIGMA - YOUR CRYPTOCURRENCY ASSITANT
-<p align="center"><img src="hhttps://github.com/facu2279/proyecto_final/blob/main/web_dynamic/static/img/sigma_logo.png"/></p>
+<img src="https://github.com/facu2279/proyecto_final/blob/main/web_dynamic/static/img/sigma_logo.png"/>
 
 This is the final Foundations project of the holberton school program. The team sought to create a product that would help non-expert users to understand the world of cryptocurrencies while advising them when it is convenient to buy and when to sell by analyzing the price rises and falls.
 
