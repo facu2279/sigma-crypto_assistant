@@ -32,7 +32,7 @@ while(i >= 0):
     percent.chequear_movimientos()
 
     if i % 60 == 0:
-        percent.chequear_tendencias()
+        percent.insert_in_tendencias()
     
     if i % 1440 == 0:
         mail.daily_resume()
