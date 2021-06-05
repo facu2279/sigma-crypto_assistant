@@ -8,21 +8,24 @@ import time
 from datetime import datetime
 
 def consultar_precio_BTC(url):
-    """ requests BTC price from Binance API """
+    """ Requests BTC price from Binance API """
+
     query = "api/v3/ticker/price?symbol=BTCUSDT"
     r = requests.get(url + query)
     r = r.json()
     return int(float(r["price"]))
 
 def consultar_precio_DOGE(url):
-    """ requests DOGE price from Binance API """
+    """ Requests DOGE price from Binance API """
+
     query = "api/v3/ticker/price?symbol=DOGEUSDT"
     r = requests.get(url + query)
     r = r.json()
     return float(r["price"])
 
 def consultar_precio_ETH(url):
-    """ requests ETH price from Binance API """
+    """ Requests ETH price from Binance API """
+
     query = "api/v3/ticker/price?symbol=ETHUSDT"
     r = requests.get(url + query)
     r = r.json()

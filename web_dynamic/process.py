@@ -12,7 +12,7 @@ import mail
 import info
 import percent
 
-""" In case url 1 is not changing for these
+""" In case url 1 is not working, changing for these
 url = "https://api2.binance.com/"
 url = "https://api3.binance.com/"
 """
