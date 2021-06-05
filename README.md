@@ -31,7 +31,7 @@ We extract information only from the OFFICIAL API of https://www.binance.com/ on
 - The dynamic web was developed and executed on Flask 2.0.1
 - The server runs our website using gunicorn tools in the version( 20.1.0)
 
-## File Descriptions
+## File Map
 ```
 ├── README.md
 ├── reset_database
@@ -80,3 +80,29 @@ We extract information only from the OFFICIAL API of https://www.binance.com/ on
     │   └── team.html
     └── wsgi.py
 ```
+
+## File Descriptions
+
+reset_database :
+sql_querys :
+entities.py :
+info.py :
+mail.py :
+mail.txt :
+objects.py :
+percent.py :
+persistence.py :
+process.py :
+sigma_btc.py :
+bitcoin_article.css :
+bitcoin_common.css :
+bitcoin_filters.css :
+header.css :
+index_common.css :
+index_filters.css :
+team_common.css :
+team_filters.css :
+bitcoin.html :
+index.html :
+team.html :
+wsgi.py :
