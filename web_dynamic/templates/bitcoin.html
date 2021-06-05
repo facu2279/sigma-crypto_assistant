@@ -82,18 +82,28 @@
     </div>
     <div class="btc">
     <article>
-	    <img src="../static/img/btc_log.png">
-      <h4>price: {{ price }}</h4>
-      <h4>Lowest price: {{ min_price }}</h4>
-      <h4>Highest price: {{ max_price }}</h4>
-      <h4>Down or up: {{ percent }}</h4>
+      <img src="../static/img/btc_log.png">
+      <div class="information">
+	<h3>Price information (last 24hs): {{ percent }}%</h3>
+	<a>Actual price: U$S{{ price }}</a>
+	<a>Lowest price: U$S{{ min_price }}</a>
+	<a>Highest price: U$S{{ max_price }}</a>
+	<h3>About Bitcoin</h3>
+	<a> Bitcoin is bla bla bla...</a>
+      </div>
     </article>
     <div>
     <div class="articles">
-	 <div>
-	 	<img src="../static/img/ethereum_logo.png">
-	 </div>
-	 <img src="../static/img/doge_log.png">
+      <div class="coin2">
+	<a href="/eth">
+	   <img src="../static/img/ethereum_logo.png">
+	   ETH ({{ eth_percent }}%)
+	</a>
+      </div>
+      <div class="coin3">
+	<img src="../static/img/doge_log.png">
+	<a href="/doge">DOGE ({{ doge_percent }}%)</a>
+      </div>
     </div>
     <footer>
       <p></p>
