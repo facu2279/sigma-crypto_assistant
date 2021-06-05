@@ -32,7 +32,7 @@ The dynamic web was developed and executed on Flask 2.0.1
 The server runs our website using gunicorn tools in the version( 20.1.0)
 
 ## File Descriptions
-
+```
 ├── README.md
 ├── reset_database
 ├── sql_querys
@@ -81,3 +81,4 @@ The server runs our website using gunicorn tools in the version( 20.1.0)
     │   ├── index.html
     │   └── team.html
     └── wsgi.py
+```
