@@ -23,3 +23,61 @@ In this version all the functionalities described below are functional to 3 cryp
 
 All the mentioned functions were programmed using Python, the database is managed by MySQL and all the data and functions are visible from a dynamic web developed with the Flask framework.
 We extract information only from the OFFICIAL API of https://www.binance.com/ on the current prices of cryptocurrencies. All the calculations and detection algorithms were 100% developed by the Sigma team.
+
+## Environment
+
+This project was developed and tested on Ubuntu 16.04.6 LTS LTS using python3 (version 3.6.13)
+The database was created on Version 14.14 Distrib 5.7.33
+The dynamic web was developed and executed on Flask 2.0.1
+The server runs our website using gunicorn tools in the version( 20.1.0)
+
+## File Descriptions
+
+├── README.md
+├── reset_database
+├── sql_querys
+└── web_dynamic
+    ├── entities.py
+    ├── info.py
+    ├── mail.py
+    ├── mail.txt
+    ├── objects.py
+    ├── percent.py
+    ├── persistence.py
+    ├── process.py
+    ├── sigma_btc.py
+    ├── static
+    │   ├── img
+    │   │   ├── background-img.png
+    │   │   ├── btc_log.png
+    │   │   ├── doge_log.png
+    │   │   ├── ethereum_logo.png
+    │   │   ├── facundo.jpg
+    │   │   ├── github_logo.png
+    │   │   ├── gmail_logo.png
+    │   │   ├── just_sigma2.png
+    │   │   ├── linkedin_logo.png
+    │   │   ├── mer.png
+    │   │   ├── sigma_card.png
+    │   │   ├── sigma_cel.png
+    │   │   ├── sigma_logo.png
+    │   │   ├── small_logo_header.png
+    │   │   ├── small_logo.png
+    │   │   ├── tadeo.jpg
+    │   │   └── tomas.jpg
+    │   └── styles
+    │       ├── bitcoin_article.css
+    │       ├── bitcoin_article.css~
+    │       ├── bitcoin_common.css
+    │       ├── bitcoin_filters.css
+    │       ├── header.css
+    │       ├── index_common.css
+    │       ├── index_filters.css
+    │       ├── team_common.css
+    │       └── team_filters.css
+    ├── templates
+    │   ├── #bitcoin.html#
+    │   ├── bitcoin.html
+    │   ├── index.html
+    │   └── team.html
+    └── wsgi.py
