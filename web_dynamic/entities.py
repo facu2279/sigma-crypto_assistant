@@ -9,19 +9,22 @@ import percent
 
 
 class User:
+    """ Class User """
     def __init__(self, name, mail):
+        """ Init function """
         self.id = None
         self.name = name
         self.mail = mail
 
 class Coin:
-    """ refreshes coin values and stores it in a new dictionary """
+    """ Class Coin """
     def __init__(self, name):
-        """ refreshes coin values to last minute ones """
+        """ Init function """
         self.refresh_coin(name)
 
     def to_dict(self):
-        """ stores all coin new values in a dictionary """
+        """ Stores all coin new values in a dictionary """
+
         new = {}
         new["name"] = self.name
         new["price"] = self.price
@@ -31,7 +34,8 @@ class Coin:
         return new
     
     def refresh_coin(self, name):
-        """ refresh al coins valus to last minute values """
+        """ Refresh al coins valus to last minute values """
+
         if name == "BTC":
             self.name = name
             self.price = persistence.traer_ultimo_precio_btc()
