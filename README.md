@@ -67,7 +67,6 @@ We extract information only from the OFFICIAL API of https://www.binance.com/ on
     │   │   └── tomas.jpg
     │   └── styles
     │       ├── bitcoin_article.css
-    │       ├── bitcoin_article.css~
     │       ├── bitcoin_common.css
     │       ├── bitcoin_filters.css
     │       ├── header.css
@@ -76,7 +75,6 @@ We extract information only from the OFFICIAL API of https://www.binance.com/ on
     │       ├── team_common.css
     │       └── team_filters.css
     ├── templates
-    │   ├── #bitcoin.html#
     │   ├── bitcoin.html
     │   ├── index.html
     │   └── team.html
