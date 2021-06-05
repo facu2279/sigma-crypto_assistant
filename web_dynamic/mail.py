@@ -42,6 +42,7 @@ def hacer_resumen():
     return str(resumen)
 
 def daily_resume():
+    """ sends what hacer_resumen() writes adding the subject of the mail """
     resumen = hacer_resumen()
     users = persistence.traer_users()
     for i in range(0, len(users), 2):
@@ -53,6 +54,7 @@ def daily_resume():
         os.system("ssmtp " + correo + " < mail.txt")
 
 def resumen_alerta_btc(porcentaje):
+    """ called by percent.chequear_movimientos() when a constant variations is detected to send an alert """
     print("va mail btc")
     if porcentaje > 0:
         resumen = "The price of BTC is on a constant raise, now at U$S "
@@ -72,6 +74,7 @@ def resumen_alerta_btc(porcentaje):
 
 
 def resumen_alerta_doge(porcentaje):
+    """ called by percent.chequear_movimientos() when a constant variations is detected to send an alert """
     print("va mail doge")
     if porcentaje > 0:
         resumen = "The price of DOGE is on a constant raise, now at U$S "
@@ -90,6 +93,7 @@ def resumen_alerta_doge(porcentaje):
         os.system("ssmtp " + correo + " < mail.txt")
 
 def resumen_alerta_eth(porcentaje):
+    """ called by percent.chequear_movimientos() when a constant variations is detected to send an alert """
     print("va mail eth")
     if porcentaje > 0:
         resumen = "The price of ETH is on a constant raise, now at U$S "

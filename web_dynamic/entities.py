@@ -15,10 +15,13 @@ class User:
         self.mail = mail
 
 class Coin:
+    """ refreshes coin values and stores it in a new dictionary """
     def __init__(self, name):
+        """ refreshes coin values to last minute ones """
         self.refresh_coin(name)
 
     def to_dict(self):
+        """ stores all coin new values in a dictionary """
         new = {}
         new["name"] = self.name
         new["price"] = self.price
@@ -28,6 +31,7 @@ class Coin:
         return new
     
     def refresh_coin(self, name):
+        """ refresh al coins valus to last minute values """
         if name == "BTC":
             self.name = name
             self.price = persistence.traer_ultimo_precio_btc()
