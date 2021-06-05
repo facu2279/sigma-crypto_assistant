@@ -26,7 +26,7 @@ We extract information only from the OFFICIAL API of https://www.binance.com/ on
 
 ## Environment
 
-- This project was developed and tested on Ubuntu 16.04.6 LTS LTS using python3 (version 3.6.13)
+- This project was developed and tested on Ubuntu 16.04.6 LTS using python3 (version 3.6.13)
 - The database was created on Version 14.14 Distrib 5.7.33
 - The dynamic web was developed and executed on Flask 2.0.1
 - The server runs our website using gunicorn tools in the version( 20.1.0)
