@@ -7,11 +7,6 @@ import requests
 import time
 from datetime import datetime
 
-""" DECLARACION DE TODAS LAS VARIABLES """
-
-
-""" FUNCTIONS """
-
 def consultar_precio_BTC(url):
     query = "api/v3/ticker/price?symbol=BTCUSDT"
     r = requests.get(url + query)

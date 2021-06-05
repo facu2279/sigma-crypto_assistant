@@ -2,10 +2,11 @@
 """
 Made by Facundo Diaz - Tomas De Castro - Tadeo Grach for Holberton School 2021 """
 
-""" IMPORTS """
+""" IMPORTS FILES """
 import persistence
 import percent
-"""OBJECTS DECLARATIONS"""
+
+
 
 class User:
     def __init__(self, name, mail):

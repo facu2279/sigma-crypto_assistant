@@ -2,11 +2,9 @@
 """
 Made by Facundo Diaz - Tomas De Castro - Tadeo Grach for Holberton School 2021 """
 
-""" colour background in hexa #262833 colour of logo in hexa #39E991 """
 
 """ IMPORTS EXTERN MODULES """
 import time
-
 """ IMPORTS FILES """
 import persistence
 import entities 
