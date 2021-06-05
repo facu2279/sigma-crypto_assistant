@@ -6,12 +6,12 @@ Made by Facundo Diaz - Tomas De Castro - Tadeo Grach for Holberton School 2021
 """ IMPORTS EXTERN MODULES """
 import os
 import time
-
+import percent
 """ IMPORTS FILES """
 import persistence
-import percent
 
 def hacer_resumen():
+    """ stores the mail body to be send in resumen """
     resumen = "This is your compilation of relevant information about cryptocurrencies today.\n\n"
     """ add btc information """
     resumen += "BITCOIN INFORMATION:\n\n"

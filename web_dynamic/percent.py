@@ -12,8 +12,9 @@ import mail
 """ IMPORTS FILES """
 import persistence
 
-""" CALCULA CAMBIO EN 24hs  BTC"""
+
 def porcentaje_btc_24():
+    """ calculates the porcentile variation of btc in 24hs """
     viejo = 1
     nuevo = 1
     viejo = persistence.traer_masviejo_precio_btc()
@@ -24,8 +25,8 @@ def porcentaje_btc_24():
     porcentaje = round(porcentaje, 2)
     return porcentaje
 
-""" CALCULA CAMBIO EN 24hs DOGE"""
 def porcentaje_doge_24():
+    """ calculates the porcentile variation of doge in 24hs """
     viejo = 1
     nuevo = 1
     viejo = persistence.traer_masviejo_precio_doge()
@@ -36,8 +37,8 @@ def porcentaje_doge_24():
     porcentaje = round(porcentaje, 2)
     return porcentaje
 
-""" CALCULA CAMBIO EN 24hs ETH"""
 def porcentaje_eth_24():
+    """ calculates the porcentile variation of eth in 24hs """
     viejo = 1
     nuevo = 1
     viejo = persistence.traer_masviejo_precio_eth()
@@ -48,14 +49,14 @@ def porcentaje_eth_24():
     porcentaje = round(porcentaje, 2)
     return porcentaje
 
-""" recive two numbers and return the percent """
 def calcular_porcentaje(viejo, nuevo):
+    """ recives two numbers and returns the diference in porcentaje """
     viejo = viejo
     nuevo = nuevo
     return 100 * (nuevo - viejo) / viejo
 
-""" detectar constantes btc cada una hora """
 def detectar_constantes_btc():
+    """ looks for a constant and significant variation in btc """
     ultimos_precios = persistence.traer_ultimos_precios_btc()
     prev = int(ultimos_precios[0])
     porcentaje = 0
@@ -75,8 +76,8 @@ def detectar_constantes_btc():
     else:
         return 0
 
-""" detectar constantes doge cada una hora """
 def detectar_constantes_doge():
+    """ looks for a constant and significant variation in doge """
     ultimos_precios = persistence.traer_ultimos_precios_doge()
     prev = float(ultimos_precios[0])
     porcentaje = 0
@@ -97,8 +98,8 @@ def detectar_constantes_doge():
     else:
         return 0
 
-""" detectar constantes eth cada una hora """
 def detectar_constantes_eth():
+    """ looks for a constant and significant variation in eth """
     ultimos_precios = persistence.traer_ultimos_precios_eth()
     prev = int(ultimos_precios[0])
     porcentaje = 0
@@ -119,6 +120,7 @@ def detectar_constantes_eth():
         return 0
 
 def chequear_movimientos():
+    """ checks what detectar_constantes_coin() returns"""
     res = detectar_constantes_btc()
     if res != 0:
         mail.resumen_alerta_btc(res)  
@@ -129,7 +131,8 @@ def chequear_movimientos():
     if res != 0:
         mail.resumen_alerta_eth(res)
 
-def chequear_tendencias():
+def insert_in_tendencias():
+    """ inserts information of the last hour in tendencias table """
     ultimos = persistence.traer_ultimos_precios_doge()
     average_doge = sum(ultimos) / len(ultimos)
     min_price_doge = min(ultimos)
