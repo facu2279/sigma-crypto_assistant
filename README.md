@@ -83,16 +83,16 @@ We extract information only from the OFFICIAL API of https://www.binance.com/ on
 
 ## File Descriptions
 
-- reset_database :
-- sql_querys :
-- entities.py :
-- info.py :
-- mail.py :
-- mail.txt :
-- objects.py :
-- percent.py :
-- persistence.py :
-- process.py :
+- reset_database : This file contains a script to delete the database and create it again and load enough test data for the program to run without any problem.
+- sql_querys : This file contains a small script that serves to test that the number of inserts in the tables is 1440 and this means that it is working well
+- entities.py : This file contains the declaration of all the classes / objects that are used
+- info.py : This file contains all the requests we make to the binance api to extract the prices
+- mail.py : This file contains all the functions that correspond to the use of emails and alerts
+- mail.txt : This file is the one we use to generate the structure of the default emails
+- objects.py : This file has the function of instantiating the objects to later be imported by the web
+- percent.py : This file has all the functions that calculate percentages, detect constants and insert trends
+- persistence.py : This file has all the functions that communicate with the database
+- process.py : This file is the main one, it is the one that runs all the time and calls the necessary functions every x amount of time
 - sigma_btc.py :
 - bitcoin_article.css :
 - bitcoin_common.css :
