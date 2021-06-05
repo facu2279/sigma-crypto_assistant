@@ -10,7 +10,6 @@ import persistence
 import entities 
 import mail
 import info
-from objects import btc, doge, eth
 import percent
 
 """ In case url 1 is not changing for these
