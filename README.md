@@ -83,26 +83,26 @@ We extract information only from the OFFICIAL API of https://www.binance.com/ on
 
 ## File Descriptions
 
-reset_database :
-sql_querys :
-entities.py :
-info.py :
-mail.py :
-mail.txt :
-objects.py :
-percent.py :
-persistence.py :
-process.py :
-sigma_btc.py :
-bitcoin_article.css :
-bitcoin_common.css :
-bitcoin_filters.css :
-header.css :
-index_common.css :
-index_filters.css :
-team_common.css :
-team_filters.css :
-bitcoin.html :
-index.html :
-team.html :
-wsgi.py :
+- reset_database :
+- sql_querys :
+- entities.py :
+- info.py :
+- mail.py :
+- mail.txt :
+- objects.py :
+- percent.py :
+- persistence.py :
+- process.py :
+- sigma_btc.py :
+- bitcoin_article.css :
+- bitcoin_common.css :
+- bitcoin_filters.css :
+- header.css :
+- index_common.css :
+- index_filters.css :
+- team_common.css :
+- team_filters.css :
+- bitcoin.html :
+- index.html :
+- team.html :
+- wsgi.py :
