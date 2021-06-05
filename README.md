@@ -3,7 +3,7 @@
 
 ## Objective
 
-This is the final Foundations project of the holberton school program. The team sought to create a product that would help non-expert users to understand the world of cryptocurrencies while advising them when it is convenient to buy and when to sell by analyzing the price rises and falls.
+This is the final foundation project of the holberton school program. The slogan was to think of an innovative and creative idea and then create an mvp. The team sought to create a product that would help the average person understand the world of cryptocurrencies easily while advising them when to buy and when to sell by analyzing price rises and falls.
 
 ## Features and functionality
 
@@ -106,3 +106,27 @@ We extract information only from the OFFICIAL API of https://www.binance.com/ on
 - index.html :
 - team.html :
 - wsgi.py :
+
+## Known bugs
+
+This project is still in under construction, therefore bugs may be present. If you find any, you're welcome to let us know
+
+## Authors
+Made by [Facundo Diaz](https://github.com/facu2279), [Tadeo Grach](https://github.com/tadeograch) and [Tomas de Castro](https://github.com/tomi1710) for Holberton School 2021 
+
+## Social Networks
+
+Facundo Diaz
+-------------------
+- [Linkedin](https://www.linkedin.com/in/facundo-diaz-noya/)
+- [Mail]() - ddiiaazzfacu@gmail.com
+
+Tadeo Grach
+-------------------
+- [Linkedin](https://www.linkedin.com/in/tadeo-grach-toledo/)
+- [Mail]() - tade.g.17@gmail.com
+
+Tomas de Castro
+-------------------
+- [Linkedin](https://www.linkedin.com/in/tomas-de-castro-guelfi-1872a1211/)
+- [Mail]() - tdecastroguelfi56@gmail.com
