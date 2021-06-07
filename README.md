@@ -142,19 +142,25 @@ Made by [Facundo Diaz](https://github.com/facu2279), [Tadeo Grach](https://githu
 ## Social Networks
 
 ### Facundo Diaz
+
 <img src="https://github.com/facu2279/proyecto_final/blob/main/web_dynamic/static/img/facundo.jpg"/>
+
 - [Linkedin](https://www.linkedin.com/in/facundo-diaz-noya/)
 - Mail: ddiiaazzfacu@gmail.com
 - [Github](https://github.com/facu2279)
 
 ### Tadeo Grach
+
 <img src="https://github.com/facu2279/proyecto_final/blob/main/web_dynamic/static/img/tadeo.jpg"/>
+
 - [Linkedin](https://www.linkedin.com/in/tadeo-grach-toledo/)
 - Mail: tade.g.17@gmail.com
 - [Github](https://github.com/tadeograch)
 
 ### Tomas de Castro
+
 <img src="https://github.com/facu2279/proyecto_final/blob/main/web_dynamic/static/img/tomas.jpg"/>
+
 - [Linkedin](https://www.linkedin.com/in/tomas-de-castro-guelfi-1872a1211/)
 - Mail: tdecastroguelfi56@gmail.com
 - [Github](https://github.com/tomi1710)
