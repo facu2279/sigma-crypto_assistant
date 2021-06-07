@@ -118,19 +118,19 @@ SOFTWARE.
 - percent.py : This file has all the functions that calculate percentages, detect constants and insert trends
 - persistence.py : This file has all the functions that communicate with the database
 - process.py : This file is the main one, it is the one that runs all the time and calls the necessary functions every x amount of time
-- sigma_btc.py :
-- bitcoin_article.css :
-- bitcoin_common.css :
-- bitcoin_filters.css :
-- header.css :
-- index_common.css :
-- index_filters.css :
-- team_common.css :
-- team_filters.css :
-- bitcoin.html :
-- index.html :
-- team.html :
-- wsgi.py :
+- sigma_btc.py : This file is in charge of passing the variables and running the templates using flask
+- bitcoin_article.css : This file is a css stylesheet
+- bitcoin_common.css : This file is a css stylesheet
+- bitcoin_filters.css : This file is a css stylesheet
+- header.css : This file is a css stylesheet
+- index_common.css : This file is a css stylesheet
+- index_filters.css : This file is a css stylesheet
+- team_common.css : This file is a css stylesheet
+- team_filters.css : This file is a css stylesheet
+- bitcoin.html : This file contains the html structure of the bitcoin page
+- index.html : This file contains the html structure of the main page
+- team.html : This file contains the html structure of the team section page
+- wsgi.py : This file is necessary to run the unicorn correctly
 
 ## Known bugs
 
