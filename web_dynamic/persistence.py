@@ -392,7 +392,7 @@ def traer_tendencias_btc():
 
     newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = newxd.cursor()
-    consulta.execute("SELECT * FROM tendencias WHERE name='BTC';")
+    consulta.execute("SELECT * FROM tendencias WHERE name='BTC' ORDER BY id_tend DESC LIMIT 24;")
     resultado = consulta.fetchall()
     arr_tencencias = []
     for i in resultado:
