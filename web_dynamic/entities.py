@@ -20,7 +20,7 @@ class Tendencia:
     """ Class Tendencia"""
     def __init__(self, name, average_price, max, min, open, close, date):
         self.name = name
-        self.average_price = round(average_price, 2)
+        self.average_price = round(float((average_price, 2)))
         self.max = max
         self.min = min
         self.open = open
