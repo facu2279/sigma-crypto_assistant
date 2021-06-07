@@ -58,7 +58,7 @@ def calcular_porcentaje(viejo, nuevo):
     return 100 * (nuevo - viejo) / viejo
 
 def detectar_constantes_btc():
-    """ Looks for a constant and significant variation in btc """
+    """ Looks for a constant variation in btc """
 
     ultimos_precios = persistence.traer_ultimos_precios_btc()
     prev = int(ultimos_precios[0])
@@ -80,7 +80,7 @@ def detectar_constantes_btc():
         return 0
 
 def detectar_constantes_doge():
-    """ Looks for a constant and significant variation in doge """
+    """ Looks for a constant variation in doge """
 
     ultimos_precios = persistence.traer_ultimos_precios_doge()
     prev = float(ultimos_precios[0])
@@ -103,7 +103,7 @@ def detectar_constantes_doge():
         return 0
 
 def detectar_constantes_eth():
-    """ Looks for a constant and significant variation in eth """
+    """ Looks for a constant variation in eth """
 
     ultimos_precios = persistence.traer_ultimos_precios_eth()
     prev = int(ultimos_precios[0])
@@ -124,18 +124,74 @@ def detectar_constantes_eth():
     else:
         return 0
 
+def detectar_pico_btc():
+    """ Looks for a significant variation in btc """
+
+    ultimos_precios = persistence.traer_ultimos_precios_btc()
+    prev = int(ultimos_precios[0])
+    now = int(ultimos_precios[1])
+    porcentaje = 0
+
+    porcentaje = calcular_porcentaje(prev, now)
+    porcentaje = round(porcentaje, 2)
+    if porcentaje > 1.5:
+        return porcentaje
+
+def detectar_pico_doge():
+    """ Looks for a significant variation in doge """
+
+    ultimos_precios = persistence.traer_ultimos_precios_doge()
+    prev = float(ultimos_precios[0])
+    now = float(ultimos_precios[1])
+    porcentaje = 0
+
+    porcentaje = calcular_porcentaje(prev, now)
+    porcentaje = round(porcentaje, 2)
+    if porcentaje > 1.5:
+        return porcentaje
+
+def detectar_pico_eth():
+    """ Looks for a significant variation in eth """
+
+    ultimos_precios = persistence.traer_ultimos_precios_btc()
+    prev = int(ultimos_precios[0])
+    now = int(ultimos_precios[1])
+    porcentaje = 0
+
+    porcentaje = calcular_porcentaje(prev, now)
+    porcentaje = round(porcentaje, 2)
+    if porcentaje > 1.5:
+        return porcentaje
+
+    
 def chequear_movimientos():
     """ Checks what detectar_constantes_coin() returns """
 
     res = detectar_constantes_btc()
     if res != 0:
-        mail.resumen_alerta_btc(res)  
+        mail.resumen_alerta_btc(res)
     res = detectar_constantes_doge()
     if res != 0:
         mail.resumen_alerta_doge(res)
     res = detectar_constantes_eth()
     if res != 0:
         mail.resumen_alerta_eth(res)
+
+
+
+def detectar_picos():
+    res = detectar_pico_btc()
+    if res != 0:
+        mail.mail_pico_btc(res)
+    
+    res = detectar_pico_doge()
+    if res != 0:
+        mail.mail_pico_doge(res)
+
+    res = detectar_pico_eth()
+    if res != 0:
+        mail.mail_pico_eth(res)
+
 
 def insert_in_tendencias():
     """ Inserts information of the last hour in tendencias table """

@@ -21,11 +21,12 @@ i = 2
 
 while(i >= 0):
     btc_price = info.consultar_precio_BTC(url)
-    persistence.save_price_bitcoin(btc_price)
+    persistence.save_price_bitcoin(40000)
     eth_price = info.consultar_precio_ETH(url)
-    persistence.save_price_ethereum(eth_price)
+    persistence.save_price_ethereum(4000)
     doge_price = info.consultar_precio_DOGE(url)
-    persistence.save_price_doge(doge_price)
+    persistence.save_price_doge(10)
+    percent.detectar_picos()
     """percent.chequear_movimientos()"""
 
     if i % 60 == 0:

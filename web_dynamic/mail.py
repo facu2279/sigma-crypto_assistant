@@ -117,3 +117,63 @@ def resumen_alerta_eth(porcentaje):
             f.truncate(0)
             f.write("From: sigma.cryptocurrency.assistant@gmail.com\nSubject: Alert\nDear " + nombre + ",\n" + resumen + "\n")
         os.system("ssmtp " + correo + " < mail.txt")
+
+def mail_pico_btc(porcentaje):
+    """ Called by detectar_picos() sendas a mail """
+
+    print("va mail btc substancial")
+    if porcentaje > 0:
+        resumen = "Bitcoin is on a quick rise "
+    else:
+        resumen = "Bitcoin is on a quick dip "
+    resumen += str(persistence.traer_ultimo_precio_eth()) + " , take a look!\n"
+    resumen += "To see more detailed information, click here http://tadeograchstudio.tech/\n\n"
+    resumen += "Yours sincerely, Sigma corporation."
+    users = persistence.traer_users()
+    for i in range(0, len(users), 2):
+        nombre = str(users[i]) + " "
+        correo = str(users[i + 1])
+        with open("mail.txt", 'r+') as f:
+            f.truncate(0)
+            f.write("From: sigma.cryptocurrency.assistant@gmail.com\nSubject: Alert\nDear " + nombre + ",\n" + resumen + "\n")
+        os.system("ssmtp " + correo + " < mail.txt")
+
+def mail_pico_doge(porcentaje):
+    """ Called by detectar_picos() sendas a mail """
+
+    print("va mail doge substancial")
+    if porcentaje > 0:
+        resumen = "Dogecoin is on a quick rise "
+    else:
+        resumen = "Dogecoin is on a quick dip "
+    resumen += str(persistence.traer_ultimo_precio_eth()) + " , take a look!\n"
+    resumen += "To see more detailed information, click here http://tadeograchstudio.tech/\n\n"
+    resumen += "Yours sincerely, Sigma corporation."
+    users = persistence.traer_users()
+    for i in range(0, len(users), 2):
+        nombre = str(users[i]) + " "
+        correo = str(users[i + 1])
+        with open("mail.txt", 'r+') as f:
+            f.truncate(0)
+            f.write("From: sigma.cryptocurrency.assistant@gmail.com\nSubject: Alert\nDear " + nombre + ",\n" + resumen + "\n")
+        os.system("ssmtp " + correo + " < mail.txt")
+
+def mail_pico_eth(porcentaje):
+    """ Called by detectar_picos() sendas a mail """
+
+    print("va mail doge substancial")
+    if porcentaje > 0:
+        resumen = "Ethereum is on a quick rise "
+    else:
+        resumen = "Ethereum is on a quick dip "
+    resumen += str(persistence.traer_ultimo_precio_eth()) + " , take a look!\n"
+    resumen += "To see more detailed information, click here http://tadeograchstudio.tech/\n\n"
+    resumen += "Yours sincerely, Sigma corporation."
+    users = persistence.traer_users()
+    for i in range(0, len(users), 2):
+        nombre = str(users[i]) + " "
+        correo = str(users[i + 1])
+        with open("mail.txt", 'r+') as f:
+            f.truncate(0)
+            f.write("From: sigma.cryptocurrency.assistant@gmail.com\nSubject: Alert\nDear " + nombre + ",\n" + resumen + "\n")
+        os.system("ssmtp " + correo + " < mail.txt")
