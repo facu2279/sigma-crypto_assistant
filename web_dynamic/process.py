@@ -42,7 +42,8 @@ while(i >= 0):
     print(btc_tendencia.to_dict())
     print(btc_tendencia.time)"""
     res = persistence.traer_tendencias_btc()
-    print(res, type(res))
+    for info in res:
+        print(info, type(info))
     print("----------")
     print(i)
     i += 1    
