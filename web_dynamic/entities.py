@@ -27,6 +27,19 @@ class Tendencia:
         self.close = close
         self.date = date
 
+    def to_dict(self):
+        """  """
+
+        new = {}
+        new["name"] = self.name
+        new["average_price"] = self.average_price
+        new["max"] = self.max
+        new["min"] = self.min
+        new["open"] = self.open
+        new["close"] = self.close
+        new["date"] = self.date
+        return new
+
 class Coin:
     """ Class Coin """
     def __init__(self, name):

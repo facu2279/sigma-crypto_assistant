@@ -39,7 +39,7 @@ while(i >= 0):
     tendencias_eth = persistence.traer_tendencias_eth()
     tendencias_doge = persistence.traer_tendencias_doge()
     btc_tendencia = entities.Tendencia(tendencias_btc[1], tendencias_btc[2], tendencias_btc[3], tendencias_btc[4], tendencias_btc[5], tendencias_btc[6], tendencias_btc[7])
-    print(btc_tendencia)
+    print(btc_tendencia.to_dict())
     print("----------")
     print(i)
     i += 1    
