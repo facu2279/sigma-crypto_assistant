@@ -42,7 +42,7 @@ while(i >= 0):
     print(btc_tendencia.to_dict())
     print(btc_tendencia.date)
     format_time = "%H:%M"
-    date = btc_tendencia.strftime(format_time)
+    date = btc_tendencia.date.strftime(format_time)
     print(date)
     print("----------")
     print(i)
