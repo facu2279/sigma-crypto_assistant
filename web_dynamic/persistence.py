@@ -376,14 +376,14 @@ def traer_menor_24_eth():
 
 """ TENDENCIAS """
 
-def insert_new_tendencia(name, average, min_price, max_price):
+def insert_new_tendencia(name, average, min_price, max_price, openprice, closeprice):
     """ This function makes an insert to the trends table with 
         the average, minimum and maximum price of the last hour """
 
     nuevaconexion = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
     consulta = nuevaconexion.cursor()
     date = str(datetime.now())
-    consulta.execute("INSERT INTO tendencias (name, average, max, min, date) VALUES ('" + name  +"', '" + average +"', '" + max_price + "', '" + min_price + "', '" + date + "');")
+    consulta.execute("INSERT INTO tendencias (name, average, max, min, open, close, date) VALUES ('" + name  +"', '" + average +"', '" + max_price + "', '" + min_price + "', '" + openprice + "', " + closeprice + "'," + date + "');")
     nuevaconexion.commit()
 
 
