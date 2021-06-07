@@ -26,9 +26,9 @@
 	      <li>
 		<h2>Coins</h2>
 		<ul>
-		  <li><a href="http://tadeograchstudio.tech/bitcoin">Bitcoin</a></li>
-		  <li><a href="http://tadeograchstudio.tech/dogecoin">Dogecoin</a></li>
-		  <li><a href="http://tadeograchstudio.tech/ethereum">Ethereum</a></li>
+		  <li><a href="http://tadeograchstudio.tech/bitcoin" style="color:white; text-decoration:none">Bitcoin</a></li>
+		  <li><a href="http://tadeograchstudio.tech/dogecoin" style="color:white; text-decoration:none">Dogecoin</a></li>
+		  <li><a href="http://tadeograchstudio.tech/ethereum" style="color:white; text-decoration:none">Ethereum</a></li>
 		</ul>
 	      </li>
 	    </ul>
@@ -42,8 +42,8 @@
 	      <li>
 		<h2>Information</h2>
 		<ul>
-		  <li><a href="">What is a blockchain?</a></li>
-		  <li><a href="">How it works?</a></li>
+		  <li><a href="" style="color:white; text-decoration:none">What is a blockchain?</a></li>
+		  <li><a href="" style="color:white; text-decoration:none">How it works?</a></li>
 		</ul>
 	      </li>
 	    </ul>
@@ -57,8 +57,8 @@
 	      <li>
 		<h2>Sigma</h2>
 		<ul>
-		  <li><a href="http://tadeograchstudio.tech/team.html">Team</a></li>
-		  <li><a href="http://tadeograchstudio.tech/">Landing page</a></li>
+		  <li><a href="http://tadeograchstudio.tech/team.html" style="color:white; text-decoration:none">Team</a></li>
+		  <li><a href="http://tadeograchstudio.tech/" style="color:white; text-decoration:none">Landing page</a></li>
 		</ul>
 	      </li>
 	    </ul>
