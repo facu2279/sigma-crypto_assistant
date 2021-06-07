@@ -67,16 +67,3 @@ class Coin:
             self.porcentaje = percent.porcentaje_eth_24()
             self.mayor = persistence.traer_mayor_24_eth()
             self.menor = persistence.traer_menor_24_eth()
-
-"""class Tendencia:
-    def __init__(self, name, average_price, max, min, open, close, time):
-        self.name = name
-        average_price = float(average_price)
-        self.average_price = round(average_price, 2)
-        self.max = max
-        self.min = min
-        self.open = open
-        self.close = close
-        self.time = time
-        format_time = "%H:%M"
-        self.time = self.time.strftime(format_time)"""
