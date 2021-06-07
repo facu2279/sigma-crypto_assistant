@@ -155,7 +155,7 @@ def detectar_pico_doge():
 def detectar_pico_eth():
     """ Looks for a significant variation in eth """
 
-    ultimos_precios = persistence.traer_ultimos_precios_btc()
+    ultimos_precios = persistence.traer_ultimos_precios_eth()
     prev = int(ultimos_precios[0])
     now = int(ultimos_precios[1])
     porcentaje = 0
