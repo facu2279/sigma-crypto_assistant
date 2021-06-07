@@ -134,8 +134,9 @@ def detectar_pico_btc():
 
     porcentaje = calcular_porcentaje(prev, now)
     porcentaje = round(porcentaje, 2)
-    if porcentaje > 1.5:
+    if porcentaje > 1.5 or porcentaje < -1.5:
         return porcentaje
+    return 0
 
 def detectar_pico_doge():
     """ Looks for a significant variation in doge """
@@ -147,8 +148,9 @@ def detectar_pico_doge():
 
     porcentaje = calcular_porcentaje(prev, now)
     porcentaje = round(porcentaje, 2)
-    if porcentaje > 1.5:
+    if porcentaje > 1.5 or porcentaje < -1.5:
         return porcentaje
+    return 0
 
 def detectar_pico_eth():
     """ Looks for a significant variation in eth """
@@ -160,8 +162,9 @@ def detectar_pico_eth():
 
     porcentaje = calcular_porcentaje(prev, now)
     porcentaje = round(porcentaje, 2)
-    if porcentaje > 1.5:
+    if porcentaje > 1.5 or porcentaje < -1.5:
         return porcentaje
+    return 0
 
     
 def chequear_movimientos():
