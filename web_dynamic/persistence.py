@@ -394,6 +394,7 @@ def traer_tendencias_btc():
     consulta = newxd.cursor()
     consulta.execute("SELECT * FROM tendencias WHERE name='BTC' ORDER BY id_tend DESC LIMIT 24;")
     resultado = consulta.fetchall()
+    print(resultado)
     arr_tencencias = []
     for i in resultado:
         for i2 in i:
