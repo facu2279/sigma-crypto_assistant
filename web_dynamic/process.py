@@ -38,8 +38,13 @@ while(i >= 0):
     tendencias_btc = persistence.traer_tendencias_btc()
     tendencias_eth = persistence.traer_tendencias_eth()
     tendencias_doge = persistence.traer_tendencias_doge()
-    for info in tendencias_btc:
-        print(info)
+    print(tendencias_btc[0])
+    print(tendencias_btc[1])
+    print(tendencias_btc[2])
+    print(tendencias_btc[3])
+    print(tendencias_btc[4])
+    print(tendencias_btc[5])
+    print("----------")
     for info in tendencias_eth:
         print(info)
     for info in tendencias_doge:
