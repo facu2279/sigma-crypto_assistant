@@ -16,6 +16,17 @@ class User:
         self.name = name
         self.mail = mail
 
+class Tendencias:
+    """ Class Tendencias"""
+    def __init__(self, name):
+        self.refresh_tendencia(name)
+    
+    def refresh_coin(self, name):
+        """ Refresh al coins valus to last minute values """
+        if name == "BTC":
+            self.name = name
+            self.price = persistence.traer_ultimo_precio_btc()
+
 class Coin:
     """ Class Coin """
     def __init__(self, name):

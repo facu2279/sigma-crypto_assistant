@@ -387,6 +387,44 @@ def insert_new_tendencia(name, average, min_price, max_price, openprice, closepr
     consulta.execute("INSERT INTO tendencias (name, average, max, min, open, close, date) VALUES ('" + name  +"', '" + average +"', '" + max_price + "', '" + min_price + "', '" + openprice + "', '" + closeprice + "','" + date + "');")
     nuevaconexion.commit()
 
+def traer_tendencias_btc():
+    """ aa """
+
+    newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
+    consulta = newxd.cursor()
+    consulta.execute("SELECT * FROM tendencias WHERE name='BTC';")
+    resultado = consulta.fetchall()
+    arr_tencencias = []
+    for i in resultado:
+        for i2 in i:
+            arr_tencencias.append(i2)
+    return arr_tencencias
+
+def traer_tendencias_eth():
+    """ aa """
+
+    newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
+    consulta = newxd.cursor()
+    consulta.execute("SELECT * FROM tendencias WHERE name='ETH';")
+    resultado = consulta.fetchall()
+    arr_tencencias = []
+    for i in resultado:
+        for i2 in i:
+            arr_tencencias.append(i2)
+    return arr_tencencias
+
+def traer_tendencias_doge():
+    """ aa """
+
+    newxd = MySQLdb.connect(host=MY_H, user=MY_U, passwd=MY_P, db=MY_D)
+    consulta = newxd.cursor()
+    consulta.execute("SELECT * FROM tendencias WHERE name='DOGE';")
+    resultado = consulta.fetchall()
+    arr_tencencias = []
+    for i in resultado:
+        for i2 in i:
+            arr_tencencias.append(i2)
+    return arr_tencencias
 
 """ USERS INSERTS """
 
