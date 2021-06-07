@@ -42,27 +42,15 @@
 	      <li>
 		<h2>Information</h2>
 		<ul>
-		  <li><a href="" style="color:white; text-decoration:none">What is a blockchain?</a></li>
-		  <li><a href="" style="color:white; text-decoration:none">How it works?</a></li>
+		  <li><a href="https://www.investopedia.com/terms/b/blockchain.asp#:~:text=Blockchain%20does%20not%20store%20any,blockchain%20to%20reflect%20the%20change." style="color:white; text-decoration:none" >What is a blockchain?</a></li>
+		  <li><a href="https://www.thebalancesmb.com/blockchain-explained-4773366" style="color:white; text-decoration:none">How it works?</a></li>
 		</ul>
 	      </li>
 	    </ul>
 	  </div>
 	</div>
 	<div class="box3">
-	  <h3>About us</h3>
-	  <h4>&nbsp;</h4>
-	  <div class="popover">
-	    <ul>
-	      <li>
-		<h2>Sigma</h2>
-		<ul>
-		  <li><a href="http://tadeograchstudio.tech/team.html" style="color:white; text-decoration:none">Team</a></li>
-		  <li><a href="http://tadeograchstudio.tech/" style="color:white; text-decoration:none">Landing page</a></li>
-		</ul>
-	      </li>
-	    </ul>
-	  </div>
+	 <a href="http://tadeograchstudio.tech/landing-page" style="color:white; text-decoration:none"><h3>About us</h3></a>
 	</div>
       </section>
     </div>
@@ -70,26 +58,40 @@
       <article>
 	<img src="../static/img/eth_logo.png">
 	<div class="information">
-	  <h3>Price information (last 24hs): {{ percent }}%</h3>
-	  <a>Actual price: U$S{{ price }}</a>
-	  <a>Lowest price: U$S{{ min_price }}</a>
-	  <a>Highest price: U$S{{ max_price }}</a>
+	  {% if eth.porcentaje >= 0 %}
+	  <h3>Price information (last 24hs): +{{ eth.porcentaje }}%</h3>
+	  {% else %}
+	  <h3>Price information (last 24hs): {{ eth.porcentaje }}%</h3>
+	  {% endif %}
+	  <a>Actual price: U$S{{ eth.price }}</a>
+	  <a>Lowest price: U$S{{ eth.menor }}</a>
+	  <a>Highest price: U$S{{ eth.mayor }}</a>
 	  <h3>About Ethereum</h3>
 	  <p> Ethereum is bla bla bla...</p>
-	</div>
+	</div>	
       </article>
       <div>
 	<div class="articles">
 	  <div class="coin2">
 	    <a href="/bitcoin" style="color:black; text-decoration:none">
 	      <img src="../static/img/bitcoin_logo.png">
-	      <p>BTC ({{ btc_percent }}%)</p>
+	      {% if btc.porcentaje >= 0 %}
+	      <p>BTC (+{{ btc.porcentaje }}%)</p>
+	      {% else %}
+	      <p>BTC ({{ btc.porcentaje }}%)</p>
+	      {% endif %}
+	      <p>U$S{{ btc.price }}</p>
 	    </a>
 	  </div>
 	  <div class="coin3">
 	    <a href="/dogecoin" style="color:black; text-decoration:none">
 	      <img src="../static/img/doge_log.png">
-	      <p>DOGE ({{ doge_percent }}%)</p>
+	      {% if doge.porcentaje >= 0 %}
+	      <p>DOGE ({{ doge.porcentaje }}%)</p>
+	      {% else %}
+	      <p>DOGE ({{ doge.porcentaje }}%)</p>
+	      {% endif %}
+	      <p>U$S{{ doge.price }}</p>
 	    </a>
 	  </div>
 	</div>

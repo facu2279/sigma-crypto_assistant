@@ -12,41 +12,35 @@ def index():
     """"""
     return render_template('index.html')
 
-@app.route('/team', strict_slashes=False)
-def team():
+@app.route('/landing-page', strict_slashes=False)
+def landing_page():
     """"""
-    return render_template('team.html')
+    return render_template('landing_page.html')
 
 
 @app.route('/bitcoin', strict_slashes=False)
 def bitcoin():
     """ """
     btc.refresh_coin(btc.name)
-    price = btc.price
-    max_price = btc.mayor
-    min_price = btc.menor
-    percent = btc.porcentaje
-    return render_template('bitcoin.html', price=price, max_price=max_price, min_price=min_price, percent=percent, eth_percent=eth.porcentaje, doge_percent=doge.porcentaje)
+    eth.refresh_coin(eth.name)
+    doge.refresh_coin(doge.name)
+    return render_template('bitcoin.html', btc=btc, eth=eth, doge=doge)
 
 @app.route('/ethereum', strict_slashes=False)
 def ethereum():
     """ """
+    btc.refresh_coin(btc.name)
     eth.refresh_coin(eth.name)
-    price = eth.price
-    max_price = eth.mayor
-    min_price = eth.menor
-    percent = eth.porcentaje
-    return render_template('ethereum.html', price=price, max_price=max_price, min_price=min_price, percent=percent, btc_percent=btc.porcentaje, doge_percent=doge.porcentaje)
+    doge.refresh_coin(doge.name)
+    return render_template('ethereum.html', btc=btc, eth=eth, doge=doge)
 
 @app.route('/dogecoin', strict_slashes=False)
 def dogecoin():
     """ """
+    btc.refresh_coin(btc.name)
+    eth.refresh_coin(eth.name)
     doge.refresh_coin(doge.name)
-    price = doge.price
-    max_price = doge.mayor
-    min_price = doge.menor
-    percent = doge.porcentaje
-    return render_template('dogecoin.html', price=price, max_price=max_price, min_price=min_price, percent=percent, btc_percent=btc.porcentaje, eth_percent=eth.porcentaje)
+    return render_template('dogecoin.html', btc=btc, eth=eth, doge=doge)
 
 if __name__ == "__main__":
     """ Main Function """
