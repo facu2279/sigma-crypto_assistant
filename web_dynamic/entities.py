@@ -27,6 +27,8 @@ class Tendencia:
         self.open = open
         self.close = close
         self.date = date
+        format_time = "%H:%M"
+        self.date = self.date.strftime(format_time)
 
     def to_dict(self):
         """  """
