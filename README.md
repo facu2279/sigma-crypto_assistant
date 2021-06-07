@@ -144,9 +144,9 @@ Made by [Facundo Diaz](https://github.com/facu2279), [Tadeo Grach](https://githu
 ### Facundo Diaz                 Tadeo Grach               Tomas de Castro
 
 
-<img src="https://github.com/facu2279/proyecto_final/blob/main/web_dynamic/static/img/facundo.jpg"/>
-<img src="https://github.com/facu2279/proyecto_final/blob/main/web_dynamic/static/img/tadeo.jpg"/>
-<img src="https://github.com/facu2279/proyecto_final/blob/main/web_dynamic/static/img/tomas.jpg"/>
+<img style ="width: 50px; height: 50px;" src="https://github.com/facu2279/proyecto_final/blob/main/web_dynamic/static/img/facundo.jpg"/>
+<img style ="width: 50px; height: 50px;" src="https://github.com/facu2279/proyecto_final/blob/main/web_dynamic/static/img/tadeo.jpg"/>
+<img style ="width: 50px; height: 50px;" src="https://github.com/facu2279/proyecto_final/blob/main/web_dynamic/static/img/tomas.jpg"/>
 
 - [Linkedin](https://www.linkedin.com/in/facundo-diaz-noya/)
 - Mail: ddiiaazzfacu@gmail.com
