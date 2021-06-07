@@ -41,7 +41,9 @@ while(i >= 0):
     btc_tendencia = entities.Tendencia(tendencias_btc[1], tendencias_btc[2], tendencias_btc[3], tendencias_btc[4], tendencias_btc[5], tendencias_btc[6], tendencias_btc[7])
     print(btc_tendencia.to_dict())
     print(btc_tendencia.date)
-    print(type(btc_tendencia.date))
+    format_time = "%H:%M"
+    date = btc_tendencia.strftime(format_time)
+    print(date)
     print("----------")
     print(i)
     i += 1    
