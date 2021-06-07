@@ -126,7 +126,7 @@ def mail_pico_btc(porcentaje):
         resumen = "Bitcoin is on a quick rise "
     else:
         resumen = "Bitcoin is on a quick dip "
-    resumen += str(persistence.traer_ultimo_precio_btc()) + " , take a look!\n"
+    resumen += str(persistence.traer_ultimo_precio_btc()) + " , take a look!\n\n\n"
     resumen += "To see more detailed information, click here http://tadeograchstudio.tech/\n\n"
     resumen += "Yours sincerely, Sigma corporation."
     users = persistence.traer_users()
@@ -146,7 +146,7 @@ def mail_pico_doge(porcentaje):
         resumen = "Dogecoin is on a quick rise "
     else:
         resumen = "Dogecoin is on a quick dip "
-    resumen += str(persistence.traer_ultimo_precio_doge()) + " , take a look!\n"
+    resumen += str(persistence.traer_ultimo_precio_doge()) + " , take a look!\n\n\n"
     resumen += "To see more detailed information, click here http://tadeograchstudio.tech/\n\n"
     resumen += "Yours sincerely, Sigma corporation."
     users = persistence.traer_users()
@@ -166,7 +166,7 @@ def mail_pico_eth(porcentaje):
         resumen = "Ethereum is on a quick rise "
     else:
         resumen = "Ethereum is on a quick dip "
-    resumen += str(persistence.traer_ultimo_precio_eth()) + " , take a look!\n"
+    resumen += str(persistence.traer_ultimo_precio_eth()) + " , take a look!\n\n\n"
     resumen += "To see more detailed information, click here http://tadeograchstudio.tech/\n\n"
     resumen += "Yours sincerely, Sigma corporation."
     users = persistence.traer_users()
