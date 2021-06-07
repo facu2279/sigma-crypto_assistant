@@ -30,9 +30,9 @@ while(i >= 0):
 
     if i % 60 == 0:
         percent.insert_in_tendencias()
-    
+    """
     if i % 1440 == 0:
-        mail.daily_resume()
+        mail.daily_resume()"""
     
     print(i)
     i += 1    
