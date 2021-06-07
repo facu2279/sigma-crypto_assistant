@@ -36,4 +36,4 @@ while(i >= 0):
     
     print(i)
     i += 1    
-    time.sleep(60)
+    """time.sleep(60)"""
