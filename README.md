@@ -139,11 +139,14 @@ This project is still in under construction, therefore bugs may be present. If y
 ## Authors
 Made by [Facundo Diaz](https://github.com/facu2279), [Tadeo Grach](https://github.com/tadeograch) and [Tomas de Castro](https://github.com/tomi1710) for Holberton School 2021 
 
-## Social Networks
+## Social Networks Sigma Team
 
-### Facundo Diaz
+### Facundo Diaz                 Tadeo Grach               Tomas de Castro
+
 
 <img src="https://github.com/facu2279/proyecto_final/blob/main/web_dynamic/static/img/facundo.jpg"/>
+<img src="https://github.com/facu2279/proyecto_final/blob/main/web_dynamic/static/img/tadeo.jpg"/>
+<img src="https://github.com/facu2279/proyecto_final/blob/main/web_dynamic/static/img/tomas.jpg"/>
 
 - [Linkedin](https://www.linkedin.com/in/facundo-diaz-noya/)
 - Mail: ddiiaazzfacu@gmail.com
@@ -151,7 +154,7 @@ Made by [Facundo Diaz](https://github.com/facu2279), [Tadeo Grach](https://githu
 
 ### Tadeo Grach
 
-<img src="https://github.com/facu2279/proyecto_final/blob/main/web_dynamic/static/img/tadeo.jpg"/>
+
 
 - [Linkedin](https://www.linkedin.com/in/tadeo-grach-toledo/)
 - Mail: tade.g.17@gmail.com
@@ -159,7 +162,7 @@ Made by [Facundo Diaz](https://github.com/facu2279), [Tadeo Grach](https://githu
 
 ### Tomas de Castro
 
-<img src="https://github.com/facu2279/proyecto_final/blob/main/web_dynamic/static/img/tomas.jpg"/>
+
 
 - [Linkedin](https://www.linkedin.com/in/tomas-de-castro-guelfi-1872a1211/)
 - Mail: tdecastroguelfi56@gmail.com
