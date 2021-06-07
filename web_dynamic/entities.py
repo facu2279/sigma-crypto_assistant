@@ -6,8 +6,6 @@ Made by Facundo Diaz - Tomas De Castro - Tadeo Grach for Holberton School 2021 "
 import persistence
 import percent
 
-
-
 class User:
     """ Class User """
     def __init__(self, name, mail):
@@ -15,19 +13,6 @@ class User:
         self.id = None
         self.name = name
         self.mail = mail
-
-    def to_dict(self):
-        """  """
-
-        new = {}
-        new["name"] = self.name
-        new["average_price"] = self.average_price
-        new["max"] = self.max
-        new["min"] = self.min
-        new["open"] = self.open
-        new["close"] = self.close
-        new["time"] = self.time
-        return new
 
 class Coin:
     """ Class Coin """
