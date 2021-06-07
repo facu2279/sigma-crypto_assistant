@@ -43,7 +43,7 @@ while(i >= 0):
     print(btc_tendencia.time)"""
     res = persistence.traer_tendencias_btc()
     for info in res:
-        new = entities.Tendencia(info[1], info[2], info[3], info[4], info[5], info[6], info[7])
+        new = entities.Tendencia(str(info[1]), str(info[2]), str(info[3]), str(info[4]), str(info[5]), str(info[6]), info[7])
         print(new, type(new))
     print("----------")
     print(i)
