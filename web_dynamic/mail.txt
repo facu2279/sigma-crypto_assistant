@@ -1,26 +1,7 @@
 From: sigma.cryptocurrency.assistant@gmail.com
-Subject: Daily Resume
+Subject: Alert
 Dear Tomas ,
-This is your compilation of relevant information about cryptocurrencies today.
-
-BITCOIN INFORMATION:
-
-The current price of bitcoin at the time of this email is U$D 36795
-in the last 24 hours its price has moved -2.76%
-and yesterday at this same time, the bitcoin cost U$D37839
-
-DOGE COIN INFORMATION:
-
-The current price of doge coin at the time of this email is U$D 0.37977
-in the last 24 hours its price has moved -12.76%
-and yesterday at this same time, the doge coin cost U$D 0.43534
-
-ETHEREUM INFORMATION:
-
-The current price of ethereum at the time of this email is U$D 2674
-in the last 24 hours its price has moved -1.87%
-and yesterday at this same time, the ethereum coin cost U$D 2725
-
+The price of ETH is on a steady decent, now at U$S 2794 , take a look!
 To see more detailed information, click here http://tadeograchstudio.tech/
 
 Yours sincerely, Sigma corporation.
