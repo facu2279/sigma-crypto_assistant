@@ -38,18 +38,9 @@ while(i >= 0):
     tendencias_btc = persistence.traer_tendencias_btc()
     tendencias_eth = persistence.traer_tendencias_eth()
     tendencias_doge = persistence.traer_tendencias_doge()
-    print(tendencias_btc[0])
-    print(tendencias_btc[1])
-    print(tendencias_btc[2])
-    print(tendencias_btc[3])
-    print(tendencias_btc[4])
-    print(tendencias_btc[5])
+    btc_tendencia = entities.Tendencia(tendencias_btc[1], tendencias_btc[2], tendencias_btc[3], tendencias_btc[4], tendencias_btc[5], tendencias_btc[6], tendencias_btc[7])
+    print(btc_tendencia)
     print("----------")
-    for info in tendencias_eth:
-        print(info)
-    for info in tendencias_doge:
-        print(info)
-
     print(i)
     i += 1    
     time.sleep(60)
