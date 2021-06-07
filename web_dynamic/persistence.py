@@ -394,12 +394,14 @@ def traer_tendencias_btc():
     consulta = newxd.cursor()
     consulta.execute("SELECT * FROM tendencias WHERE name='BTC' ORDER BY id_tend DESC LIMIT 24;")
     resultado = consulta.fetchall()
-    print(resultado)
     arr_tencencias = []
+    arr_todos = []
     for i in resultado:
         for i2 in i:
             arr_tencencias.append(i2)
-    return arr_tencencias
+    for info in arr_tencencias:
+        arr_todos.append(info)
+    return arr_todos
 
 def traer_tendencias_eth():
     """ aa """
