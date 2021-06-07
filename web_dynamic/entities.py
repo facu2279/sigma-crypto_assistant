@@ -18,7 +18,7 @@ class User:
 
 class Tendencia:
     """ Class Tendencia"""
-    def __init__(self, name, average_price, max, min, open, close, date):
+    def __init__(self, name, average_price, max, min, open, close, time):
         self.name = name
         average_price = float(average_price)
         self.average_price = round(average_price, 2)
@@ -26,9 +26,9 @@ class Tendencia:
         self.min = min
         self.open = open
         self.close = close
-        self.date = date
+        self.time = time
         format_time = "%H:%M"
-        self.date = self.date.strftime(format_time)
+        self.time = self.time.strftime(format_time)
 
     def to_dict(self):
         """  """
@@ -40,7 +40,7 @@ class Tendencia:
         new["min"] = self.min
         new["open"] = self.open
         new["close"] = self.close
-        new["date"] = self.date
+        new["time"] = self.time
         return new
 
 class Coin:
