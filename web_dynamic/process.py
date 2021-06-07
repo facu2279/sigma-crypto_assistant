@@ -35,6 +35,16 @@ while(i >= 0):
         mail.daily_resume()
     """
     percent.insert_in_tendencias()
+    tendencias_btc = persistence.traer_tendencias_btc()
+    tendencias_eth = persistence.traer_tendencias_eth()
+    tendencias_doge = persistence.traer_tendencias_doge()
+    for info in tendencias_btc:
+        print(info)
+    for info in tendencias_eth:
+        print(info)
+    for info in tendencias_doge:
+        print(info)
+
     print(i)
     i += 1    
     time.sleep(60)
