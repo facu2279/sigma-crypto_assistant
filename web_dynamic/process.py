@@ -26,7 +26,7 @@ while(i >= 0):
     persistence.save_price_ethereum(eth_price)
     doge_price = info.consultar_precio_DOGE(url)
     persistence.save_price_doge(doge_price)
-    percent.chequear_movimientos()
+    """percent.chequear_movimientos()"""
 
     if i % 60 == 0:
         percent.insert_in_tendencias()
