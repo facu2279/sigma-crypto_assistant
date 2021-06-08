@@ -118,22 +118,3 @@ def resumen_alerta_eth(porcentaje):
             f.write("From: sigma.cryptocurrency.assistant@gmail.com\nSubject: Alert\nDear " + nombre + ",\n" + resumen + "\n")
         os.system("ssmtp " + correo + " < mail.txt")
 
-def resumen_alerta_eth(porcentaje):
-    """ Called by perc send an alert """
-
-    print("va mail eth")
-    if porcentaje > 0:
-        resumen = "The price of ETH is on a constant raise, now at U$S "
-    else:
-        resumen = "The price of ETH is on a steady decent, now at U$S "
-    resumen += str(persistence.traer_ultimo_precio_eth()) + " , take a look!\n"
-    resumen += "To see more detailed information, click here http://tadeograchstudio.tech/\n\n"
-    resumen += "Yours sincerely, Sigma corporation."
-    users = persistence.traer_users()
-    for i in range(0, len(users), 2):
-        nombre = str(users[i]) + " "
-        correo = str(users[i + 1])
-        with open("mail.txt", 'r+') as f:
-            f.truncate(0)
-            f.write("From: sigma.cryptocurrency.assistant@gmail.com\nSubject: Alert\nDear " + nombre + ",\n" + resumen + "\n")
-        os.system("ssmtp " + correo + " < mail.txt")

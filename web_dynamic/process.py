@@ -17,7 +17,7 @@ url = "https://api2.binance.com/"
 url = "https://api3.binance.com/"
 """
 url = "https://api.binance.com/"
-i = 2
+i = 0
 
 while(i >= 0):
     btc_price = info.consultar_precio_BTC(url)
@@ -27,14 +27,14 @@ while(i >= 0):
     doge_price = info.consultar_precio_DOGE(url)
     persistence.save_price_doge(doge_price)
     percent.detectar_picos()
-    """percent.chequear_movimientos()"""
+    percent.chequear_movimientos()
 
     if i % 60 == 0:
         percent.insert_in_tendencias()
-    """
-    if i % 1440 == 0:
-        mail.daily_resume()"""
     
+    if i % 1440 == 0:
+        mail.daily_resume()
+
     print(i)
     i += 1    
-    """time.sleep(60)"""
+    time.sleep(60)
