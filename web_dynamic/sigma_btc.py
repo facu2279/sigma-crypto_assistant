@@ -49,7 +49,7 @@ def subscribe():
     """Rendering suscribe template"""
     return render_template('subscribe.html')
 
-@app.route('/suscribirse', methods=["POST"], strict_slashes=False)
+@app.route('/suscribe', methods=["POST"], strict_slashes=False)
 def suscribirse():
     print(request.method)
     if request.method == "POST" and request.form.get("name") != None and request.form.get("email") != None:
