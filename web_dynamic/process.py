@@ -6,6 +6,8 @@ Made by Facundo Diaz - Tomas De Castro - Tadeo Grach for Holberton School 2021 "
 """ IMPORTS EXTERN MODULES """
 import time
 from datetime import datetime
+import os
+
 """ IMPORTS FILES """
 import persistence
 import entities 
@@ -20,7 +22,7 @@ url = "https://api3.binance.com/"
 url = "https://api.binance.com/"
 i = 2
 a = b = 0
-
+os.system('clear')
 print("Start process at ", datetime.now())
 
 while(i >= 0):
