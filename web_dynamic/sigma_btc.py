@@ -4,23 +4,23 @@
 from flask.wrappers import Request
 from objects import btc, doge, eth
 import persistence
-from flask import Flask, render_template, request, redirect, session, Blueprint
+from flask import Flask, render_template, request, redirect, session
 
 app = Flask(__name__)
-auth = Blueprint('auth', __name__)
 
-@auth.route('/', strict_slashes=False)
+
+@app.route('/', strict_slashes=False)
 def index():
     """Rendering index template"""
     return render_template('index.html')
 
-@auth.route('/landing-page', strict_slashes=False)
+@app.route('/landing-page', strict_slashes=False)
 def landing_page():
     """Rendering landing page template"""
     return render_template('landing_page.html')
 
 
-@auth.route('/bitcoin', strict_slashes=False)
+@app.route('/bitcoin', strict_slashes=False)
 def bitcoin():
     """Rendering bitcoin template"""
     btc.refresh_coin(btc.name)
@@ -28,7 +28,7 @@ def bitcoin():
     doge.refresh_coin(doge.name)
     return render_template('bitcoin.html', btc=btc, eth=eth, doge=doge)
 
-@auth.route('/ethereum', strict_slashes=False)
+@app.route('/ethereum', strict_slashes=False)
 def ethereum():
     """Rendering ethereum template"""
     btc.refresh_coin(btc.name)
@@ -36,7 +36,7 @@ def ethereum():
     doge.refresh_coin(doge.name)
     return render_template('ethereum.html', btc=btc, eth=eth, doge=doge)
 
-@auth.route('/dogecoin', strict_slashes=False)
+@app.route('/dogecoin', strict_slashes=False)
 def dogecoin():
     """Rendering dogecoin template"""
     btc.refresh_coin(btc.name)
@@ -44,12 +44,12 @@ def dogecoin():
     doge.refresh_coin(doge.name)
     return render_template('dogecoin.html', btc=btc, eth=eth, doge=doge)
 
-@auth.route('/subscribe')
+@app.route('/subscribe')
 def subscribe():
     """Rendering suscribe template"""
     return render_template('subscribe.html')
 
-@auth.route('/suscribe', methods=["POST"])
+@app.route('/suscribe', methods=["POST"])
 def suscribe_post():
     print(request.method)
     if request.method == "POST":
@@ -63,4 +63,4 @@ def suscribe_post():
 
 if __name__ == "__main__":
     """Main Function"""
-    auth.run(host='0.0.0.0', port='5000')
+    app.run(host='0.0.0.0', port='5000')
