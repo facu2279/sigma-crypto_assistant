@@ -161,7 +161,7 @@ def mail_pico_doge(porcentaje):
 def mail_pico_eth(porcentaje):
     """ Called by detectar_picos() sendas a mail """
 
-    print("va mail doge substancial")
+    print("va mail eth substancial")
     if porcentaje > 0:
         resumen = "Ethereum is on a quick rise "
     else:
