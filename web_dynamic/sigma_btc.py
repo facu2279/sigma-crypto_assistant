@@ -50,9 +50,9 @@ def subscribe():
     return render_template('subscribe.html')
 
 @app.route('/suscribe', methods=["POST"], strict_slashes=False)
-def suscribirse():
+def suscribe():
     print(request.method)
-    if request.method == "POST" and request.form.get("name") != None and request.form.get("email") != None:
+    if request.method == "POST":
         print("entro a request method")
         name = request.form.get("name")
         mail = request.form.get("email")
