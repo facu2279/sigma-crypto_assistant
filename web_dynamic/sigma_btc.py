@@ -2,7 +2,7 @@
 """File containing methods for rendering templates"""
 
 from objects import btc, doge, eth
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -41,6 +41,17 @@ def dogecoin():
     eth.refresh_coin(eth.name)
     doge.refresh_coin(doge.name)
     return render_template('dogecoin.html', btc=btc, eth=eth, doge=doge)
+
+@app.route('/subscribe', methods=["GET", "POST"], strict_slashes=False)
+def subscribe():
+    """Rendering suscribe template"""
+    if request.method == "POST":
+        name = request.form.get("name")
+        email = request.form.get("email")
+        print("name: {}\nemail: {}".format(name, email))
+        print("algo")
+        return redirect("/")
+    return render_template('subscribe.html')
 
 if __name__ == "__main__":
     """ Main Function """

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="static/styles/index_common.css">
+    <link rel="stylesheet" type="text/css" href="static/styles/header.css">
+    <link rel="stylesheet" type="text/css" href="static/styles/index_filters.css">
+    <link rel="icon" href="static/img/small_logo.png" />
+    <title>Sigma</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+	<img src="static/img/small_logo_header.png">
+	<img src="static/img/just_sigma2.png">
+      </div>
+    </header>
+    <form action="/suscribe" method="POST">
+      <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
+      <input autocomplete="off" autofocus name="email" placeholder="Email" type="text">
+      <input type="submit">
+    </form>
+    <footer>
+      <p></p>
+    </footer>
+  </body>
+</html>
