@@ -18,7 +18,8 @@ url = "https://api2.binance.com/"
 url = "https://api3.binance.com/"
 """
 url = "https://api.binance.com/"
-i = a = b = 0
+i = 2
+a = b = 0
 
 print("Start process at ", datetime.now())
 
