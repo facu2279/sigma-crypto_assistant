@@ -46,7 +46,7 @@ def dogecoin():
 
 @app.route('/subscribe')
 def subscribe():
-    """Rendering suscribe template"""
+    """Rendering suscribe template."""
     return render_template('subscribe.html')
 
 @app.route('/suscribe', methods=["POST"])
