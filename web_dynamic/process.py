@@ -56,7 +56,7 @@ while(i >= 0):
     
     if i % 240 == 0:
         mail.daily_resume()
-        print("Sending daily resume at", datetime.now())
+        print("Sending daily resume test at", datetime.now())
 
     print("LAP: ", i, "--" , datetime.now())
     i += 1    
