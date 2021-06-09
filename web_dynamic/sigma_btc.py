@@ -44,9 +44,13 @@ def dogecoin():
     doge.refresh_coin(doge.name)
     return render_template('dogecoin.html', btc=btc, eth=eth, doge=doge)
 
-@app.route('/subscribe', methods=["GET", "POST"], strict_slashes=False)
+@app.route('/subscribe', methods=["GET"], strict_slashes=False)
 def subscribe():
     """Rendering suscribe template"""
+    return render_template('subscribe.html')
+
+@app.route('/suscribirse', methods=["POST"], strict_slashes=False)
+def suscribirse():
     print(request.method)
     if request.method == "POST" and request.form.get("name") != None and request.form.get("email") != None:
         print("entro a request method")
@@ -55,7 +59,6 @@ def subscribe():
         print(name, mail)
         persistence.insert_new_user(str(name), str(mail))
         return redirect("/")
-    return render_template('subscribe.html')
 
 
 if __name__ == "__main__":
