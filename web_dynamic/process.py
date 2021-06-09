@@ -49,8 +49,12 @@ while(i >= 0):
             b = 0
             print("Clean mail history of 'chequear_movimientos'")
 
-    """ Send daily summary """
+    """ Send daily summary 
     if i % 1440 == 0:
+        mail.daily_resume()
+        print("Sending daily resume at", datetime.now())"""
+    
+    if i % 240 == 0:
         mail.daily_resume()
         print("Sending daily resume at", datetime.now())
 
