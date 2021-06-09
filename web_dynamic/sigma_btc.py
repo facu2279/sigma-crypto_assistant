@@ -4,7 +4,7 @@
 from flask.wrappers import Request
 from objects import btc, doge, eth
 import persistence
-from flask import Flask, render_template, request, redirect, session
+from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
 
@@ -44,23 +44,16 @@ def dogecoin():
     doge.refresh_coin(doge.name)
     return render_template('dogecoin.html', btc=btc, eth=eth, doge=doge)
 
-@app.route('/subscribe')
+@app.route('/subscribe', methods=["GET", "POST"])
 def subscribe():
     """Rendering suscribe template."""
+    if request.method == "POST":
+        name = request.form.get("name")
+        email = request.form.get("email")
+        persistence.insert_new_user(str(name), str(email))
+        return redirect("/")
     return render_template('subscribe.html')
 
-@app.route('/suscribe', methods=["POST"])
-def suscribe_post():
-    print(request.method)
-    if request.method == "POST":
-        print("entro a request method")
-        name = request.form.get("name")
-        mail = request.form.get("email")
-        print(name, mail)
-        persistence.insert_new_user(str(name), str(mail))
-        return redirect("/")
-
-
-if __name__ == "__main__":
+if  __name__ == "__main__":
     """Main Function"""
     app.run(host='0.0.0.0', port='5000')
