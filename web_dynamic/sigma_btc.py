@@ -43,11 +43,11 @@ def dogecoin():
     doge.refresh_coin(doge.name)
     return render_template('dogecoin.html', btc=btc, eth=eth, doge=doge)
 
-@app.route('/subscribe', methods=["GET", "POST"], strict_slashes=False)
+@app.route('/subscribe', methods=["get", "post"], strict_slashes=False)
 def subscribe():
     """Rendering suscribe template"""
     print("entro a funcion suscribe")
-    if request.method == "POST":
+    if request.method == "post":
         print("entro a request method")
         name = request.form.get("name")
         mail = request.form.get("email")
