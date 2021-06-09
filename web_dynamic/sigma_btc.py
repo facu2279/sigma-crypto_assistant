@@ -4,10 +4,10 @@
 from flask.wrappers import Request
 from objects import btc, doge, eth
 import persistence
-from flask import Flask, render_template, request, redirect, session
+from flask import Flask, render_template, request, redirect, session, Blueprint
 
 app = Flask(__name__)
-
+auth = Blueprint('auth', __name__)
 
 @app.route('/', strict_slashes=False)
 def index():
@@ -44,12 +44,12 @@ def dogecoin():
     doge.refresh_coin(doge.name)
     return render_template('dogecoin.html', btc=btc, eth=eth, doge=doge)
 
-@app.route('/subscribe')
+@auth.route('/subscribe')
 def subscribe():
     """Rendering suscribe template"""
     return render_template('subscribe.html')
 
-@app.route('/suscribe', methods=["POST"])
+@auth.route('/suscribe', methods=["POST"])
 def suscribe_post():
     print(request.method)
     if request.method == "POST":
