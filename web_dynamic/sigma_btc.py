@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """File containing methods for rendering templates"""
 
+from flask.wrappers import Request
 from objects import btc, doge, eth
 import persistence
 from flask import Flask, render_template, request, redirect, session
@@ -43,17 +44,20 @@ def dogecoin():
     doge.refresh_coin(doge.name)
     return render_template('dogecoin.html', btc=btc, eth=eth, doge=doge)
 
+a = 0
 @app.route('/subscribe', methods=["GET", "POST"], strict_slashes=False)
 def subscribe():
+    global a
     """Rendering suscribe template"""
     print(request.method)
-    if request.form.get("name") != None and request.form.get("email") != None:
+    if a == 1 or request.method == "POST" and request.form.get("name") != None and request.form.get("email") != None:
         print("entro a request method")
         name = request.form.get("name")
         mail = request.form.get("email")
         print(name, mail)
         persistence.insert_new_user(str(name), str(mail))
         return redirect("/")
+    a = 1
     return render_template('subscribe.html')
 
 
