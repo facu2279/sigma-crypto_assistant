@@ -52,7 +52,7 @@ def subscribe():
         print("entro a request method")
         name = request.form.get("name")
         mail = request.form.get("email")
-        persistence.insert_new_user(name, mail)
+        persistence.insert_new_user(str(name), str(mail))
         return redirect("/")
     return render_template('subscribe.html')
 
