@@ -47,6 +47,7 @@ def dogecoin():
 def subscribe():
     """Rendering suscribe template"""
     print(request.method)
+    request.method = "POST"
     if request.method == "POST":
         print("entro a request method")
         name = request.form.get("name")
