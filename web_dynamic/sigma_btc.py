@@ -48,7 +48,7 @@ def subscribe():
     """Rendering suscribe template"""
     if request.method == "POST":
         name = request.form.get("name")
-        email = request.form.get("email")
+        mail = request.form.get("email")
         persistence.insert_new_user(name, mail)
         return redirect("/")
     return render_template('subscribe.html')
