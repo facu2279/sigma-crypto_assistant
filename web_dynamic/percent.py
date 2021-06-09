@@ -167,33 +167,45 @@ def detectar_pico_eth():
     return 0
 
     
-def chequear_movimientos():
+def chequear_movimientos(a):
     """ Checks what detectar_constantes_coin() returns """
 
     res = detectar_constantes_btc()
-    if res != 0:
+    if res != 0 and a != 3 and a != 7 and  a!= 8 and a != 12:
         mail.resumen_alerta_btc(res)
+        a += 3
+
     res = detectar_constantes_doge()
-    if res != 0:
+    if res != 0 and a != 4 and a != 7 and a != 9 and a != 12:
         mail.resumen_alerta_doge(res)
+        a += 4
+
     res = detectar_constantes_eth()
-    if res != 0:
+    if res != 0 and a != 5 and a != 9 and a != 8 and a != 12:
         mail.resumen_alerta_eth(res)
+        a += 5
+    return a
 
 
+def detectar_picos(a):
+    """ """
 
-def detectar_picos():
     res = detectar_pico_btc()
-    if res != 0:
+    if res != 0 and a != 3 and a != 7 and  a!= 8 and a != 12:
         mail.mail_pico_btc(res)
+        a += 3
     
     res = detectar_pico_doge()
-    if res != 0:
+    if res != 0 and a != 4 and a != 7 and a != 9 and a != 12:
         mail.mail_pico_doge(res)
+        a += 4
 
     res = detectar_pico_eth()
-    if res != 0:
+    if res != 0 and a != 5 and a != 9 and a != 8 and a != 12:
         mail.mail_pico_eth(res)
+        a += 5
+    
+    return a
 
 
 def insert_in_tendencias():
