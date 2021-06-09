@@ -22,6 +22,7 @@ url = "https://api3.binance.com/"
 url = "https://api.binance.com/"
 i = 2
 a = b = 0
+cortarpicos = cortarconstantes = 0
 os.system('clear')
 print("Start process at ", datetime.now())
 
