@@ -2,6 +2,7 @@
 """File containing methods for rendering templates"""
 
 from objects import btc, doge, eth
+import persistence
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
@@ -48,12 +49,11 @@ def subscribe():
     if request.method == "POST":
         name = request.form.get("name")
         email = request.form.get("email")
-        print("name: {}\nemail: {}".format(name, email))
-        print("algo")
+        persistence.insert_new_user(name, mail)
         return redirect("/")
     return render_template('subscribe.html')
 
-"""
+
 if __name__ == "__main__":
     Main Function 
-    app.run(host='0.0.0.0', port='5000')"""
+    app.run(host='0.0.0.0', port='5000')
