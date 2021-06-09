@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../static/styles/landing_page_common.css">
+    <link rel="stylesheet" type="text/css" href="../static/styles/team_common.css">
     <link rel="stylesheet" type="text/css" href="../static/styles/header.css">
-    <link rel="stylesheet" type="text/css" href="../static/styles/landing_page_filters.css">
+    <link rel="stylesheet" type="text/css" href="../static/styles/team_filters.css">
     <link rel="icon" href="../static/img/small_logo.png" />
     <title>Sigma</title>
   </head>
@@ -16,17 +16,10 @@
       </div>
     </header>
     <div class="landing">
-      <h1>Our mission is to organize</h1>
-      <h1>and simplify cryptocurrency information</h1>
-      <h1>in order to make it accessibe to everyone</h1>
+      <h2>Our mission is to organize and simplify cryptocurrency information in order to make it accessibe to everyone</h2>
       <img src="../static/img/landing_img_1.jpg" >
-      <p>Real time values with data analysis</p>
-      <p>Daily summarys of your favourite cryptos</p>
-      <p>Alerts on significant or constant movements</p>
-      <img src="../static/img/sigma_cell_landing.png">
     </div>
     <div class="all">
-      <h1>Team</h1>
       <div class="teammate">
         <img src="../static/img/facundo.jpg">
         <h2>Facundo Díaz</h2>

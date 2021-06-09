@@ -1,0 +1,15 @@
+.all {
+    margin-left: 3%;
+}
+
+.teammate {
+    display:inline-block;
+    margin-top: 5%;
+    margin-left: 6%;
+    text-align: center;
+}
+
+.teammate a {
+    padding-left: 5%;
+    padding-right: 5%;
+}
