@@ -46,12 +46,12 @@ def dogecoin():
 @app.route('/subscribe', methods=["GET", "POST"], strict_slashes=False)
 def subscribe():
     """Rendering suscribe template"""
-    print("entro a funcion suscribe")
     print(request.method)
     if request.method == "POST":
         print("entro a request method")
         name = request.form.get("name")
         mail = request.form.get("email")
+        print(name, mail)
         persistence.insert_new_user(str(name), str(mail))
         return redirect("/")
     return render_template('subscribe.html')
