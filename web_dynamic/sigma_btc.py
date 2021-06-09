@@ -48,7 +48,7 @@ def subscribe():
     """Rendering suscribe template"""
     print("entro a funcion suscribe")
     print(request.method)
-    if request.method == "GET":
+    if request.method == "POST":
         print("entro a request method")
         name = request.form.get("name")
         mail = request.form.get("email")
