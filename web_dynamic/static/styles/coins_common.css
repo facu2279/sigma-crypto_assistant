@@ -1,13 +1,13 @@
 body {
     margin: 0;
     padding: 0;
-    color: white;
-    font-size: 14px;
     font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    background: #eee;
 }
 
 body .container {
-    max-width: 1000px;
-    margin: -5.6% auto;
-    margin-right: 0%;
+    max-width: 630px;
+    margin: -3.5% auto;
+    margin-right: -0%;
 }
+
