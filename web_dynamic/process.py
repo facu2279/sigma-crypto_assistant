@@ -40,6 +40,7 @@ while(i >= 0):
 
     """ Save trends every hour """
     if i % 60 == 0:
+        print("entro en if de proces")
         percent.insert_in_tendencias()
     """ Every 3 hours clear history of constants and peaks """
     if i == cortarpicos:
@@ -50,6 +51,7 @@ while(i >= 0):
     if i % 1440 == 0:
         mail.daily_resume()
 
-    i += 1    
+    i += 1
+    print(i)
 """    time.sleep(60)
 """
