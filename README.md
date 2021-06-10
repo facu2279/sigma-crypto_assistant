@@ -69,35 +69,72 @@ This project is still in under construction, therefore bugs may be present. If y
 
 ## File Map
 ```
-
+├── AUTHORS
+├── LICENSE
+├── README.md
+├── reset_database.sql
+├── sql_querys.sql
+└── web_dynamic
+    ├── entities.py
+    ├── info.py
+    ├── mail.py
+    ├── mail.txt
+    ├── objects.py
+    ├── percent.py
+    ├── persistence.py
+    ├── process.py
+    ├── __pycache__
+    │   ├── entities.cpython-36.pyc
+    │   ├── mail.cpython-36.pyc
+    │   ├── objects.cpython-36.pyc
+    │   ├── percent.cpython-36.pyc
+    │   ├── persistence.cpython-36.pyc
+    │   ├── sigma_btc.cpython-36.pyc
+    │   └── wsgi.cpython-36.pyc
+    ├── sigma_btc.py
+    ├── static
+    │   ├── img
+    │   │   ├── background-img.png
+    │   │   ├── btc_log.png
+    │   │   ├── doge_log.png
+    │   │   ├── ethereum_logo.png
+    │   │   ├── facundo.jpg
+    │   │   ├── github_logo.png
+    │   │   ├── gmail_logo.png
+    │   │   ├── just_sigma2.png
+    │   │   ├── landing_img_1.jpg
+    │   │   ├── linkedin_logo.png
+    │   │   ├── mer.png
+    │   │   ├── sigma_card.png
+    │   │   ├── sigma_cell_landing.png
+    │   │   ├── sigma_cel.png
+    │   │   ├── sigma_logo.png
+    │   │   ├── small_logo_header.png
+    │   │   ├── small_logo.png
+    │   │   ├── tadeo.jpg
+    │   │   └── tomas.jpg
+    │   └── styles
+    │       ├── coins_article.css
+    │       ├── coins_common.css
+    │       ├── coins_filters.css
+    │       ├── error_404.css
+    │       ├── header.css
+    │       ├── index_common.css
+    │       ├── index_filters.css
+    │       ├── landing_page_common.css
+    │       ├── landing_page_filters.css
+    │       ├── subscribe_common.css
+    │       └── subscribe_filters.css
+    ├── templates
+    │   ├── bitcoin.html
+    │   ├── dogecoin.html
+    │   ├── error_404.html
+    │   ├── ethereum.html
+    │   ├── index.html
+    │   ├── landing_page.html
+    │   └── subscribe.html
+    └── wsgi.py
 ```
-
-## File Descriptions
-
-- reset_database : This file contains a script to delete the database and create it again and load enough test data for the program to run without any problem.
-- sql_querys : This file contains a small script that serves to test that the number of inserts in the tables is 1440 and this means that it is working well
-- entities.py : This file contains the declaration of all the classes / objects that are used
-- info.py : This file contains all the requests we make to the binance api to extract the prices
-- mail.py : This file contains all the functions that correspond to the use of emails and alerts
-- mail.txt : This file is the one we use to generate the structure of the default emails
-- objects.py : This file has the function of instantiating the objects to later be imported by the web
-- percent.py : This file has all the functions that calculate percentages, detect constants and insert trends
-- persistence.py : This file has all the functions that communicate with the database
-- process.py : This file is the main one, it is the one that runs all the time and calls the necessary functions every x amount of time
-- sigma_btc.py : This file is in charge of passing the variables and running the templates using flask
-- bitcoin_article.css : This file is a css stylesheet
-- bitcoin_common.css : This file is a css stylesheet
-- bitcoin_filters.css : This file is a css stylesheet
-- header.css : This file is a css stylesheet
-- index_common.css : This file is a css stylesheet
-- index_filters.css : This file is a css stylesheet
-- team_common.css : This file is a css stylesheet
-- team_filters.css : This file is a css stylesheet
-- bitcoin.html : This file contains the html structure of the bitcoin page
-- index.html : This file contains the html structure of the main page
-- team.html : This file contains the html structure of the team section page
-- wsgi.py : This file is necessary to run the unicorn correctly
-
 
 
 ## Authors
