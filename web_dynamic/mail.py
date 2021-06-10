@@ -60,7 +60,6 @@ def daily_resume():
 def resumen_alerta_btc(porcentaje):
     """ Called by percent.chequear_movimientos() when a constant variations is detected to send an alert """
 
-    print("va mail btc")
     if porcentaje > 0:
         resumen = "The price of BTC is on a constant raise, now at U$S "
     else:
@@ -81,7 +80,6 @@ def resumen_alerta_btc(porcentaje):
 def resumen_alerta_doge(porcentaje):
     """ Called by percent.chequear_movimientos() when a constant variations is detected to send an alert """
 
-    print("va mail doge")
     if porcentaje > 0:
         resumen = "The price of DOGE is on a constant raise, now at U$S "
     else:
@@ -101,7 +99,6 @@ def resumen_alerta_doge(porcentaje):
 def resumen_alerta_eth(porcentaje):
     """ Called by percent.chequear_movimientos() when a constant variations is detected to send an alert """
 
-    print("va mail eth")
     if porcentaje > 0:
         resumen = "The price of ETH is on a constant raise, now at U$S "
     else:
@@ -121,7 +118,6 @@ def resumen_alerta_eth(porcentaje):
 def mail_pico_btc(porcentaje):
     """ Called by detectar_picos() sendas a mail """
 
-    print("va mail btc substancial")
     if porcentaje > 0:
         resumen = "Bitcoin is on a quick rise "
     else:
@@ -141,7 +137,6 @@ def mail_pico_btc(porcentaje):
 def mail_pico_doge(porcentaje):
     """ Called by detectar_picos() sendas a mail """
 
-    print("va mail doge substancial")
     if porcentaje > 0:
         resumen = "Dogecoin is on a quick rise "
     else:
@@ -161,7 +156,6 @@ def mail_pico_doge(porcentaje):
 def mail_pico_eth(porcentaje):
     """ Called by detectar_picos() sendas a mail """
 
-    print("va mail eth substancial")
     if porcentaje > 0:
         resumen = "Ethereum is on a quick rise "
     else:
