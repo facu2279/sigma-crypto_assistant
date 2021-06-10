@@ -50,5 +50,5 @@ while(i >= 0):
     if i % 1440 == 0:
         mail.daily_resume()
 
-    i += 1    
+    i += 1
     time.sleep(60)

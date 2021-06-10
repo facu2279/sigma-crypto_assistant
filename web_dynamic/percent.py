@@ -234,4 +234,3 @@ def insert_in_tendencias():
     openprice = persistence.traer_masviejo_precio_eth()
     closeprice = persistence.traer_ultimo_precio_eth()
     persistence.insert_new_tendencia("ETH", str(average_eth), str(min_price_eth), str(max_price_eth), str(openprice), str(closeprice))
-    
