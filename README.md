@@ -56,6 +56,17 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
+## Testing
+
+Tests were carried out by entering test data to check the correct functioning of the functions that detect constants and detect peaks.
+Also all the functions that contain sql queries were tested by entering test data and checking their actual representation in the database.
+On the other hand, the correct functioning of the functions that create the mails was also tested, as well as that the functions are called at the corresponding times.
+All tests were performed at test execution times every 1 second, using 1 second = 1 minute as a scale since the program has pause spaces every one minute, understanding that this is a stable number to be considered online and keep data updated without go to the extreme of testing second by second.
+
+## Known bugs
+
+This project is still in under construction, therefore bugs may be present. If you find any, you're welcome to let us know
+
 ## File Map
 ```
 ├── README.md
@@ -132,9 +143,7 @@ SOFTWARE.
 - team.html : This file contains the html structure of the team section page
 - wsgi.py : This file is necessary to run the unicorn correctly
 
-## Known bugs
 
-This project is still in under construction, therefore bugs may be present. If you find any, you're welcome to let us know
 
 ## Authors
 Made by [Facundo Diaz](https://github.com/facu2279), [Tadeo Grach](https://github.com/tadeograch) and [Tomas de Castro](https://github.com/tomi1710) for Holberton School 2021 
