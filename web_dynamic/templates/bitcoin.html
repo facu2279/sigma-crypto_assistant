@@ -12,8 +12,8 @@
   <body>
     <header>
       <div class="logo">
-      <a href="http://tadeograchstudio.tech/"><img src="../static/img/small_logo_header.png"></a>
-      <a href="http://tadeograchstudio.tech/"><img src="../static/img/just_sigma2.png"></a>
+	<a href="http://tadeograchstudio.tech/"><img src="../static/img/small_logo_header.png"></a>
+	<a href="http://tadeograchstudio.tech/"><img src="../static/img/just_sigma2.png"></a>
       </div>
     </header>
     <div class="container">
@@ -55,48 +55,48 @@
       </section>
     </div>
     <div class="btc">
-    <article>
-      <img src="../static/img/btc_log.png">
-      <div class="information">
-	{% if btc.porcentaje >= 0 %}
-	<h3>Price information (last 24hs): +{{ btc.porcentaje }}%</h3>
-	{% else %}
-	<h3>Price information (last 24hs): {{ btc.porcentaje }}%</h3>
-	{% endif %}
-	<a>Lowest price: U$S{{ btc.menor }}</a>
-	<a>Actual price: U$S{{ btc.price }}</a>
-    <a>Highest price: U$S{{ btc.mayor }}</a>
-	<h3>About Bitcoin</h3>
-	<p>Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network.</p>
-	<h3>Official Website</h3>
-	<a target=”_blank” href="https://bitcoin.org/en/">Click here!</a>
-	<h3>Official whitepaper</h3>
-	<a target=”_blank” href="https://bitcoin.org/bitcoin.pdf">Click here!</a>
-      </div>
-    </article>
-    <div>
-    <div class="articles">
-      <div class="coin2">
-	<a href="/ethereum" style="color:black; text-decoration:none">
-	  <img src="../static/img/ethereum_logo.png">
-	  {% if eth.porcentaje >= 0 %}
-	  <p>ETH (+{{ eth.porcentaje }}%)</p>
+      <div class="art">
+	<img src="../static/img/btc_log.png">
+	<div class="information">
+	  {% if btc.porcentaje >= 0 %}
+	  <h3>Price information (last 24hs): +{{ btc.porcentaje }}%</h3>
 	  {% else %}
-	  <p>ETH ({{ eth.porcentaje }}%)</p>
+	  <h3>Price information (last 24hs): {{ btc.porcentaje }}%</h3>
 	  {% endif %}
-	  <p>U$S{{ eth.price }}</p>
-	</a>
+	  <a>Lowest price: U$S{{ btc.menor }}</a>
+	  <a>Actual price: U$S{{ btc.price }}</a>
+	  <a>Highest price: U$S{{ btc.mayor }}</a>
+	  <h3>About Bitcoin</h3>
+	  <p>Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network.</p>
+	  <h3>Official Website</h3>
+	  <a target=”_blank” href="https://bitcoin.org/en/">Click here!</a>
+	  <h3>Official whitepaper</h3>
+	  <a target=”_blank” href="https://bitcoin.org/bitcoin.pdf">Click here!</a>
+	</div>
       </div>
-      <div class="coin3">
-	<a href="/dogecoin" style="color:black; text-decoration:none">
-	  <img src="../static/img/doge_log.png">
-	  {% if doge.porcentaje >= 0 %}
-	  <p>DOGE (+{{ doge.porcentaje }}%)</p>
-	  {% else %}
-	  <p>DOGE ({{ doge.porcentaje }}%)</p>
-	  {% endif %}
-	  <p>U$S{{ doge.price }}</p>
-	</a>
+      <div class="articles">
+	<div class="coin2">
+	  <a href="/ethereum" style="color:black; text-decoration:none">
+	    <img src="../static/img/ethereum_logo.png">
+	    {% if eth.porcentaje >= 0 %}
+	    <p>ETH (+{{ eth.porcentaje }}%)</p>
+	    {% else %}
+	    <p>ETH ({{ eth.porcentaje }}%)</p>
+	    {% endif %}
+	    <p>U$S{{ eth.price }}</p>
+	  </a>
+	</div>
+	<div class="coin3">
+	  <a href="/dogecoin" style="color:black; text-decoration:none">
+	    <img src="../static/img/doge_log.png">
+	    {% if doge.porcentaje >= 0 %}
+	    <p>DOGE (+{{ doge.porcentaje }}%)</p>
+	    {% else %}
+	    <p>DOGE ({{ doge.porcentaje }}%)</p>
+	    {% endif %}
+	    <p>U$S{{ doge.price }}</p>
+	  </a>
+	</div>
       </div>
     </div>
     <footer>

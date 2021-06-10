@@ -55,7 +55,7 @@
       </section>
     </div>
     <div class="btc">
-      <article>
+      <div class="art">
 	<img src="../static/img/dogecoin_logo.png">
 	<div class="information">
 	  {% if doge.porcentaje >= 0 %}
@@ -71,36 +71,36 @@
 	  <h3>Official Website</h3>
 	  <a target=”_blank” href="https://dogecoin.com/">Click here!</a>
 	  <h3>Official whitepaper</h3>
-	<a target=”_blank” stule="text-decoration:none">Dogecoin has no whitepaper</a>
+	  <a target=”_blank” stule="text-decoration:none">Dogecoin has no whitepaper</a>
 	</div>
-      </article>
-      <div>
-	<div class="articles">
-	  <div class="coin2">
-	    <a href="/bitcoin" style="color:black; text-decoration:none">
-	      <img src="../static/img/bitcoin_logo.png">
-	      {% if btc.porcentaje >= 0 %}
-	      <p>BTC (+{{ btc.porcentaje }}%)</p>
-	      {% else %}
-	      <p>BTC ({{ btc.porcentaje }}%)</p>
-	      {% endif %}
-	      <p>U$S{{ btc.price }}</p>
-	    </a>
-	  </div>
-	  <div class="coin3">
-	    <a href="/ethereum" style="color:black; text-decoration:none">
-	      <img src="../static/img/ethereum_logo.png">
-	      {% if eth.porcentaje >= 0 %}
-	      <p>ETH (+{{ eth.porcentaje }}%)</p>
-	      {% else %}
-	      <p>ETH ({{ eth.porcentaje }}%)</p>
-	      {% endif %}
-	      <p>U$S{{ eth.price }}</p>
-	    </a>
-	  </div>
+      </div>
+      <div class="articles">
+	<div class="coin2">
+	  <a href="/bitcoin" style="color:black; text-decoration:none">
+	    <img src="../static/img/bitcoin_logo.png">
+	    {% if btc.porcentaje >= 0 %}
+	    <p>BTC (+{{ btc.porcentaje }}%)</p>
+	    {% else %}
+	    <p>BTC ({{ btc.porcentaje }}%)</p>
+	    {% endif %}
+	    <p>U$S{{ btc.price }}</p>
+	  </a>
 	</div>
-	<footer>
-	  <p></p>
-	</footer>
+	<div class="coin3">
+	  <a href="/ethereum" style="color:black; text-decoration:none">
+	    <img src="../static/img/ethereum_logo.png">
+	    {% if eth.porcentaje >= 0 %}
+	    <p>ETH (+{{ eth.porcentaje }}%)</p>
+	    {% else %}
+	    <p>ETH ({{ eth.porcentaje }}%)</p>
+	    {% endif %}
+	    <p>U$S{{ eth.price }}</p>
+	  </a>
+	</div>
+      </div>
+    </div>
+    <footer>
+      <p></p>
+    </footer>
   </body>
 </html>

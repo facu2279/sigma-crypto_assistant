@@ -55,7 +55,7 @@
       </section>
     </div>
     <div class="btc">
-      <article>
+      <div class="article">
 	<img src="../static/img/eth_logo.png">
 	<div class="information">
 	  {% if eth.porcentaje >= 0 %}
@@ -73,34 +73,34 @@
 	  <h3>Official whitepaper</h3>
 	  <a target=”_blank” href="https://ethereum.org/en/whitepaper/">Click here!</a>
 	</div>	
-      </article>
-      <div>
-	<div class="articles">
-	  <div class="coin2">
-	    <a href="/bitcoin" style="color:black; text-decoration:none">
-	      <img src="../static/img/bitcoin_logo.png">
-	      {% if btc.porcentaje >= 0 %}
-	      <p>BTC (+{{ btc.porcentaje }}%)</p>
-	      {% else %}
-	      <p>BTC ({{ btc.porcentaje }}%)</p>
-	      {% endif %}
-	      <p>U$S{{ btc.price }}</p>
-	    </a>
-	  </div>
-	  <div class="coin3">
-	    <a href="/dogecoin" style="color:black; text-decoration:none">
-	      <img src="../static/img/doge_log.png">
-	      {% if doge.porcentaje >= 0 %}
-	      <p>DOGE ({{ doge.porcentaje }}%)</p>
-	      {% else %}
-	      <p>DOGE ({{ doge.porcentaje }}%)</p>
-	      {% endif %}
-	      <p>U$S{{ doge.price }}</p>
-	    </a>
-	  </div>
+      </div>
+      <div class="articles">
+	<div class="coin2">
+	  <a href="/bitcoin" style="color:black; text-decoration:none">
+	    <img src="../static/img/bitcoin_logo.png">
+	    {% if btc.porcentaje >= 0 %}
+	    <p>BTC (+{{ btc.porcentaje }}%)</p>
+	    {% else %}
+	    <p>BTC ({{ btc.porcentaje }}%)</p>
+	    {% endif %}
+	    <p>U$S{{ btc.price }}</p>
+	  </a>
 	</div>
-	<footer>
-	  <p></p>
-	</footer>
+	<div class="coin3">
+	  <a href="/dogecoin" style="color:black; text-decoration:none">
+	    <img src="../static/img/doge_log.png">
+	    {% if doge.porcentaje >= 0 %}
+	    <p>DOGE (+{{ doge.porcentaje }}%)</p>
+	    {% else %}
+	    <p>DOGE ({{ doge.porcentaje }}%)</p>
+	    {% endif %}
+	    <p>U$S{{ doge.price }}</p>
+	  </a>
+	</div>
+      </div>
+    </div>
+    <footer>
+      <p></p>
+    </footer>
   </body>
 </html>
