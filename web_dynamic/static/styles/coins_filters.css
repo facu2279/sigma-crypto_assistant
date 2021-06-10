@@ -1,8 +1,10 @@
 .container .filters {
     position: relative;
     background: #262833;
-    height: 70px;
+    height: 40px;
     width: 100%;
+    color: white;
+    z-index:1;
 }
 
 .filters div {
@@ -10,21 +12,21 @@
 }
 .filters h2 {
     margin-left: 15%;
-    margin-top: -10;
     margin-bottom: 0;
     font-weight: 600;
 }
 .filters h3 {
-    margin-left: 20px;
-    margin-bottom: 0;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 2%;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 20px;
 }
 .filters h4 {
     margin-left: 20px;
     margin-top: 0;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 7px;
 }
 
 #selectedtext {
@@ -44,8 +46,8 @@
 
 .box1 {
     height: 100%;
-    width: 33%;
-    border-right: 1px solid #414458;
+    width: 36%;
+
 }
 
 .popover {
@@ -61,7 +63,7 @@
     max-height: 250px;
 }
 
-.popover::-webkit-scrollbar{
+.popover::-webkit-scrollbar {
     width: 0px;
 }
 
@@ -91,7 +93,6 @@
 .box2 {
     height: 100%;
     width: 33%;
-    border-right: 1px solid #414458;
 }
 
 .box2:hover .popover {
@@ -105,7 +106,7 @@
 
 .box3 {
     height: 100%;
-    width: 33%;
+    width: 29%;
 }
 
 .box3:hover .popover {
