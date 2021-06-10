@@ -119,9 +119,9 @@ def mail_pico_btc(porcentaje):
     """ Called by detectar_picos() sendas a mail """
 
     if porcentaje > 0:
-        resumen = "Bitcoin is on a quick rise "
+        resumen = "Bitcoin is on a quick rise, now at U$S "
     else:
-        resumen = "Bitcoin is on a quick dip "
+        resumen = "Bitcoin is on a quick dip, now at U$S "
     resumen += str(persistence.traer_ultimo_precio_btc()) + " , take a look!\n\n\n"
     resumen += "To see more detailed information, click here http://tadeograchstudio.tech/\n\n"
     resumen += "Yours sincerely, Sigma corporation."
@@ -138,9 +138,9 @@ def mail_pico_doge(porcentaje):
     """ Called by detectar_picos() sendas a mail """
 
     if porcentaje > 0:
-        resumen = "Dogecoin is on a quick rise "
+        resumen = "Dogecoin is on a quick rise, now at U$S "
     else:
-        resumen = "Dogecoin is on a quick dip "
+        resumen = "Dogecoin is on a quick dip, now at U$S "
     resumen += str(persistence.traer_ultimo_precio_doge()) + " , take a look!\n\n\n"
     resumen += "To see more detailed information, click here http://tadeograchstudio.tech/\n\n"
     resumen += "Yours sincerely, Sigma corporation."
@@ -157,9 +157,9 @@ def mail_pico_eth(porcentaje):
     """ Called by detectar_picos() sendas a mail """
 
     if porcentaje > 0:
-        resumen = "Ethereum is on a quick rise "
+        resumen = "Ethereum is on a quick rise, now at U$S "
     else:
-        resumen = "Ethereum is on a quick dip "
+        resumen = "Ethereum is on a quick dip, now at U$S "
     resumen += str(persistence.traer_ultimo_precio_eth()) + " , take a look!\n\n\n"
     resumen += "To see more detailed information, click here http://tadeograchstudio.tech/\n\n"
     resumen += "Yours sincerely, Sigma corporation."
