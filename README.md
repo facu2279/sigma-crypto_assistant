@@ -69,52 +69,7 @@ This project is still in under construction, therefore bugs may be present. If y
 
 ## File Map
 ```
-├── README.md
-├── reset_database
-├── sql_querys
-└── web_dynamic
-    ├── entities.py
-    ├── info.py
-    ├── mail.py
-    ├── mail.txt
-    ├── objects.py
-    ├── percent.py
-    ├── persistence.py
-    ├── process.py
-    ├── sigma_btc.py
-    ├── static
-    │   ├── img
-    │   │   ├── background-img.png
-    │   │   ├── btc_log.png
-    │   │   ├── doge_log.png
-    │   │   ├── ethereum_logo.png
-    │   │   ├── facundo.jpg
-    │   │   ├── github_logo.png
-    │   │   ├── gmail_logo.png
-    │   │   ├── just_sigma2.png
-    │   │   ├── linkedin_logo.png
-    │   │   ├── mer.png
-    │   │   ├── sigma_card.png
-    │   │   ├── sigma_cel.png
-    │   │   ├── sigma_logo.png
-    │   │   ├── small_logo_header.png
-    │   │   ├── small_logo.png
-    │   │   ├── tadeo.jpg
-    │   │   └── tomas.jpg
-    │   └── styles
-    │       ├── bitcoin_article.css
-    │       ├── bitcoin_common.css
-    │       ├── bitcoin_filters.css
-    │       ├── header.css
-    │       ├── index_common.css
-    │       ├── index_filters.css
-    │       ├── team_common.css
-    │       └── team_filters.css
-    ├── templates
-    │   ├── bitcoin.html
-    │   ├── index.html
-    │   └── team.html
-    └── wsgi.py
+
 ```
 
 ## File Descriptions
