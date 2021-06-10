@@ -1,7 +1,9 @@
+-- Made by Facundo Diaz, Tadeo Grach and Tomas de Castro for Holberton School 2021
 DROP DATABASE IF EXISTS sigma;
 CREATE DATABASE sigma;
 USE sigma;
 
+-- history table 
 CREATE TABLE history_coin (
     id int NOT NULL AUTO_INCREMENT,
         name varchar(4),
@@ -9,6 +11,7 @@ CREATE TABLE history_coin (
 	        PRIMARY KEY (id)
 		);
 
+-- tendencias table
 CREATE TABLE tendencias (
     id_tend int NOT NULL AUTO_INCREMENT,
         name varchar(4),
@@ -21,6 +24,7 @@ CREATE TABLE tendencias (
 	    PRIMARY KEY (id_tend)
 	    );
 
+-- users table
 CREATE TABLE users_sigma (
     id_users int NOT NULL AUTO_INCREMENT,
         name varchar(50) NOT NULL,
@@ -29,11 +33,12 @@ CREATE TABLE users_sigma (
 		);
 
 
-
+-- insert test users
 INSERT INTO users_sigma (name, mail) VALUES ("Facundo", "ddiiaazzfacu@gmail.com");
 INSERT INTO users_sigma (name, mail) VALUES ("Tadeo", "tade.g.17@gmail.com");
 INSERT INTO users_sigma (name, mail) VALUES ("Tomas", "tdecastroguelfi56@gmail.com");
 
+-- insert test prices of btc, doge and eth
 
 INSERT INTO history_coin (name, price) VALUES ("BTC", "34234");
 INSERT INTO history_coin (name, price) VALUES ("BTC", "34235");
