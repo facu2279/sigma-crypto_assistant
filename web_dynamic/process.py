@@ -23,8 +23,6 @@ url = "https://api.binance.com/"
 i = 2
 a = b = 0
 cortarpicos = cortarconstantes = 0
-os.system('clear')
-print("Start process at ", datetime.now())
 
 while(i >= 0):
     btc_price = info.consultar_precio_BTC(url)
@@ -43,22 +41,14 @@ while(i >= 0):
     """ Save trends every hour """
     if i % 60 == 0:
         percent.insert_in_tendencias()
-        print("Insert tendencia at", datetime.now())
-
     """ Every 3 hours clear history of constants and peaks """
-    if cortarpicos % 180 == 0:
+    if i == cortarpicos:
         a = 0
-        print("Clean mail history of 'detectar_picos'")
-
-    if cortarconstantes % 180 == 0:
+    if i == cortarconstantes:
         b = 0
-        print("Clean mail history of 'chequear_movimientos'")
-
     """Send daily summary """
     if i % 1440 == 0:
         mail.daily_resume()
-        print("Sending daily resume at", datetime.now())
 
-    print("LAP: ", i, "--" , datetime.now())
     i += 1    
     time.sleep(60)
