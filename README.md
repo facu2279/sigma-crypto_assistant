@@ -1,14 +1,21 @@
 # SIGMA - YOUR CRYPTOCURRENCY ASSITANT
 <img src="https://github.com/facu2279/proyecto_final/blob/main/web_dynamic/static/img/sigma_logo.png"/>
 
-## Objective
+## General
 
-This is the final foundation project of the holberton school program. The slogan was to think of an innovative and creative idea and then create an mvp. The team sought to create a product that would help the average person understand the world of cryptocurrencies easily while advising them when to buy and when to sell by analyzing price rises and falls.
+This is the final foundation project for the holberton school program. The motto was to think of an innovative and creative idea and then create an MVP. The team sought to create a product that would help the average person understand the world of cryptocurrencies easily while advising them when to buy and when to sell by analyzing price rises and falls, offering simplified information and daily summaries of the movements of some cryptocurrencies.
+
+## Planning and framework
+
+For the realization of this project we had available 3 weeks in which we had to first plan and describe our project, then implement it and in the last week finish the corresponding documentation as well as a presentation to sell our MVP.
+
+The project was done in a team mode by 3 people (personal information at the end of the README) for this we use the trello tool to plan the tasks and divide them by stages and functions.
+
+
 
 ## Features and functionality
 
-Features of this sigma interpreter:
-In this version all the functionalities described below are functional to 3 cryptocurrencies (Bitcoin, Ethereum, Dogecoin)
+Sigma features: In this MVP version all the functionalities described below are functional to 3 cryptocurrencies (Bitcoin, Ethereum, Dogecoin)
 
 - Price update minute by minute
 - Calculation of percentages of rise / fall per hour
