@@ -62,6 +62,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+## Architecture
+
+<img src="https://github.com/facu2279/proyecto_final/blob/main/web_dynamic/static/img/arquitectura.png"/>
+
 
 ## Testing
 
