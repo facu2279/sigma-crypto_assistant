@@ -71,3 +71,9 @@ ul > li {
     text-decoration: none;
     list-style-type: none;
 }
+
+.video-landing {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10%;
+}
